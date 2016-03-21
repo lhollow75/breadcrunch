@@ -1,7 +1,7 @@
     <footer class="wrapper" id="main-footer">
     	<div class="container">
         	<p class="col-lg-6 col-xs-12"><a href="index.php?page=login">Administration</a></p>
-        	<p class="col-lg-6 col-xs-12"></p>
+        	<p class="col-lg-6 col-xs-12"><a href="">Deconnexion</a></p>
         </div>
     </footer>
 

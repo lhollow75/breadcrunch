@@ -6,6 +6,10 @@
 
 <div class="wrapper" id="main-content">
 	<div class="container">
+	    <div class="col-lg-7 col-xs-12" contenteditable="true">
+			<h1>title</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quisquam!</p>
+		</div>
 		<form action="" method="post" id="contact-form" class="row">
 			<div class="col-lg-6 col-xs-12">
 				<input type="text" name="prenom" value="" placeholder="Votre prénom" required>
