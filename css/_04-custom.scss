@@ -1,0 +1,87 @@
+* {
+	background: rgba(0,0,0,0.2);
+	border: 1px solid #000;
+}
+
+.alert {
+	position: fixed;
+	width: 100%;
+	padding: 1.5em;
+	bottom: 0;
+	left: 0;
+	display: none;
+	background: $tertiary-color;
+	.successMsg {
+		color: $primary-color;
+	}
+}
+
+.error {
+	display: none;
+	color: red;
+}
+
+
+#main-content{
+	background: $main-content-bg-color;
+	.galerie figure {
+		padding-left: 0;
+		padding-right: 0;
+		background: $quaternary-color;
+	}
+	.galerie figcaption{
+		padding-left: $gutter-width/2;
+		padding-right: $gutter-width/2;
+		background: $quaternary-color;
+		color: $primary-color;
+	}
+	h1{
+		color: $secondary-color;
+	}
+	.bandeau{
+		background-color: $secondary-color;
+		font-size: $base-font-size*1.5;
+		color: $primary-color;
+
+		h1,h2{
+			color: $primary-color;
+		}
+	}
+
+}
+
+#main-footer p{
+	color: $primary-color;
+}
+
+//forms
+#connect-form, #contact-form{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding-top: 1em;
+	input {
+		width: 100%;
+		padding: .5em;
+		border: 1px solid $quaternary-color;
+		background: none;
+		color: $quaternary-color;
+		margin-bottom: 1em; 
+	}
+	textarea{
+		width: 100%;
+		margin-bottom: 1em;
+		min-height: 100px;
+	} 
+	input[type="submit"] {
+		background: $secondary-color;
+		color: $primary-color;
+	}
+}
+
+
+
+
+
+
+
+

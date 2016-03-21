@@ -1,0 +1,5 @@
+/*
+$('.slider').click(function(){
+    //Rien
+});
+*/
