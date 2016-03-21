@@ -28,7 +28,7 @@
                     <span class="icon-menu"></span>
                     <ul>
                         <li><a href="./">Accueil</a></li>
-                        <li><a href="index.php?page=a-propos.html">A propos</a></li>
+                        <li><a href="index.php?page=a-propos">A propos</a></li>
                         <li><a href="index.php?page=contact">Contact</a></li>
                     </ul>
                 </nav>
