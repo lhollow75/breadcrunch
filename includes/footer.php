@@ -1,6 +1,6 @@
     <footer class="wrapper" id="main-footer">
     	<div class="container">
-        	<p class="col-lg-6 col-xs-12"></p>
+        	<a href="index.php?page=login"><p class="col-lg-6 col-xs-12">ADMIN</p></a>
         	<p class="col-lg-6 col-xs-12"></p>
         </div>
     </footer>
