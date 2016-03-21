@@ -9,15 +9,15 @@
 	</div>
 	<div class="container galerie">
 		<figure class="col-lg-4 col-xs-12">
-			<img src="./img/img1.jpg" alt="">
+			<img src="./img/baguettes.jpg" alt="">
 			<figcaption contenteditable="true"></figcaption>
 		</figure>
 		<figure class="col-lg-4 col-xs-12">
-			<img src="./img/img2.jpg" alt="">
+			<img src="./img/patisserie.jpg" alt="">
 			<figcaption contenteditable="true"></figcaption>
 		</figure>
 		<figure class="col-lg-4 col-xs-12">
-			<img src="./img/img3.jpg" alt="">
+			<img src="./img/chocolats.jpg" alt="">
 			<figcaption contenteditable="true"></figcaption>
 		</figure>
 	</div>
