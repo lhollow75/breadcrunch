@@ -5,7 +5,7 @@ $page = showPage();
 include('includes/header.php');
 include ('pages/'.$page['content']);
 include ('includes/footer.php');
-
+?>
 
 
 
