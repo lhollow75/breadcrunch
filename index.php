@@ -7,7 +7,3 @@ include ('pages/'.$page['content']);
 include ('includes/footer.php');
 ?>
 
-
-
-
-
