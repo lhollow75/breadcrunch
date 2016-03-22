@@ -8,7 +8,7 @@ include ('includes/footer.php');
 ?>
 <script src="javascript/script.js"></script>
 <?php
-print_r($_SESSION);
+//print_r($_SESSION);
 error_reporting(E_ALL);
 ini_set("display_errors",1);
 ?>

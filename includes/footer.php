@@ -1,7 +1,17 @@
     <footer class="wrapper" id="main-footer">
     	<div class="container">
-        	<p class="col-lg-6 col-xs-12"><a href="index.php?page=login">Administration</a></p>
-        	<p class="col-lg-6 col-xs-12"><a href="index.php?page=logout">Deconnexion</a></p>
+    	<?php
+    		if(isset($_SESSION['login'])) {
+    			?>
+    			<p class="col-lg-6 col-xs-12"><a href="index.php?page=logout">Deconnexion</a></p>
+        		<?php
+        	} else {
+        		?>
+        		<p class="col-lg-6 col-xs-12"><a href="index.php?page=login">Se connecter</a></p>
+        		<?php
+        	}
+        	
+        ?>
         </div>
     </footer>
 
@@ -12,7 +22,7 @@
     <!-- /message -->
 
     <?php 
-	    if(isset($_SESSION['login'])) {
+	    if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
 	   	?>
 	    <!-- barre laterale admin -->
 		<div class="admin">

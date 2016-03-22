@@ -34,6 +34,22 @@ function showPage(){
 			$_SESSION['context']="login.php";
 			return $page;
 			break;
+
+			case "logon":
+			$page['title']="Enregistrement";
+			$page['desc']="enregistrement d'un nouvel utilisateur";
+			$page['content']="logon.php";
+			$_SESSION['context']="logon.php";
+			return $page;
+			break;
+
+			case "logout":
+			$page['title']="Deconnection";
+			$page['desc']="deconnection";
+			$page['content']="logout.php";
+			$_SESSION['context']="logout.php";
+			return $page;
+			break;
 		}
 	}
 }
