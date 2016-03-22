@@ -25,10 +25,7 @@ if(isset($_POST) && !empty($_POST['identifiant']) && !empty($_POST['password']) 
 		
 	}
 	else {
-		print_r($req->fetch());
-		print_r("login: ".$login);
-		print_r("pass: ".$pass1);
-		//header('location:./index.php?page=login&erreur=Login ou mot de pass incorrect');
+		header('location:./index.php?page=login&erreur=Login ou mot de pass incorrect');
 		exit();
 	}
 }
