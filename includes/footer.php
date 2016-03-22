@@ -1,7 +1,7 @@
     <footer class="wrapper" id="main-footer">
     	<div class="container">
         	<p class="col-lg-6 col-xs-12"><a href="index.php?page=login">Administration</a></p>
-        	<p class="col-lg-6 col-xs-12"><a href="">Deconnexion</a></p>
+        	<p class="col-lg-6 col-xs-12"><a href="index.php?page=logout">Deconnexion</a></p>
         </div>
     </footer>
 
@@ -30,6 +30,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="./js/production.min.js"></script>
 	<script src="http://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
+	
 </body>
         
 </html>

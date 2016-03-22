@@ -8,15 +8,15 @@
 			<h2 class="col-lg-12"></h2>
 	</div>
 	<div class="container galerie">
-		<figure class="col-lg-4 col-xs-12">
+		<figure class="col-lg-4 col-xs-12" id="img" draggable="true" ondragstart="drag(event)">
 			<img src="./img/baguettes.jpg" alt="">
 			<figcaption contenteditable="true"></figcaption>
 		</figure>
-		<figure class="col-lg-4 col-xs-12">
+		<figure class="col-lg-4 col-xs-12" id="img" ondrop="drop(event)" ondragover="allowDrop(event)">
 			<img src="./img/patisserie.jpg" alt="">
 			<figcaption contenteditable="true"></figcaption>
 		</figure>
-		<figure class="col-lg-4 col-xs-12">
+		<figure class="col-lg-4 col-xs-12" id="img">
 			<img src="./img/chocolats.jpg" alt="">
 			<figcaption contenteditable="true"></figcaption>
 		</figure>
