@@ -3,11 +3,11 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.setData("dragged", ev.target.id);
 }
 
 function drop(ev) {
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById('img'));
+    var data = ev.dataTransfer.getData("dragged");
+    ev.target.appendChild(document.getElementById(data));
 }
