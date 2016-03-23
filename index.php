@@ -2,8 +2,10 @@
 session_start();
 if (isset($_SESSION['admin']) && $_SESSION['admin']==true){
 	$activeContent = "true";
+    $appear = "block";
 } else {
 	$activeContent = "false";
+    $appear = "none";
 }
 require('includes/functions.php');
 $page = showPage();
@@ -14,6 +16,7 @@ include ('includes/footer.php');
 ?>
 <script src="javascript/script.js"></script>
 <?php
+
 //print_r($_SESSION);
 
 error_reporting(E_ALL);

@@ -29,6 +29,7 @@ $(function(){
 		});
 	});
 
+
 	$("[contenteditable]").focusout(function(d){
 		console.log(d);
 
@@ -49,6 +50,8 @@ $(function(){
 
 	})
 });
+
+
 //on cible tous les éléments required
 $("#contact-form [required]").each(function(){
 	$(this).val( $(this).attr("data-form") );

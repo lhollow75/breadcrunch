@@ -18,8 +18,10 @@ if(isset($_POST) && !empty($_POST['identifiant']) && !empty($_POST['password']) 
 		$_SESSION['login']=true;
 		if ($reponse["admin"]==1){
 			$_SESSION['admin']=true;
+            
 		} else {
 			$_SESSION['admin']=false;
+            
 		}
 		header('location:./index.php');
 		

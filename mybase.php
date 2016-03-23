@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config.php';
+require 'php/config.php';
 
 if (isset($_POST['data'])) {
 	$data = json_encode($_POST['data']);

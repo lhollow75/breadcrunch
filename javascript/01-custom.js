@@ -29,6 +29,7 @@ $(function(){
 		});
 	});
 
+
 	$("[contenteditable]").focusout(function(d){
 		console.log(d);
 
@@ -49,3 +50,4 @@ $(function(){
 
 	})
 });
+
