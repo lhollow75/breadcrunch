@@ -29,6 +29,9 @@ $(function(){
 		});
 	});
 });
+
+
+
 //on cible tous les éléments required
 $("#contact-form [required]").each(function(){
 	$(this).val( $(this).attr("data-form") );
