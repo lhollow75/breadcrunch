@@ -1,10 +1,13 @@
 <!-- //============ 
    MAIN CONTENT
 =============== -->
-
-<div class="wrapper" id="main-content">
-	<div class="container bandeau">
-			<h1 class="col-lg-12"></h1>
+<?php
+	include('./functionBdd.php');
+	$accueil = recupAccueil($mysql);
+?>
+<div class="wrapper" >
+	<div class="container bandeau" >
+			<h1 id="titre_boulangerie" class="col-lg-12" contenteditable="<?php echo $activeContent; ?>"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></h1>
 			<h2 class="col-lg-12"></h2>
 	</div>
 	<div class="container galerie">
@@ -37,16 +40,6 @@
 		<p></p>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 <!-- //============ 
    /MAIN CONTENT
