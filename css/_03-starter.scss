@@ -56,7 +56,7 @@ p, li, span{
     font-family: $base-font-family;
 }
 
-.social-bar{
+/*.social-bar{
     background-color: $social-bar-bg-color;
     a{
         color: $social-bar-links-color;
@@ -68,20 +68,17 @@ p, li, span{
         }
     }
 }
-
+*/
 nav{
-    background-color: $nav-bar-bg-color;
-    a{
-        color: $nav-bar-links-color;
-        background: $nav-bar-links-bg-color;
-        font-size: $nav-bar-font-size;
-        &:hover {
-            color: $nav-bar-links-color-hover;
-            background: $nav-bar-links-bg-color-hover;
-        }
-    }
+
 }
 
+nav li
+{
+   display: inline-block; 
+}
+
+/*
 #main-header{
     background-color: $header-bg-color;
 }
@@ -89,7 +86,7 @@ nav{
 #main-footer{
     background-color: $footer-bg-color;
 }
-
+*/
 .wrapper:before, .wrapper:after, .container:before, .container:after, .row:before, .row:after{
     display: table;
     content: "";
