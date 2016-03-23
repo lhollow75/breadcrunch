@@ -1,6 +1,6 @@
 <?php 
 // Constantes
-define('TARGET', './');    // Repertoire cible
+define('TARGET', './img/');    // Repertoire cible
 define('MAX_SIZE', 100000);    // Taille max en octets du fichier
 define('WIDTH_MAX', 800);    // Largeur max de l'image en pixels
 define('HEIGHT_MAX', 800);    // Hauteur max de l'image en pixels
@@ -14,7 +14,7 @@ $extension = '';
 $message = '';
 $nomImage = '';
  
- 
+
 /************************************************************
  * Script d'upload
  *************************************************************/
@@ -85,7 +85,6 @@ if(!empty($_POST))
     $message = 'Veuillez remplir le formulaire svp !';
   }
 }
-
-error_reporting(E_ALL);
-ini_set("display_errors",1);
+header('location:./index.php');
+exit();
 ?>
