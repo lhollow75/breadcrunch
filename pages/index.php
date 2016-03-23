@@ -11,8 +11,8 @@
 		<figure class="col-lg-4 col-xs-12" draggable="<?php echo $activeContent; ?>" ondragstart="drag(event)">
 		   
 			<img src="./img/baguettes.jpg" alt="">
-            <form method="post" enctype="multipart/form-data" action="./img_upload.php">
-                <input style="display:<?php echo $appear; ?>;" class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
+            <form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
+                <input  class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
                 <button type="submit" name="submit" id="btn">Envoyer</button>
             </form>
 			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>
@@ -20,8 +20,8 @@
 		<figure class="col-lg-4 col-xs-12">
 		    
 			<img src="./img/patisserie.jpg" alt="">
-			<form method="post" enctype="multipart/form-data" action="./img_upload.php">
-                <input style="display:<?php echo $appear; ?>;" class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
+			<form method="post" style="display:<?php echo $appear; ?>;" enctype="multipart/form-data" action="./img_upload.php">
+                <input  class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
                 <button type="submit" name="submit" id="btn">Envoyer</button>
             </form>
 			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>
@@ -29,8 +29,8 @@
 		<figure class="col-lg-4 col-xs-12">
 		    
 			<img src="./img/chocolats.jpg" alt="">
-			<form method="post" enctype="multipart/form-data" action="./img_upload.php">
-                <input style="display:<?php echo $appear; ?>;" class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
+			<form method="post" style="display:<?php echo $appear; ?>;" enctype="multipart/form-data" action="./img_upload.php">
+                <input class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
                 <button type="submit" name="submit" id="btn">Envoyer</button>
             </form>
 			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>
