@@ -42,7 +42,8 @@ if(!empty($_POST))
           if(isset($_FILES['fichier']['error']) 
             && UPLOAD_ERR_OK === $_FILES['fichier']['error'])
           {
-        
+            // On renomme le fichier
+            $nomImage = md5(uniqid()) .'.'. $extension;
  
             // Si c'est OK, on teste l'upload
             if(move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET.$nomImage))
