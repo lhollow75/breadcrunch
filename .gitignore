@@ -2,3 +2,4 @@ node_modules
 php/config.php
 config.php
 .sass-cache
+.DS_Store
