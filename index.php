@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (isset($_SESSION['admin']) && $_SESSION['admin']==true){
+	$activeContent = "true";
+} else {
+	$activeContent = "false";
+}
 require('includes/functions.php');
 $page = showPage();
 include('includes/header.php');

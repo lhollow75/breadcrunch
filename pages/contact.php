@@ -6,7 +6,7 @@
 
 <div class="wrapper" id="main-content">
 	<div class="container">
-	    <div class="col-lg-7 col-xs-12" contenteditable="true">
+	    <div class="col-lg-7 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
 			<h1>title</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quisquam!</p>
 		</div>

@@ -6,13 +6,13 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-6 col-xs-12" contenteditable="true">
+		<div class="col-lg-6 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
 			<figure>
 				<img src="./img/bateau.jpg" alt="">
 			</figure>
 		</div>
 
-		<div class="col-lg-6 col-xs-12" contenteditable="true">
+		<div class="col-lg-6 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
 			<h1>title</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quisquam!</p>
 			<h1>title</h1>
@@ -21,23 +21,23 @@
 	</div>
 
 	<div class="row">
-		<div class="col-lg-6 col-xs-12" contenteditable="true">
+		<div class="col-lg-6 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
 			<h1>title</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quisquam!</p>
 		</div>
 
-		<div class="col-lg-6 col-xs-12" contenteditable="true">
+		<div class="col-lg-6 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
 			<h1>title</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quisquam!</p>
 		</div>
 	</div>
 <div class="row">
-		<div class="col-lg-6 col-xs-12" contenteditable="true">
+		<div class="col-lg-6 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
 			<h1>title</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quisquam!</p>
 		</div>
 
-		<div class="col-lg-6 col-xs-12" contenteditable="true">
+		<div class="col-lg-6 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
 			<h1>title</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quisquam!</p>
 		</div>

@@ -2,6 +2,9 @@
 
 //----------------- function qui récupère les bonnes vues chaque page
 function showPage(){
+
+	
+
 	if(!isset($_GET['page'])) {
 		$page['title']="contenu title page accueil";
 		$page['desc']="description page accueil";

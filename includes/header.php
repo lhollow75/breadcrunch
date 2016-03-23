@@ -7,15 +7,15 @@
         <link rel="stylesheet" href="./css/global.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-        <meta name="format-detection" content="telephone=no">
-        <link rel="cannonical" href="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>">
-        <?php 
-        if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
-        ?>
-            <link rel="stylesheet" href="css-admin/admin.css">
-        <?php
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <meta name="format-detection" content="telephone=no">
+    <link rel="cannonical" href="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>">
+    <?php 
+    if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
+    ?>
+        <link rel="stylesheet" href="css-admin/admin.css">
+    <?php
     }
     ?>
 

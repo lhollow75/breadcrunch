@@ -8,3 +8,4 @@ $(".admin .icon-cog").click(function() {
 		$(".admin").addClass("deplie");
 	}
 });
+

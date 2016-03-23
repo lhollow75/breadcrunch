@@ -27,7 +27,7 @@
 	    <!-- barre laterale admin -->
 		<div class="admin">
 			<span class="icon-cog"></span>
-			<span id="admin-publish">publier</span>
+			<span id="admin-publish">Publier</span>
 		</div>
 	    <!-- /barre laterale admin -->
 	    <?php
