@@ -73,13 +73,8 @@
 		}
 		?>
 	</div>
-<<<<<<< HEAD
-	<div id="presentation-text">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut obcaecati beatae laborum vel amet. Fugiat delectus et velit, tempora magni.</p>
-=======
 	<div id="presentation-text" contenteditable="<?php echo $activeContent; ?>">
 		<?php localisationEnBase($mysql, 'presentation-text','', 'recuperation') ?>
->>>>>>> 47e8a20441e33e059d14cea9b91608e8bbb979ba
 	</div>
 	<div id="opening-hours">
 		<p contenteditable="<?php echo $activeContent; ?>" id="horaires_ouverture"><?php localisationEnBase($mysql, 'horaires_ouverture','', 'recuperation') ?></p>
