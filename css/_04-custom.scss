@@ -60,10 +60,7 @@
 	color: $quaternary-color;
 }
 
-#user-bar ul{
-	margin: 0;
-	text-align: right;
-}
+
 
 #user-bar ul li a{
 	text-transform: none !important;
@@ -76,6 +73,14 @@
 }
 
 .btn_logout{
+	padding: 5px 20px;
+	background-color: #c78629;
+}
+.btn_inscription{
+	padding: 5px 20px;
+	background-color: #c78629;
+}
+.btn_admin{
 	padding: 5px 20px;
 	background-color: #c78629;
 }
