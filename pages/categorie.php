@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<title>Accueil</title>
-	<link rel="stylesheet" href="css/global.css">
-</head>
-<body>
 <h1>Produits</h1>
 
 <h2>Boulangerie<h2>
@@ -44,5 +36,3 @@
 	</div>
 
 
-</body>
-</html>

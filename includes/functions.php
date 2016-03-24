@@ -22,6 +22,14 @@ function showPage(){
 			return $page;
 			break;
 
+			case "administration":
+			$page['title']="Administration";
+			$page['desc']="Administration du site";
+			$page['content']="administration.php";
+			$_SESSION['context']="administration.php";
+			return $page;
+			break;
+
 			case "contact":
 			$page['title']="contenu title page contact";
 			$page['desc']="description page contact";
@@ -51,6 +59,22 @@ function showPage(){
 			$page['desc']="deconnection";
 			$page['content']="logout.php";
 			$_SESSION['context']="logout.php";
+			return $page;
+			break;
+
+			case "categorie":
+			$page['title']="Categorie de produit";
+			$page['desc']="Nos categories de produit";
+			$page['content']="categorie.php";
+			$_SESSION['context']="categorie.php";
+			return $page;
+			break;
+
+			case "fiche-produit":
+			$page['title']="Fiche produit";
+			$page['desc']="Découvrez nos produits";
+			$page['content']="fiche-produit.php";
+			$_SESSION['context']="fiche-produit.php";
 			return $page;
 			break;
 		}
