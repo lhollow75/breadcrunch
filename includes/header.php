@@ -33,7 +33,7 @@
                         if($_SESSION['admin']==true) {
 
                         ?>
-                        <li><a class="btn_admin" href="index.php?page=administration">Administration</a></li>
+                        <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
                         <?php
                         }
                         ?>
@@ -69,33 +69,11 @@
         </nav>
         <nav id="second-menu">
             <ul>
-            <?php
-            if ($categorie[0]['actif']==1){
-            ?>
-                <li><a href="#">Boulangerie</a></li>
-            <?php
-            }
-            if ($categorie[1]['actif']==1){
-            ?>
-                <li><a href="#">Pâtisserie</a></li>
-            <?php
-            }
-            if ($categorie[2]['actif']==1){
-            ?>
-                    <li><a href="#">Chocolaterie</a></li>
-                <?php
-            }
-            if ($categorie[3]['actif']==1){
-            ?>
-                    <li><a href="#">Sandwich / Salade</a></li>
-                <?php
-            }
-            if ($categorie[4]['actif']==1){
-            ?>
-                    <li><a href="#">Boisson</a></li>
-                <?php
-            }
-            ?>
+                <li><a id="menu-boulangerie" href="#">Boulangerie</a></li>
+                <li><a id="menu-patisserie" href="#">Pâtisserie</a></li>
+                <li><a id="menu-sandwich" href="#">Sandwich / Salade</a></li>
+                <li><a id="menu-chocolaterie" href="#">Chocolaterie</a></li>
+                <li><a id="menu-boisson" href="#">Boisson</a></li>
             </ul>
         </nav>
     </header>
