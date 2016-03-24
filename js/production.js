@@ -30,8 +30,16 @@ $(function(){
 	});
 
 
-	$("[contenteditable]").focusout(function(d){
+	$("[contenteditable]").blur(function(d){
 		console.log(d);
+
+		if (d.target.nodeName == 'IMG'){
+			insertion = d.target.currentSrc.split("/");
+			insertion = insertion[(insertion.length)-1]
+			//console.log(insertion);
+		} else {
+			insertion = d.target.innerText;
+		}
 
 		$.ajax({ 
 			url: 'functionBdd.php',
@@ -39,7 +47,7 @@ $(function(){
 			data: {
 				fonction: 'localisationEnBase',
 				data: d.target.id,
-				donnees: d.target.innerText
+				donnees: insertion
 			},
 			success: function(m) {
 				//console.log(m);
