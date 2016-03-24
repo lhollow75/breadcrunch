@@ -26,6 +26,7 @@ if(!empty($_POST))
     // Recuperation de l'extension du fichier
     $extension  = pathinfo($_FILES['fichier']['name'], PATHINFO_EXTENSION);
  
+    
     // On verifie l'extension du fichier
     if(in_array(strtolower($extension),$tabExt))
     {
@@ -43,12 +44,25 @@ if(!empty($_POST))
             && UPLOAD_ERR_OK === $_FILES['fichier']['error'])
           {
             // On renomme le fichier
-            $nomImage = md5(uniqid()) .'.'. $extension;
+            $nomImage = /*md5(uniqid()) .'.'. $extension*/$_FILES['fichier']['name'];
  
             // Si c'est OK, on teste l'upload
             if(move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET.$nomImage))
             {
               $message = 'Upload réussi !';
+              /* A APPROFONDIR, LA REQUETE SQL DOIT PROBABLEMENT ENVOYER VERS UNE AUTRE TABLE.
+              $content = htmlspecialchars($_FILES['fichier']['name']);
+              $id = 1;
+              $page = htmlspecialchars('index.php');
+              $req = $mysql->prepare("INSERT INTO content (id, content, page) 
+                                      VALUES (:id, :content, :page)");
+              $req->execute(array(
+              ':id'=>$id,  
+              ':content'=>$content,
+              ':page'=>$page      
+              ));*/
+              header('location:./index.php');
+              exit();
             }
             else
             {
@@ -85,6 +99,7 @@ if(!empty($_POST))
     $message = 'Veuillez remplir le formulaire svp !';
   }
 }
-header('location:./index.php');
-exit();
 ?>
+
+
+                    
