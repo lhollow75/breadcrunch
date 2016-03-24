@@ -156,6 +156,29 @@
   	border: 0;
 }
 
+#galery{
+	text-align: center;
+	margin: 30px auto;
+}
+
+#galery div{
+	display: inline-block;
+	width: 220px;
+}
+
+#galery form{
+	font-size: 10px;
+	text-align: left;
+	margin-left: 10px;
+}
+
+#galery form button{
+	font-size: 10px;
+	text-align: center;
+	color: #fff;
+	background-color: $primary-color;
+	border: none;
+}
 
 /**/
 #opening-hours{

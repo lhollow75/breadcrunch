@@ -56,7 +56,7 @@
         </div>
 	</div>
 	<div id="presentation-text">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut obcaecati beatae laborum vel amet. Fugiat delectus et velit, tempora magni.
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut obcaecati beatae laborum vel amet. Fugiat delectus et velit, tempora magni.</p>
 	</div>
 	<div id="opening-hours">
 		<p contenteditable="<?php echo $activeContent; ?>" id="horaires_ouverture"><?php echo utf8_encode($accueil['horaires_ouverture'])?></p>
