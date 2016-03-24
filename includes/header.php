@@ -27,6 +27,11 @@
             <ul>
             <?php
                     if(isset($_SESSION['login'])) {
+                        if($_SESSION['admin']==true) {
+                        ?>
+                            <a href="index.php?page=administration">Administration</a>
+                        <?php
+                        }
                         ?>
                         <a href="index.php?page=logout">Deconnexion</a>
                         <?php
