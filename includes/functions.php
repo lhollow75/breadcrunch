@@ -85,6 +85,14 @@ function showPage(){
 			$_SESSION['context']="liste-commande.php";
 			return $page;
 			break;
+
+			case "config-site":
+			$page['title']="Configuration du site";
+			$page['desc']="Modifier les configurations du site";
+			$page['content']="config-site.php";
+			$_SESSION['context']="config-site.php";
+			return $page;
+			break;
 		}
 	}
 }
