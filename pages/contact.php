@@ -6,22 +6,6 @@
 
 
 <div class="wrapper contact" id="main-content">
-<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-<div style='overflow:hidden;height:400px;width:100%;'>
-<div id='gmap_canvas' style='height:400px;width:100%;'></div>
-	<div>
-		<small>
-			<a href="http://embedgooglemaps.com">google maps carte</a>
-		</small>
-	</div>
-	<div>
-		<small>
-			<a href="http://youtubeembedcode.com">embed youtube code</a>
-		</small>
-	</div>
-	<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-</div>
-<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(48.86031277478549,2.3650750455994007),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.86031277478549,2.3650750455994007)});infowindow = new google.maps.InfoWindow({content:'<strong>Boulangerie </strong><br>Paris, France<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -64,6 +48,23 @@
 			</div>
 		</div>
 	</div>
+	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+	<div style='overflow:hidden;height:400px;width:100%;'>
+	<div id='gmap_canvas' style='height:400px;width:100%;'></div>
+		<div>
+			<small>
+				<a href="http://embedgooglemaps.com">google maps carte</a>
+			</small>
+		</div>
+		<div>
+			<small>
+				<a href="http://youtubeembedcode.com">embed youtube code</a>
+			</small>
+		</div>
+		<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+	</div>
+	<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(48.86031277478549,2.3650750455994007),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.86031277478549,2.3650750455994007)});infowindow = new google.maps.InfoWindow({content:'<strong>Boulangerie </strong><br>Paris, France<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+		
 </div>
 
 
