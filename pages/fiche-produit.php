@@ -24,17 +24,21 @@
 	  <option value="16h-17h">16h - 17h</option>
 	  <option value="17h-18h">17h - 18h</option>
 	</select>
-
-
+</div>
+<div class="col-lg-2 col-sm-12 col-md-12 col-xs-12">
 <label for="quantity">Quantité</label><input type="number" name="quantity" id="quantity" class="product-spec">
+</div>
+
+<div class="col-lg-4 col-lg-offset-1 col-sm-12 col-md-12 col-xs-12">
 <label>Allergène : </label>
 
 <ul>
     <li><input type="checkbox">Poissons</li>
     <li><input type="checkbox">Produits à base de crustacé</li>
 </ul>
+</div>
 
-
+<div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
 <label>Taille gateaux</label>
 	<select class="product-spec">
 		  <option value="4pers">4 pers.</option>
@@ -42,7 +46,9 @@
 		  <option value="8pers">8 pers.</option>
 		  <option value="10pers">10 pers.</option>
 	</select>
-<p>1,50€</p>
-<a class="btn">Ajouter au panier<a/>
-</div></div></div>
-
+   </br>
+    <a class="btn2">1,50€</a></br></br></br>
+<a class="btn">Ajouter au panier</a>
+</div>
+</div></div>
+</br></br>
