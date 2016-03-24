@@ -29,7 +29,7 @@
                     if(isset($_SESSION['login'])) {
                         if($_SESSION['admin']==true) {
                         ?>
-                        <li><a href="index.php?page=administration">Administration</a></li>
+                        <li><a class="btn_admin" href="index.php?page=administration">Administration</a></li>
                         <?php
                         }
                         ?>
