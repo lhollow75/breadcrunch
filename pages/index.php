@@ -4,9 +4,9 @@
     ?>
     <img src="images/breadcrunch_02.jpg" alt="">
 	<div id="intro">
-		<h1>Lorem ipsum dolor sit amet</h1>
+		<h1 id="titre_index" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'titre_index','', 'recuperation') ?></h1>
         <hr>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui blanditiis distinctio sunt, laborum incidunt itaque?</p>
+		<p id="index_text" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'index_text','', 'recuperation') ?></p>
 	</div>
   
 	<div id="galery">

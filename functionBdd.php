@@ -78,7 +78,7 @@ function modifEnBase($mysql, $insertion, $table, $colonne, $row){
 							SET $colonne = :insertion
 							WHERE id = :id");
 	$req->execute(array(
-	':insertion'=>utf8_decode(strip_tags($insertion)),
+	':insertion'=>utf8_decode(strip_tags(trim ($insertion))),
 	':id'=> $row
 	));
 }
