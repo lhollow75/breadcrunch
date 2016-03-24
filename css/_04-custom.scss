@@ -68,9 +68,8 @@
 	padding: 10px;
 }
 
-#galery{
 
-}
+
 
 /**/
 #opening-hours{
@@ -81,6 +80,10 @@
 
 }
 
+#first-menu ul li a{
+	color: lighten($tertiary-color, 30%);
+}
+
 #second-menu{
 	background-color: $primary-color;
 	color: $quaternary-color;
@@ -88,6 +91,10 @@
 	text-transform : uppercase;
 	font-size: 1.0em;
 }
+#second-menu ul li a{
+	color: $quaternary-color;
+}
+
 /*FIN HOME*/
 
 
