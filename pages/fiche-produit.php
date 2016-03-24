@@ -3,7 +3,7 @@
 
 <h4>Ingrédients</h4>
 <p>Sucre, oeufs, farine, et d'autres trucs</p>
-<label>Délai de commande : </p><p>2h</p>
+<label>Délai de commande : </label><p>2h</p>
 <label for="pickup-date">Date de retrait </label><input type="date" name="pickup-date" id="pickup-date"></br>
 <label>Heure de retrait </label>
 	<select>
@@ -19,5 +19,13 @@
 	</select></br>
 
 <label for="quantity">Quantité </label><input type="number" name="quantity" id="quantity">
-<label>Allergène : </p><p>Poissons et produits à base de crustacé</p>
-<label>Taille gateaux</p>
+<label>Allergène : </label><p>Poissons et produits à base de crustacé</p>
+<label>Taille gateaux</label>
+	<select>
+		  <option value="4pers">4 pers.</option>
+		  <option value="6pers">6 pers.</option>
+		  <option value="8pers">8 pers.</option>
+		  <option value="10pers">10 pers.</option>
+	</select></br>
+<p>1,50€</p>
+<a class="btn">Ajouter au panier<a/>
