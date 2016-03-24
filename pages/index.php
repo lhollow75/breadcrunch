@@ -2,7 +2,11 @@
     $accueil = recupAccueil($mysql);
     $categorie = recupTable($mysql,'categorie');
     ?>
+
+    
     <img src="images/breadcrunch_02.jpg" alt="">
+        <div class="wrapper" id="main-content">
+        <div class="container">
 	<div id="intro">
 		<h1 id="titre_index" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'titre_index','', 'recuperation') ?></h1>
         <hr>
@@ -74,8 +78,12 @@
 		?>
 	</div>
 	<div id="presentation-text" contenteditable="<?php echo $activeContent; ?>">
-		<?php localisationEnBase($mysql, 'presentation-text','', 'recuperation') ?>
+		<p><?php localisationEnBase($mysql, 'presentation-text','', 'recuperation') ?></p>
 	</div>
+    </div>
+    </div>
 	<div id="opening-hours">
 		<p contenteditable="<?php echo $activeContent; ?>" id="horaires_ouverture"><?php localisationEnBase($mysql, 'horaires_ouverture','', 'recuperation') ?></p>
 	</div>
+
+	
