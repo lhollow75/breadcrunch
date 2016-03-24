@@ -1,37 +1,34 @@
 
+
 <!-- //============ 
    MAIN CONTENT
 =============== -->
 
+
 <div class="wrapper contact" id="main-content">
 	<div class="container">
-	    <div class="col-lg-7 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
-			<h1>CONTACT</h1>
+		<div class="row">
+		    <div class="col-lg-12">
+				<h1>CONTACT</h1>
+			</div>
+			<div class="col-lg-6">
+				<form action="" method="post" id="contact-form" class="row">
+					<div class="col-lg-7">
+						<input type="password" name="nom" value="" placeholder="Nom.." required>
+						<input type="email" name="email" value="" placeholder="Email.." required>
+						<input type="tel" name="tel" value="" placeholder="Sujet.." required>
+					</div>
+					<div class="col-lg-12">
+						<textarea rows="8" name="message" id="message" placeholder="Message.."></textarea>
+						<input class="btn" type="submit" name="sumbit" value="Envoyer">
+					</div>
+				</form>
+			</div>
+			<div class="col-lg-6">
+				<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte</p>
+				<p><span>Adresse</span></p>
+			</div>
 		</div>
-		<form action="" method="post" id="contact-form" class="row">
-			<div class="col-lg-6 col-md-6 col-sm-12">
-				<input type="password" name="nom" value="" placeholder="Votre nom" required>
-				<input type="text" name="prenom" value="" placeholder="Votre prénom" required>
-				<input type="email" name="email" value="" placeholder="Votre email" required>
-				<input type="tel" name="tel" value="" placeholder="Votre téléphone" required>
-				<textarea rows="4" cols="20" name="message" id="message" placeholder="Votre message"></textarea>
-			</div>
-
-
-			<div class="col-lg-12">
-				<?php
-				$a=rand(0,5);
-				$b=rand(0,5);
-				$_SESSION['code']=$a+$b;
-				?>
-				<input type="text" name="securecode" placeholder="<?php echo $a.'+'.$b.'='; ?>" required>
-			</div>
-
-			<div class="col-lg-12">
-				<input type="submit" name="sumbit" value="Envoyer">
-			</div>
-			
-		</form>
 	</div>
 </div>
 
@@ -39,3 +36,4 @@
 <!-- //============ 
    /MAIN CONTENT
 =============== -->
+
