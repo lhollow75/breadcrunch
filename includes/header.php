@@ -60,11 +60,8 @@
         <nav id="second-menu">
             <ul>
                 <li><a href="#">Boulangerie</a></li>
-                <li>|</li>
                 <li><a href="#">Pâtisserie</a></li>
-                <li>|</li>
                 <li><a href="#">Chocolaterie</a></li>
-                <li>|</li>
                 <li><a href="#">Sandwich / Salade</a></li>
             </ul>
         </nav>
