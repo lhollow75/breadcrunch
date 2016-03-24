@@ -53,6 +53,14 @@ function showPage(){
 			$_SESSION['context']="logout.php";
 			return $page;
 			break;
+
+			case "categorie":
+			$page['title']="Categorie de produit";
+			$page['desc']="Nos categories de produit";
+			$page['content']="categorie.php";
+			$_SESSION['context']="categorie.php";
+			return $page;
+			break;
 		}
 	}
 }
