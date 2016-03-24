@@ -1,5 +1,4 @@
     <?php 
-    include('./functionBdd.php');
     $accueil = recupAccueil($mysql);
     $categorie = recupTable($mysql,'categorie');
     ?>
@@ -44,5 +43,5 @@
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut obcaecati beatae laborum vel amet. Fugiat delectus et velit, tempora magni.
 	</div>
 	<div id="opening-hours">
-		<p>Ouvert du mardi au dimanche de 7h à 20h30</p>
+		<p contenteditable="<?php echo $activeContent; ?>" id="horaires_ouverture"><?php echo utf8_encode($accueil['horaires_ouverture'])?></p>
 	</div>

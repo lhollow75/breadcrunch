@@ -14,6 +14,8 @@
     <link rel="cannonical" href="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>">
     <?php 
     require_once ('php/config.php');
+    include('./functionBdd.php');
+    $accueil = recupAccueil($mysql);
     if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
     ?>
         <link rel="stylesheet" href="css-admin/admin.css">
@@ -28,9 +30,9 @@
             <?php
                     if(isset($_SESSION['login'])) {
                         if($_SESSION['admin']==true) {
-                        ?>
-                        <li><a href="index.php?page=administration">Administration</a></li>
-                        <?php
+                            ?>
+                            <li><a href="index.php?page=administration">Administration</a></li>
+                            <?php
                         }
                         ?>
                         <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>
@@ -45,7 +47,7 @@
                 <li><a class="btn_cart" href="#">Mon panier</a></li>
             </ul>
         </nav>
-        <span class="title">La Boulange de mon Grand-Père</span>
+        <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
         <nav id="first-menu">
             <ul>
                 <li><a href="index.php">Accueil</a></li>
