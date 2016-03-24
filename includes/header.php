@@ -30,9 +30,10 @@
             <?php
                     if(isset($_SESSION['login'])) {
                         if($_SESSION['admin']==true) {
-                            ?>
-                            <li><a href="index.php?page=administration">Administration</a></li>
-                            <?php
+
+                        ?>
+                        <li><a class="btn_admin" href="index.php?page=administration">Administration</a></li>
+                        <?php
                         }
                         ?>
                         <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>

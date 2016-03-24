@@ -69,6 +69,14 @@ function showPage(){
 			$_SESSION['context']="categorie.php";
 			return $page;
 			break;
+
+			case "fiche-produit":
+			$page['title']="Fiche produit";
+			$page['desc']="Découvrez nos produits";
+			$page['content']="fiche-produit.php";
+			$_SESSION['context']="fiche-produit.php";
+			return $page;
+			break;
 		}
 	}
 }
