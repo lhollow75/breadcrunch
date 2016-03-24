@@ -1,4 +1,5 @@
-<?php 
+<?php
+require_once ('php/config.php');
 include('./functionBdd.php');
 // Constantes
 define('TARGET', './img/');    // Repertoire cible
@@ -50,14 +51,8 @@ if(!empty($_POST))
             // Si c'est OK, on teste l'upload
             if(move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET.$nomImage))
             {
-              $message = 'Upload réussi !';
-              ?>
-              <script>
-                  var x = '<?php echo $_FILES['fichier']['name']?>';
-                  console.log(x);
-              </script>
-              <?php     
-              header('location:./index.php');
+              $message = 'Upload réussi !'; localisationEnBase($mysql,$_POST['id_formulaire'],$nomImage);
+              header('location:./index.php');    
             }
             else
             {
