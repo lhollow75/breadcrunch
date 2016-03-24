@@ -27,6 +27,7 @@ if(!empty($_POST))
     // Recuperation de l'extension du fichier
     $extension  = pathinfo($_FILES['fichier']['name'], PATHINFO_EXTENSION);
  
+    
     // On verifie l'extension du fichier
     if(in_array(strtolower($extension),$tabExt))
     {
@@ -44,13 +45,19 @@ if(!empty($_POST))
             && UPLOAD_ERR_OK === $_FILES['fichier']['error'])
           {
             // On renomme le fichier
-            $nomImage = md5(uniqid()) .'.'. $extension;
+            $nomImage = $_FILES['fichier']['name'];
  
             // Si c'est OK, on teste l'upload
             if(move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET.$nomImage))
             {
               $message = 'Upload réussi !';
-              // Modifier le nom de l'image dans la bdd avec la fonction localisationEnBase
+              ?>
+              <script>
+                  var x = '<?php echo $_FILES['fichier']['name']?>';
+                  console.log(x);
+              </script>
+              <?php     
+              header('location:./index.php');
             }
             else
             {
@@ -87,6 +94,7 @@ if(!empty($_POST))
     $message = 'Veuillez remplir le formulaire svp !';
   }
 }
-header('location:./index.php');
-exit();
 ?>
+
+
+                    
