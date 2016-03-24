@@ -101,7 +101,7 @@
 }
 
 #first-menu{
-	font-size: 0.7em;
+	font-size: 16px;
 	font-weight: lighter;
 }
 
@@ -117,7 +117,7 @@
 	background-color: $primary-color;
 	color: $quaternary-color;
 	text-transform : uppercase;
-	font-size: 0.7em;
+	font-size: 18px;
 	font-weight: lighter;
 	padding: 10px 0px;
 }
@@ -148,12 +148,23 @@
 #intro h1, #intro p{
 	text-align: center;
 }
+#intro h1{
+	margin-bottom: 5px;
+}
+
+#intro p{
+	font-size: 16px;
+	margin-top: 20px;
+}	
+
 
 #intro hr{
 	width:222px;
 	height: 4px;
 	background-color: $primary-color;
   	border: 0;
+  	margin-bottom: 0px !important;
+  	margin-top: 0px !important;
 }
 
 #galery{
@@ -180,13 +191,20 @@
 	border: none;
 }
 
+#presentation-text p{
+	text-align: center;
+}
+
+
 /**/
 #opening-hours{
 	background-color: $secondary-color;
-	height: 120px;
+	border: dotted 1px #fff;
 }
 #opening-hours p{
-
+	text-align: center;
+	padding: 20px 20px;
+	color: $quaternary-color;
 }
 
 /*FIN HOME*/
