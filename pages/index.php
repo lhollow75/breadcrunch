@@ -3,8 +3,9 @@
     $categorie = recupTable($mysql,'categorie');
     ?>
     <img src="images/breadcrunch_02.jpg" alt="">
-	<div>
+	<div id="intro">
 		<h1>Lorem ipsum dolor sit amet</h1>
+        <hr>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui blanditiis distinctio sunt, laborum incidunt itaque?</p>
 	</div>
   
