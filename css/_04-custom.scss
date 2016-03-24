@@ -100,6 +100,36 @@
 	margin-top: 10px;
 }
 
+#first-menu{
+	font-size: 0.7em;
+	font-weight: lighter;
+}
+
+#first-menu ul{
+	margin: 0;
+}
+#first-menu ul li a{
+	color: lighten($tertiary-color, 30%);
+	padding: .2em 1.5em;
+}
+
+#second-menu{
+	background-color: $primary-color;
+	color: $quaternary-color;
+	text-transform : uppercase;
+	font-size: 0.7em;
+	font-weight: lighter;
+	padding: 10px 0px;
+}
+#second-menu ul li a{
+	color: $quaternary-color;
+	padding: .2em 2em;
+	border-right: solid 1px #fff;
+}
+#second-menu ul li:last-child a{
+	border: none;
+}
+
 
 /*HOME*/
 #logo{
@@ -115,8 +145,15 @@
 	padding: 10px;
 }
 
-#first-menu ul{
-	margin: 0;
+#intro h1, #intro p{
+	text-align: center;
+}
+
+#intro hr{
+	width:222px;
+	height: 4px;
+	background-color: $primary-color;
+  	border: 0;
 }
 
 
@@ -127,21 +164,6 @@
 }
 #opening-hours p{
 
-}
-
-#first-menu ul li a{
-	color: lighten($tertiary-color, 30%);
-}
-
-#second-menu{
-	background-color: $primary-color;
-	color: $quaternary-color;
-	height: 50px;
-	text-transform : uppercase;
-	font-size: 1.0em;
-}
-#second-menu ul li a{
-	color: $quaternary-color;
 }
 
 /*FIN HOME*/
@@ -167,6 +189,66 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-color: rgb(255,255,255);
     background-image: none;
     color: rgb(0, 0, 0);
+}
+
+#contact-form .btn{
+	width: 220px;
+	float: right;
+}
+#contact-form p{
+	margin: 0;
+}
+.btn{
+    font-size: 20px;
+    color: #FFF;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-transform: uppercase;
+}
+.contact-details h1{
+	text-align: left;
+}
+.contact-details{
+	display: table;
+	font-size: 16px;
+	width: 100%;
+}
+.contact-details p:first-child{
+	margin-bottom: 30px;
+}
+.contact-details p{
+	display: inline-block;
+}
+.contact-details p span.details,.contact-details p span.dtl{
+	display: block;
+}
+.contact-details,.social-network{
+	margin-bottom: 40px;
+}
+.contact-details p span.details{
+	display: block;
+	margin-right: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.contact-details p span:first-child{
+	height: 60px;
+	margin-top: 0;
+}
+.contact-details p span{
+	margin-top: 20px;
+}
+
+.social-network{
+	text-align: center;
+}
+.social-network img{
+	width: 63px;
+	height: 63px;
+	display: inline-block;
+	margin-right: 10px;
 }
 /*FIN CONTACT*/
 

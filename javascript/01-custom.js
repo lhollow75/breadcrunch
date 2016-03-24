@@ -38,7 +38,7 @@ $(function(){
 			insertion = insertion[(insertion.length)-1]
 			//console.log(insertion);
 		} else {
-			insertion = d.target.innerText;
+			insertion = d.target.innerHTML;
 		}
 
 		$.ajax({ 
