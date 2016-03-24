@@ -59,12 +59,22 @@
 	font-size: 12px;
 	color: $quaternary-color;
 }
+#user-bar ul{
+	text-align: right;
+}
 
-
+#user-bar ul li{
+	margin-left: -0.5em;/*delete white-space*/
+}
 
 #user-bar ul li a{
 	text-transform: none !important;
 	color: $quaternary-color;
+}
+#user-bar ul li a:hover{
+	text-decoration: underline;
+	color: $quaternary-color;
+	background-color: darken($primary-color, 30%);
 }
 
 .btn_login{
@@ -74,7 +84,7 @@
 
 .btn_logout{
 	padding: 5px 20px;
-	background-color: #c78629;
+	background-color: #875427;
 }
 .btn_inscription{
 	padding: 5px 20px;
@@ -91,17 +101,17 @@
 }
 
 
-.title{
+#titre_magasin{
 	text-align: center;
 	font-weight: 700;
 	font-size: 30px;
 	text-transform: uppercase;
 	display: block;
-	margin-top: 10px;
+	margin: 20px 0px;
 }
 
 #first-menu{
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: lighter;
 }
 
@@ -112,22 +122,34 @@
 	color: lighten($tertiary-color, 30%);
 	padding: .2em 1.5em;
 }
+#first-menu ul li a:hover{
+	text-decoration: underline;
+}
 
 #second-menu{
 	background-color: $primary-color;
 	color: $quaternary-color;
 	text-transform : uppercase;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: lighter;
 	padding: 10px 0px;
 }
+#second-menu ul li{
+	margin-left: -0.25em;/*delete white-space*/
+}
+
 #second-menu ul li a{
 	color: $quaternary-color;
-	padding: .2em 2em;
 	border-right: solid 1px #fff;
+    line-height: 1.5em;
+    padding: 5px 20px 0px 20px;
 }
+#second-menu ul li a:hover{
+	text-decoration: underline;
+}
+
 #second-menu ul li:last-child a{
-	border: none;
+	border-right: none;
 }
 
 
@@ -172,18 +194,24 @@
 	margin: 30px auto;
 }
 
+.galery-section{
+	width: 200px;
+}
+
 #galery div{
 	display: inline-block;
-	width: 220px;
+	/*width: 220px;*/
 }
 
 #galery form{
 	font-size: 10px;
-	text-align: left;
+	text-align: center;
 	margin-left: 10px;
+	width: 200px;
 }
 
 #galery form button{
+	margin-top: 5px;
 	font-size: 10px;
 	text-align: center;
 	color: #fff;
@@ -191,17 +219,28 @@
 	border: none;
 }
 
+
+
 #presentation-text p{
 	text-align: center;
+	margin-bottom: 30px;
 }
 
 
 /**/
 #opening-hours{
 	background-color: $secondary-color;
+	padding: 10px;
+}
+
+.dot{
 	border: dotted 1px #fff;
 }
+
 #opening-hours p{
+	font-size: 25px;
+	font-weight: bold;
+	font-style: italic;
 	text-align: center;
 	padding: 20px 20px;
 	color: $quaternary-color;
