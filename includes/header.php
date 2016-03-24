@@ -29,31 +29,32 @@
                     if(isset($_SESSION['login'])) {
                         if($_SESSION['admin']==true) {
                         ?>
-                            <a href="index.php?page=administration">Administration</a>
+                        <li><a href="index.php?page=administration">Administration</a></li>
                         <?php
                         }
                         ?>
-                        <a href="index.php?page=logout">Deconnexion</a>
+                        <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>
                         <?php
                     } else {
                         ?>
-                        <li><a href="index.php?page=logon">S'inscrire</a></li>
-                        <li><a href="index.php?page=login">Se connecter</a><li>
+                        <li><a class="btn_inscription" href="index.php?page=logon">S'inscrire</a></li>
+                        <li><a class="btn_login" href="index.php?page=login">Se connecter</a><li>
                         <?php
                     }
                  ?>
-                <li><a href="#">Mon panier</a></li>
+                <li><a class="btn_cart" href="#">Mon panier</a></li>
             </ul>
         </nav>
+        <span class="title">La Boulange de mon Grand-Père</span>
         <nav id="first-menu">
             <ul>
-                <li><a href="#">Accueil</a></li>
+                <li><a href="index.php">Accueil</a></li>
                 <li><a href="#">Produits</a></li>
                 <li><a href="#">Offres</a></li>
-                <li><a href="#"></a><img src="images/breadcrunch_logo.png" alt="Logo" id="logo"></a></li>
+                <li><a href="index.php"><img src="images/breadcrunch_logo.png" alt="Logo" id="logo"></a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">A Propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.php?page=a-propos">A Propos</a></li>
+                <li><a href="index.php?page=contact">Contact</a></li>
             </ul>
         </nav>
         <nav id="second-menu">
