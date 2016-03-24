@@ -1,10 +1,18 @@
-<h1>Pain au chocolat</h1>
-<img class="product-picture" src="images/breadcrunch_29.jpg" alt="">
+<div class="wrapper" id="main-content">
+<div class="container">
+<h1 class="product-name">Pain au chocolat</h1>
+<img class="col-lg-7 product-picture" src="images/breadcrunch_29.jpg" alt="">
 
+<div class="product-specs col-lg-4">
 <h4>Ingrédients</h4>
 <p>Sucre, oeufs, farine, et d'autres trucs</p>
+<<<<<<< HEAD
+<label>Délai de commande minimum : </label><p>2h</p>
+<label for="pickup-date">Date de retrait </label><input type="date" name="pickup-date" id="pickup-date"></br></br>
+=======
 <label>Délai de commande : </label><p>2h</p>
 <label for="pickup-date">Date de retrait </label><input type="date" name="pickup-date" id="pickup-date"></br>
+>>>>>>> 496bda6b3a45eaf77b9f0f2c972128df04ccd1f8
 <label>Heure de retrait </label>
 	<select>
 	  <option value="9h-10h">9h - 10h</option>
@@ -16,8 +24,14 @@
 	  <option value="15h-16h">15h - 16h</option>
 	  <option value="16h-17h">16h - 17h</option>
 	  <option value="17h-18h">17h - 18h</option>
-	</select></br>
+	</select></br></br>
 
+<<<<<<< HEAD
+<label for="quantity">Quantité</label><input type="number" name="quantity" id="quantity"></br></br>
+<label>Allergène : </label><p>Poissons et produits à base de crustacé</p>
+<label>Taille gateaux</label>
+</div></div></div>
+=======
 <label for="quantity">Quantité </label><input type="number" name="quantity" id="quantity">
 <label>Allergène : </label><p>Poissons et produits à base de crustacé</p>
 <label>Taille gateaux</label>
@@ -29,3 +43,4 @@
 	</select></br>
 <p>1,50€</p>
 <a class="btn">Ajouter au panier<a/>
+>>>>>>> 496bda6b3a45eaf77b9f0f2c972128df04ccd1f8
