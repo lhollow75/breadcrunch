@@ -16,6 +16,7 @@
     require_once ('php/config.php');
     include('./functionBdd.php');
     $accueil = recupAccueil($mysql);
+    $categorie = recupTable($mysql,'categorie');
     if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
     ?>
         <link rel="stylesheet" href="css-admin/admin.css">
@@ -53,19 +54,48 @@
             <ul>
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="#">Produits</a></li>
-                <li><a href="#">Offres</a></li>
+                <li><a href="#">Promotions</a></li>
                 <li><a href="index.php"><img src="images/breadcrunch_logo.png" alt="Logo" id="logo"></a></li>
-                <li><a href="#">Blog</a></li>
+                <?php
+                if ($accueil['blog']!=""){
+                ?>
+                    <li><a href="#">Blog</a></li>
+                <?php
+                }
+                ?>
                 <li><a href="index.php?page=a-propos">A Propos</a></li>
                 <li><a href="index.php?page=contact">Contact</a></li>
             </ul>
         </nav>
         <nav id="second-menu">
             <ul>
+            <?php
+            if ($categorie[0]['actif']==1){
+            ?>
                 <li><a href="#">Boulangerie</a></li>
+            <?php
+            }
+            if ($categorie[1]['actif']==1){
+            ?>
                 <li><a href="#">Pâtisserie</a></li>
-                <li><a href="#">Chocolaterie</a></li>
-                <li><a href="#">Sandwich / Salade</a></li>
+            <?php
+            }
+            if ($categorie[2]['actif']==1){
+            ?>
+                    <li><a href="#">Chocolaterie</a></li>
+                <?php
+            }
+            if ($categorie[3]['actif']==1){
+            ?>
+                    <li><a href="#">Sandwich / Salade</a></li>
+                <?php
+            }
+            if ($categorie[4]['actif']==1){
+            ?>
+                    <li><a href="#">Boisson</a></li>
+                <?php
+            }
+            ?>
             </ul>
         </nav>
     </header>
