@@ -126,6 +126,9 @@
 	padding: .2em 2em;
 	border-right: solid 1px #fff;
 }
+#second-menu ul li:last-child a{
+	border: none;
+}
 
 
 /*HOME*/
@@ -142,6 +145,16 @@
 	padding: 10px;
 }
 
+#intro h1, #intro p{
+	text-align: center;
+}
+
+#intro hr{
+	width:222px;
+	height: 4px;
+	background-color: $primary-color;
+  	border: 0;
+}
 
 
 /**/
