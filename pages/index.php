@@ -17,8 +17,9 @@
 		   
 			<img id="img_baguette" src="./img/<?php echo $categorie[0]['photo'] ?>" alt="" contenteditable="<?php echo $activeContent; ?>">
             <form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
-                <input  class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
-                <button type="submit" name="submit" id="envoyer_baguette">Envoyer</button>
+                <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
+                <input type="hidden" name="id_formulaire" value="envoyer_baguette">
+                <button type="submit" >Envoyer</button>
             </form>
 			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>
 		</figure>
@@ -26,7 +27,8 @@
 		    
 			<img src="./img/patisserie.jpg" id="img_patisserie" alt="">
 			<form method="post" style="display:<?php echo $appear; ?>;" enctype="multipart/form-data" action="./img_upload.php">
-                <input  class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
+                <input  class="fileimg" type="file" name="fichier" accept="image/*" multiple>
+                <input type="hidden" name="id_formulaire" value="envoyer_patisserie">
                 <button type="submit" name="submit" >Envoyer</button>
             </form>
 			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>
@@ -35,7 +37,8 @@
 		    
 			<img src="./img/chocolats.jpg" id="img_chocolats" alt="">
 			<form method="post" style="display:<?php echo $appear; ?>;" enctype="multipart/form-data" action="./img_upload.php">
-                <input class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
+                <input class="fileimg" type="file" name="fichier" accept="image/*" multiple>
+                <input type="hidden" name="id_formulaire" value="envoyer_chocolat">
                 <button type="submit" name="submit" >Envoyer</button>
             </form>
 			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>

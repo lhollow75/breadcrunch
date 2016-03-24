@@ -53,7 +53,6 @@ function localisationEnBase($mysql, $id, $donnees){
 		));
 
 	$reponse = $req->fetch();
-	var_dump($reponse);
 	modifEnBase($mysql, $donnees, $reponse['table_insert'], $reponse['colonne_insert'], $reponse['id_insert']);
 }
 
