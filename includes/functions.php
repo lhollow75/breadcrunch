@@ -22,6 +22,14 @@ function showPage(){
 			return $page;
 			break;
 
+			case "administration":
+			$page['title']="Administration";
+			$page['desc']="Administration du site";
+			$page['content']="administration.php";
+			$_SESSION['context']="administration.php";
+			return $page;
+			break;
+
 			case "contact":
 			$page['title']="contenu title page contact";
 			$page['desc']="description page contact";
