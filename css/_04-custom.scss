@@ -91,10 +91,29 @@
 /*FIN HOME*/
 
 
+/*CONTACT*/
+#contact-form input,#contact-form textarea{
+    width: 100%;
+    outline: none;
+    padding: 10px 10px;
+    margin: 10px 0;
+    font-family: $base-font-family;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
 
+#contact-form textarea{
+    border-color: #e1e2e1;
+}
 
-
-
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(255,255,255);
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+/*FIN CONTACT*/
 
 
 
