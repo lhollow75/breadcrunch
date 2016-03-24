@@ -1,5 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body{
     height: 100%;
+    margin:0;
+    padding: 0;
 }
 
 html{
@@ -52,6 +58,7 @@ h4 {
 
 p, li, span{
     font-family: $base-font-family;
+    margin:0;
 }
 
 /*.social-bar{
@@ -104,6 +111,11 @@ footer{
     margin-right: -$gutter-width/2;
 }
 
+.clearfix{
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+}
 @function columns($columns, $container-columns: $maximum-columns){
     $column-width: 100% / $container-columns;
     $width: $columns * $column-width;

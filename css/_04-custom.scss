@@ -119,6 +119,23 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-image: none;
     color: rgb(0, 0, 0);
 }
+
+#contact-form .btn{
+	width: 220px;
+	float: right;
+}
+#contact-form p{
+	margin: 0;
+}
+.btn{
+    font-size: 20px;
+    color: #FFF;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-transform: uppercase;
+}
 /*FIN CONTACT*/
 
 /*Product page*/
