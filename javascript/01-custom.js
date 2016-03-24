@@ -38,7 +38,7 @@ $(function(){
 			insertion = insertion[(insertion.length)-1]
 			//console.log(insertion);
 		} else {
-			insertion = d.target.innerHTML;
+			insertion = d.target.innerText;
 		}
 
 		$.ajax({ 
@@ -47,7 +47,8 @@ $(function(){
 			data: {
 				fonction: 'localisationEnBase',
 				data: d.target.id,
-				donnees: insertion
+				donnees: insertion,
+				action: 'modification'
 			},
 			success: function(m) {
 				//console.log(m);

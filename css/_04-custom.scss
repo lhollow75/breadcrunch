@@ -192,7 +192,7 @@
 /*FIN HOME*/
 
 /*CONTACT*/
-#contact-form input,#contact-form textarea{
+#contact-form input,#contact-form textarea,#connect-form input{
     width: 100%;
     outline: none;
     padding: 10px 10px;
@@ -214,7 +214,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     color: rgb(0, 0, 0);
 }
 
-#contact-form .btn{
+#contact-form .btn,#connect-form .btn{
 	width: 220px;
 	float: right;
 }
@@ -229,6 +229,49 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     font-weight: normal;
     padding: 20px 30px;
     text-transform: uppercase;
+}
+.contact-details h1{
+	text-align: left;
+}
+.contact-details{
+	display: table;
+	font-size: 16px;
+	width: 100%;
+}
+.contact-details p:first-child{
+	margin-bottom: 30px;
+}
+.contact-details p{
+	display: inline-block;
+}
+.contact-details p span.details,.contact-details p span.dtl{
+	display: block;
+}
+.contact-details,.social-network{
+	margin-bottom: 40px;
+}
+.contact-details p span.details{
+	display: block;
+	margin-right: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.contact-details p span:first-child{
+	height: 60px;
+	margin-top: 0;
+}
+.contact-details p span{
+	margin-top: 20px;
+}
+
+.social-network{
+	text-align: center;
+}
+.social-network img{
+	width: 63px;
+	height: 63px;
+	display: inline-block;
+	margin-right: 10px;
 }
 /*FIN CONTACT*/
 
@@ -248,11 +291,15 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .product-picture{
 	width: 550px;
 	height: 400px;
-	margin: 10px;
+	/*margin: 10px;*/
 	border: 1px solid black;
 	padding: 10px;
+    margin-bottom: 35px;
 }
 
+.product-specs{
+    bottom: 30px;
+}
 /*FIN product page*/
 
 
