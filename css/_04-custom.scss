@@ -289,8 +289,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 /*Product page*/
 
 .product-picture{
-	width: 550px;
-	height: 400px;
+	
 	/*margin: 10px;*/
 	border: 1px solid black;
 	padding: 10px;
@@ -298,7 +297,18 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 
 .product-specs{
-    bottom: 30px;
+    bottom: 33px;
+    
+}
+
+.product-specs li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.product-spec{
+    display: block;
+    margin-bottom:15px; 
 }
 /*FIN product page*/
 
