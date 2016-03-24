@@ -16,7 +16,7 @@ $(function(){
 		$("[contenteditable]").each(function(){
 			data.push($(this).html());
 		});
-		$.ajax({
+		$.ajax({ 
 			url: 'mybase.php',
 			method: 'POST',
 			data: {
@@ -28,8 +28,28 @@ $(function(){
 			}
 		});
 	});
-});
 
+
+	$("[contenteditable]").focusout(function(d){
+		console.log(d);
+
+		$.ajax({ 
+			url: 'functionBdd.php',
+			method: 'POST',
+			data: {
+				fonction: 'localisationEnBase',
+				data: d.target.id,
+				donnees: d.target.innerText
+			},
+			success: function(m) {
+				//console.log(m);
+				//$(".alert").fadeIn(100);
+				//$(".successMsg").text(m);
+			}
+		});
+
+	})
+});
 
 
 //on cible tous les éléments required
