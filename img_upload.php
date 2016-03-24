@@ -1,4 +1,5 @@
 <?php 
+include('./functionBdd.php');
 // Constantes
 define('TARGET', './img/');    // Repertoire cible
 define('MAX_SIZE', 100000);    // Taille max en octets du fichier
@@ -49,6 +50,7 @@ if(!empty($_POST))
             if(move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET.$nomImage))
             {
               $message = 'Upload réussi !';
+              // Modifier le nom de l'image dans la bdd avec la fonction localisationEnBase
             }
             else
             {

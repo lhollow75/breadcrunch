@@ -17,6 +17,22 @@ function recupProduit(){
 
 }
 
+function recupTable($mysql, $table){
+	$req = $mysql->prepare("SELECT * FROM $table");
+	$req->execute();
+
+	if($req->rowCount()>=1) {
+		while ($donnees = $req->fetch()){
+			$tab[] = $donnees;
+		}
+		//$reponse = $req->fetch();
+		//var_dump($tab);
+		return $tab;
+	} else {
+		return "Site non configuré";
+	}
+}
+
 function recupAccueil($mysql){
 
 	$req = $mysql->prepare("SELECT * FROM configuration");
@@ -38,15 +54,16 @@ function localisationEnBase($mysql, $id, $donnees){
 
 	$reponse = $req->fetch();
 	var_dump($reponse);
-	modifEnBase($mysql, $donnees, $reponse['table_insert'], $reponse['colonne_insert']);
+	modifEnBase($mysql, $donnees, $reponse['table_insert'], $reponse['colonne_insert'], $reponse['id_insert']);
 }
 
-function modifEnBase($mysql, $insertion, $table, $colonne, $row=1){
+function modifEnBase($mysql, $insertion, $table, $colonne, $row){
 	$req = $mysql->prepare("UPDATE $table
 							SET $colonne = :insertion
-							WHERE id_boulangerie=1");
+							WHERE id = :id");
 	$req->execute(array(
-	':insertion'=>utf8_decode(htmlspecialchars($insertion))
+	':insertion'=>utf8_decode(htmlspecialchars($insertion)),
+	':id'=> $row
 	));
 }
 

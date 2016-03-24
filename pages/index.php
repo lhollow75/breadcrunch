@@ -4,6 +4,8 @@
 <?php
 	include('./functionBdd.php');
 	$accueil = recupAccueil($mysql);
+	$categorie = recupTable($mysql, 'categorie');
+	//var_dump($categorie);
 ?>
 <div class="wrapper" >
 	<div class="container bandeau" >
@@ -13,7 +15,7 @@
 	<div class="container galerie">
 		<figure class="col-lg-4 col-xs-12" draggable="<?php echo $activeContent; ?>" ondragstart="drag(event)">
 		   
-			<img src="./img/baguettes.jpg" alt="">
+			<img id="img_baguette" src="./img/<?php echo $categorie[0]['photo'] ?>" alt="" contenteditable="<?php echo $activeContent; ?>">
             <form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
                 <input  class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
                 <button type="submit" name="submit" id="btn">Envoyer</button>
