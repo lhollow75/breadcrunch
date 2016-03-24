@@ -33,6 +33,12 @@
             <input type="hidden" name="id_formulaire" value="envoyer_chocolaterie">
             <button type="submit" >Envoyer</button>
         </form>
+        <img id="img_boisson" class="photo-galery" src="./img/<?php echo $categorie[4]['photo']?>" alt="">
+		<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
+            <input  class="fileimg" type="file" name="fichier"  accept="image/png" multiple>
+            <input type="hidden" name="id_formulaire" value="envoyer_boisson">
+            <button type="submit" >Envoyer</button>
+        </form>
 	</div>
 	<div id="presentation-text">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut obcaecati beatae laborum vel amet. Fugiat delectus et velit, tempora magni.

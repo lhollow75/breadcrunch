@@ -3,7 +3,7 @@ require_once ('php/config.php');
 include('./functionBdd.php');
 // Constantes
 define('TARGET', './img/');    // Repertoire cible
-define('MAX_SIZE', 100000);    // Taille max en octets du fichier
+define('MAX_SIZE', 1000000);    // Taille max en octets du fichier
 define('WIDTH_MAX', 800);    // Largeur max de l'image en pixels
 define('HEIGHT_MAX', 800);    // Hauteur max de l'image en pixels
  
