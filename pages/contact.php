@@ -30,7 +30,7 @@
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<form action="" method="post" id="contact-form" class="row">
 					<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-						<input type="password" name="nom" value="" placeholder="Nom.." required>
+						<input type="text" name="nom" value="" placeholder="Nom.." required>
 						<input type="email" name="email" value="" placeholder="Email.." required>
 						<input type="tel" name="tel" value="" placeholder="Sujet.." required>
 					</div>

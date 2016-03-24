@@ -169,7 +169,7 @@
 /*FIN HOME*/
 
 /*CONTACT*/
-#contact-form input,#contact-form textarea{
+#contact-form input,#contact-form textarea,#connect-form input{
     width: 100%;
     outline: none;
     padding: 10px 10px;
@@ -191,7 +191,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     color: rgb(0, 0, 0);
 }
 
-#contact-form .btn{
+#contact-form .btn,#connect-form .btn{
 	width: 220px;
 	float: right;
 }
