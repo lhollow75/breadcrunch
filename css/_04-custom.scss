@@ -100,6 +100,36 @@
 	margin-top: 10px;
 }
 
+#first-menu{
+	font-size: 0.7em;
+	font-weight: lighter;
+}
+
+#first-menu ul{
+	margin: 0;
+}
+#first-menu ul li a{
+	color: lighten($tertiary-color, 30%);
+	padding: .2em 1.5em;
+}
+
+#second-menu{
+	background-color: $primary-color;
+	color: $quaternary-color;
+	text-transform : uppercase;
+	font-size: 0.7em;
+	font-weight: lighter;
+	padding: 10px 0px;
+}
+#second-menu ul li a{
+	color: $quaternary-color;
+	padding: .2em 2em;
+	border-right: solid 1px #fff;
+}
+#second-menu ul li:last-child a{
+	border: none;
+}
+
 
 /*HOME*/
 #logo{
@@ -115,8 +145,15 @@
 	padding: 10px;
 }
 
-#first-menu ul{
-	margin: 0;
+#intro h1, #intro p{
+	text-align: center;
+}
+
+#intro hr{
+	width:222px;
+	height: 4px;
+	background-color: $primary-color;
+  	border: 0;
 }
 
 
@@ -127,21 +164,6 @@
 }
 #opening-hours p{
 
-}
-
-#first-menu ul li a{
-	color: lighten($tertiary-color, 30%);
-}
-
-#second-menu{
-	background-color: $primary-color;
-	color: $quaternary-color;
-	height: 50px;
-	text-transform : uppercase;
-	font-size: 1.0em;
-}
-#second-menu ul li a{
-	color: $quaternary-color;
 }
 
 /*FIN HOME*/

@@ -77,6 +77,14 @@ function showPage(){
 			$_SESSION['context']="fiche-produit.php";
 			return $page;
 			break;
+
+			case "liste-commande":
+			$page['title']="Commande";
+			$page['desc']="Liste des commandes des utilisateurs";
+			$page['content']="liste-commande.php";
+			$_SESSION['context']="liste-commande.php";
+			return $page;
+			break;
 		}
 	}
 }
