@@ -1,4 +1,6 @@
-<?php 
+<?php
+require_once ('php/config.php');
+include('./functionBdd.php');
 // Constantes
 define('TARGET', './img/');    // Repertoire cible
 define('MAX_SIZE', 100000);    // Taille max en octets du fichier
@@ -44,25 +46,13 @@ if(!empty($_POST))
             && UPLOAD_ERR_OK === $_FILES['fichier']['error'])
           {
             // On renomme le fichier
-            $nomImage = /*md5(uniqid()) .'.'. $extension*/$_FILES['fichier']['name'];
+            $nomImage = $_FILES['fichier']['name'];
  
             // Si c'est OK, on teste l'upload
             if(move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET.$nomImage))
             {
-              $message = 'Upload réussi !';
-              /* A APPROFONDIR, LA REQUETE SQL DOIT PROBABLEMENT ENVOYER VERS UNE AUTRE TABLE.
-              $content = htmlspecialchars($_FILES['fichier']['name']);
-              $id = 1;
-              $page = htmlspecialchars('index.php');
-              $req = $mysql->prepare("INSERT INTO content (id, content, page) 
-                                      VALUES (:id, :content, :page)");
-              $req->execute(array(
-              ':id'=>$id,  
-              ':content'=>$content,
-              ':page'=>$page      
-              ));*/
-              header('location:./index.php');
-              exit();
+              $message = 'Upload réussi !'; localisationEnBase($mysql,$_POST['id_formulaire'],$nomImage);
+              header('location:./index.php');    
             }
             else
             {

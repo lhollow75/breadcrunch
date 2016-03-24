@@ -68,9 +68,8 @@
 	padding: 10px;
 }
 
-#galery{
 
-}
+
 
 /**/
 #opening-hours{
@@ -81,6 +80,10 @@
 
 }
 
+#first-menu ul li a{
+	color: lighten($tertiary-color, 30%);
+}
+
 #second-menu{
 	background-color: $primary-color;
 	color: $quaternary-color;
@@ -88,8 +91,11 @@
 	text-transform : uppercase;
 	font-size: 1.0em;
 }
-/*FIN HOME*/
+#second-menu ul li a{
+	color: $quaternary-color;
+}
 
+/*FIN HOME*/
 
 /*CONTACT*/
 #contact-form input,#contact-form textarea{
@@ -115,5 +121,14 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 /*FIN CONTACT*/
 
+/*Product page*/
 
+.product-photo{
+	width: 300px;
+	height: 250px;
+	margin: 10px;
+	padding: 10px;
+}
+
+/*End product page*/
 

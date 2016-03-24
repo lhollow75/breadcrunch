@@ -1,62 +1,17 @@
-<!-- //============ 
-   MAIN CONTENT
-=============== -->
-<?php
-	include('./functionBdd.php');
-	$accueil = recupAccueil($mysql);
-?>
-<div class="wrapper" >
-	<div class="container bandeau" >
-			<h1 id="titre_boulangerie" class="col-lg-12" contenteditable="<?php echo $activeContent; ?>"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></h1>
-			<h2 class="col-lg-12"></h2>
+	<img src="images/breadcrunch_02.jpg" alt="">
+	<div>
+		<h1>Lorem ipsum dolor sit amet</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui blanditiis distinctio sunt, laborum incidunt itaque?</p>
 	</div>
-	<div class="container galerie">
-		<figure class="col-lg-4 col-xs-12" draggable="<?php echo $activeContent; ?>" ondragstart="drag(event)">
-		   
-			<img src="./img/baguettes.jpg" alt="">
-            <form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
-                <input  class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
-                <button type="submit" name="submit" id="btn">Envoyer</button>
-            </form>
-			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>
-		</figure>
-		<figure class="col-lg-4 col-xs-12">
-		    
-			<img src="./img/patisserie.jpg" alt="">
-			<form method="post" style="display:<?php echo $appear; ?>;" enctype="multipart/form-data" action="./img_upload.php">
-                <input  class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
-                <button type="submit" name="submit" id="btn">Envoyer</button>
-            </form>
-			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>
-		</figure>
-		<figure class="col-lg-4 col-xs-12">
-		    
-			<img src="./img/chocolats.jpg" alt="">
-			<form method="post" style="display:<?php echo $appear; ?>;" enctype="multipart/form-data" action="./img_upload.php">
-                <input class="fileimg" type="file" name="fichier" id="images" accept="image/*" multiple>
-                <button type="submit" name="submit" id="btn">Envoyer</button>
-            </form>
-			<figcaption contenteditable="<?php echo $activeContent; ?>"></figcaption>
-		</figure>
+	<div id="galery">
+		<img class="photo-galery" src="images/breadcrunch_05.jpg" alt="">
+		<img class="photo-galery" src="images/breadcrunch_07.jpg" alt="">
+		<img class="photo-galery" src="images/breadcrunch_09.jpg" alt="">
+		<img class="photo-galery" src="images/breadcrunch_11.jpg" alt="">
 	</div>
-</div><!-- /#main-content -->
-
-<div class="container">
-	<div class="col-lg-12" contenteditable="<?php echo $activeContent; ?>">
-		<h1>coucou</h1>
-		<p></p>
+	<div id="presentation-text">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut obcaecati beatae laborum vel amet. Fugiat delectus et velit, tempora magni.
 	</div>
-	<div class="col-lg-6 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
-		<h1></h1>
-		<p></p>
+	<div id="opening-hours">
+		<p>Ouvert du mardi au dimanche de 7h à 20h30</p>
 	</div>
-	<div class="col-lg-6 col-xs-12" contenteditable="<?php echo $activeContent; ?>">
-		<h1></h1>
-		<p></p>
-	</div>
-</div>
-
-
-<!-- //============ 
-   /MAIN CONTENT
-=============== -->
