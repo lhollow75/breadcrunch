@@ -22,11 +22,11 @@ function showPage(){
 			return $page;
 			break;
 
-			case "administration":
-			$page['title']="Administration";
-			$page['desc']="Administration du site";
-			$page['content']="administration.php";
-			$_SESSION['context']="administration.php";
+			case "config-site":
+			$page['title']="Configuration";
+			$page['desc']="Configuration du site";
+			$page['content']="config-site.php";
+			$_SESSION['context']="config-site.php";
 			return $page;
 			break;
 
@@ -83,6 +83,14 @@ function showPage(){
 			$page['desc']="Liste des commandes des utilisateurs";
 			$page['content']="liste-commande.php";
 			$_SESSION['context']="liste-commande.php";
+			return $page;
+			break;
+
+			case "config-site":
+			$page['title']="Configuration du site";
+			$page['desc']="Modifier les configurations du site";
+			$page['content']="config-site.php";
+			$_SESSION['context']="config-site.php";
 			return $page;
 			break;
 		}
