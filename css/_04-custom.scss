@@ -194,6 +194,8 @@
 /*CONTACT*/
 #contact-form input,#contact-form textarea,#connect-form input{
     width: 100%;
+}
+#contact-form input,#contact-form textarea,#connect-form input,#register-form input{
     outline: none;
     padding: 10px 10px;
     margin: 10px 0;
@@ -278,12 +280,46 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 
 /*FORMULAIRE DE CONNEXION*/
-#connect-form{
+#connect-form,#register-form{
 	width: 80%;
 	margin: auto;
 }
-
+#register-form .column{
+	padding-right: 0;
+}
+#register-form .column2{
+    margin-left: -10px;
+}
+#register-form input{
+	width: 98%;
+}
+#register-form input[type="submit"]{
+	max-width: 220px;
+	float: right;
+}
+#register-form input[type="checkbox"]{
+	max-width: 30px;
+	display: inline-block;
+}
+#register-form div p{
+	display: inline;
+}
+#register-form div span{
+	color: #ff0000;
+	margin-top: -10px;
+}
+#register-form .required{
+	display: block;
+}
 /*FIN FORMULAIRE DE CONNEXION*/
+
+
+/*FORMULAIRE DE S'INSCRIRE*/
+input[type="checkbox"]{
+	display: inline-block;
+}
+
+/*FIN FORMULAIRE DE S'INSCRIRE*/
 
 /*Category page*/
 
