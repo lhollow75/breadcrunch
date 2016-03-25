@@ -42,7 +42,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>

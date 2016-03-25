@@ -1,9 +1,9 @@
 <div class="wrapper" id="main-content">
 <div class="container">
 <h1 class="product-name">Pain au chocolat</h1>
-<img class="col-lg-7 product-picture" src="images/breadcrunch_29.jpg" alt="">
+<img class="col-lg-7  product-picture" src="images/breadcrunch_29.jpg" alt="">
 
-<div class="product-specs col-lg-5 col-sm-12 col-md-12 col-xs-12">
+<div class="product-specs col-lg-5 col-sm-12 col-md-5 col-xs-12">
 <h4>Ingrédients</h4>
 <p class="product-spec">Sucre, oeufs, farine, et d'autres trucs</p>
 
@@ -25,11 +25,11 @@
 	  <option value="17h-18h">17h - 18h</option>
 	</select>
 </div>
-<div class="col-lg-2 col-sm-12 col-md-12 col-xs-12">
+<div class="col-lg-2 col-sm-12 col-md-2 col-xs-12">
 <label for="quantity">Quantité</label><input type="number" name="quantity" id="quantity" class="product-spec">
 </div>
 
-<div class="col-lg-4 col-lg-offset-1 col-sm-12 col-md-12 col-xs-12">
+<div class="col-lg-4 col-lg-offset-1 col-sm-12 col-md-4 col-xs-12">
 <label>Allergène : </label>
 
 <ul>
@@ -38,7 +38,7 @@
 </ul>
 </div>
 
-<div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
+<div class="col-lg-5 col-sm-12 col-md-5 col-xs-2">
 <label>Taille gateaux</label>
 	<select class="product-spec">
 		  <option value="4pers">4 pers.</option>
