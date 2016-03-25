@@ -111,13 +111,18 @@
 
 #titre_magasin{
 	text-align: center;
-	font-weight: 700;
-	font-size: 30px;
-	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 24px;
 	display: block;
-	margin: 20px 0px;
+	margin: 10px 0px;
 }
-
+#logo_magasin a{
+	text-align: center;
+}
+#logo_magasin{
+	width: 100%;
+    text-align: center;
+}
 #first-menu{
 	font-size: 14px;
 	font-weight: lighter;
@@ -126,12 +131,16 @@
 #first-menu ul{
 	margin: 0;
 }
+#first-menu ul li{
+	padding: 10px;
+}
 #first-menu ul li a{
 	color: lighten($tertiary-color, 30%);
+	border-bottom: solid 4px $quaternary-color;
 	padding: .2em 1.5em;
 }
 #first-menu ul li a:hover{
-	text-decoration: underline;
+	border-bottom: solid 4px $primary-color;
 }
 
 #second-menu{
@@ -163,15 +172,20 @@
 
 
 /*HOME*/
+
+#vid{
+	width: 100%;
+}
+
 #logo{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 
 .photo-galery{
 	width: 200px;
 	height: 200px;
-	margin: 10px;
+	/*margin: 10px;*/
 	border: 1px solid black;
 	padding: 10px;
 }
@@ -179,7 +193,7 @@
 #intro h1, #intro p{
 	text-align: center;
 }
-#intro h1, #story h1{
+#intro h1, .page_titre{
 	margin-bottom: 5px;
 }
 
@@ -194,7 +208,7 @@ hr{
 	height: 4px;
 	background-color: $primary-color;
   	border: 0;
-  	margin-bottom: 0px !important;
+  	margin-bottom: 20px !important;
   	margin-top: 0px !important;
 }
 
@@ -663,6 +677,7 @@ input[type="checkbox"]{
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: bold;
+    letter-spacing: 0.05em;
 }
 
 #footer-presentation p, #footer-social p, #footer-location p{
@@ -701,6 +716,7 @@ input[type="checkbox"]{
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
+/*Fin FOOTER*/
 
 /*CONFIG SITE*/
 
@@ -748,16 +764,28 @@ p.name-of-admin {
     margin-top: 20px;
 }
 div#admin-card {
-    width: 49%;
+    min-width: 49%;
 }
 .space{
 	max-width:20px;
 	padding: 0;
 }
-
+#config-site span.icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: $primary-color;
+}
+#config-site span.icon2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 20px;
+    color: $primary-color;
+}
 /*FIN CONFIG SITE*/
 
-/*Fin FOOTER*/
 
 /*Page promotions*/
 .old-product-price{

@@ -3,9 +3,12 @@
     $categorie = recupTable($mysql,'categorie');
     ?>
 
+	<!--<video autoplay loop muted poster="/static/img/background.jpg" id="vid">
+		<source src="./video/video_boulanger.mp4" type="video/mp4">
+	</video>-->
 
     <img src="images/breadcrunch_00.jpg" alt="">
-    
+
     <div class="wrapper" id="main-content">
         <div class="container">
 			<div id="intro">

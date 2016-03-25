@@ -2,6 +2,11 @@
         <div class="container">
         	<div class="row">
         		<div class="col-lg-12">
+					<h1 class="page_titre">Nos produits</h1>
+					<hr>
+				</div>
+
+        		<div class="col-lg-12">
 					<h2>Produits boulangers</h2>
 				</div>
 
