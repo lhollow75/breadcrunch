@@ -106,30 +106,35 @@
 				</div>
 				<div class="conf-bloc">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<label class="col-lg-6" for="admin-active">Ajouter un administrateur : </label>
-						<input class="col-lg-6" type="text" name="admin-active" id="admin-active" placeholder="Email..">
+					<h2>ADMINISTRATION</h2>
+						<label class="col-lg-3" for="admin-active">Ajouter un administrateur : </label>
+						<input class="col-lg-9" type="text" name="admin-active" id="admin-active" placeholder="Email..">
 					</div>
-					<div class="admin-card col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="left-admin-card col-lg-6">
-							<p>ADMINISTRATEUR</p>
-							<p class="name-of-admin">Marc DESBOS</p>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div id="admin-card" class="col-lg-5">
+							<div class="col-lg-6">
+								<p>ADMINISTRATEUR</p>
+								<p class="name-of-admin">Marc DESBOS</p>
+							</div>
+							<div class="col-lg-6">
+								<p>Pseudo : </p><p>marcD</p>
+								<a href="">Modifier le mot de passe</a>
+								<p>marc.desbos@gmail.com</p>
+							</div>
 						</div>
-						<div class="left-admin-card col-lg-6">
-							<p>Pseudo : </p><p>marcD</p>
-							<a href="">Modifier le mot de passe</a>
-							<p>marc.desbos@gmail.com</p>
+						<div class="space col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
+						<div id="admin-card" class="col-lg-5">
+							<div class="col-lg-6">
+								<p>ADMINISTRATEUR</p>
+								<p class="name-of-admin">Marc DESBOS</p>
+							</div>
+							<div class="col-lg-6">
+								<p>Pseudo : </p><p>marcD</p>
+								<a href="">Modifier le mot de passe</a>
+								<p>marc.desbos@gmail.com</p>
+							</div>
 						</div>
-					</div>
-					<div class="admin-card col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="left-admin-card col-lg-6">
-							<p>ADMINISTRATEUR</p>
-							<p class="name-of-admin">Marc DESBOS</p>
-						</div>
-						<div class="left-admin-card col-lg-6">
-							<p>Pseudo : </p><p>marcD</p>
-							<a href="">Modifier le mot de passe</a>
-							<p>marc.desbos@gmail.com</p>
-						</div>
+						<div class="space col-lg-1 col-md-1"></div>
 					</div>
 				</div>
 			</div>

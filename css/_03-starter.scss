@@ -65,7 +65,11 @@ p, li, span,label{
     font-family: $base-font-family;
     margin:0;
 }
-
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 /*.social-bar{
     background-color: $social-bar-bg-color;
     a{
