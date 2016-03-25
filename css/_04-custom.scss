@@ -249,10 +249,10 @@
 /*FIN HOME*/
 
 /*CONTACT*/
-#contact-form input,#contact-form textarea,#connect-form input{
+#contact-form input,#contact-form textarea,#connect-form input,#chart-form input,#chart-form textarea{
     width: 100%;
 }
-#contact-form input,#contact-form textarea,#connect-form input,#register-form input{
+#contact-form input,#contact-form textarea,#connect-form input,#register-form input,#chart-form input,#chart-form  button,#chart-form textarea{
     outline: none;
     padding: 10px 10px;
     margin: 10px 0;
@@ -263,7 +263,7 @@
     transition: all 0.3s ease-out;
 }
 
-#contact-form textarea{
+#contact-form textarea,#chart-form textarea{
     border-color: #e1e2e1;
 }
 
@@ -350,7 +350,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 
 /*FORMULAIRE DE CONNEXION*/
-#connect-form,#register-form{
+#connect-form,#register-form,#chart-form{
 	width: 80%;
 	margin: auto;
 }
@@ -367,7 +367,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	max-width: 220px;
 	float: right;
 }
-#register-form input[type="checkbox"]{
+#register-form input[type="checkbox"],#chart-form input[type="checkbox"]{
 	max-width: 30px;
 	display: inline-block;
 }
@@ -388,8 +388,49 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 input[type="checkbox"]{
 	display: inline-block;
 }
-
 /*FIN FORMULAIRE DE S'INSCRIRE*/
+
+/*PANIER*/
+#chart-form button{
+	float: right;
+	display: inline-block;
+}
+
+#chart-form img{
+	width: 140px;
+	border: 1px solid black;
+	padding: 5px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.gift{
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+.gift-msg{
+	width: 75%;
+}
+.gift-lab{
+	margin-top: 20px;
+}
+.chart-infos{
+    margin-top: 20px;
+}
+#chart-form input[type="checkbox"]{
+	margin-left: 10px;
+}
+.chart-infos p span:first-child {
+}
+.chart-infos p span:last-child {
+    text-align: right;
+}
+.chart-com{
+	margin-top: 20px;
+}
+/*FIN PANIER*/
+
 
 /*Category page*/
 
