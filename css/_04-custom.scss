@@ -518,8 +518,6 @@ input[type="checkbox"]{
     transition: all 0.3s ease-out;
 }
 
-
-
 .product-name{
 	font-size: 20px;
 	font-weight: bold;
@@ -532,6 +530,14 @@ input[type="checkbox"]{
 .product-price{
 	font-size: 31px;
 	font-weight: bold;
+}
+
+.product-price span{
+	font-size: 18px;
+}
+.product-price span:hover{
+	font-size: 18px;
+	color: $secondary-color;
 }
 
 /*End category page*/
