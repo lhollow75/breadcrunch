@@ -46,7 +46,7 @@
                         <?php
                     }
                  ?>
-                <li><a class="btn_cart" href="index.php?page=panier">Mon panier • (0)<span></a></li>
+                <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>
             </ul>
         </nav>
         <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>

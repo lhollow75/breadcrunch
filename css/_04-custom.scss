@@ -72,7 +72,6 @@
 	color: $quaternary-color;
 }
 #user-bar ul li a:hover{
-	text-decoration: underline;
 	color: $quaternary-color;
 	background-color: darken($primary-color, 30%);
 }
@@ -100,6 +99,15 @@
 	background-color: $primary-color;
 }
 
+#user-bar ul li span{
+	color: #fff;
+    display: inline-block;
+    position: relative;
+    top: initial;
+    right: initial;
+    line-height: 0.4em;
+    margin-right: 5px;
+}
 
 #titre_magasin{
 	text-align: center;
