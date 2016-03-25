@@ -10,23 +10,27 @@
 <label>Délai de commande minimum : </label>
 
 <?php
-                    if(isset($_SESSION['login'])) {
-                        if($_SESSION['admin']==true) {
-
-                        ?>
-                        	<input type="text" name="" id=""></input></br>
-                        <?php
-                        }
-                        ?>
-                        
-                        <?php
-                    } else {
-
-                        ?>
-							<p class="product-spec">2h</p>
-                        <?php
-                    }
-                 ?>
+    if(isset($_SESSION['login'])) {
+        if($_SESSION['admin']==true) {
+?>
+            <input type="text" name="" id=""></input>
+            <select class="product-spec">
+				<option value="9h-10h">Heure</option>
+				<option value="10h-11h">Jours</option>
+				<option value="11h-12h">Semaines</option>
+				<option value="11h-12h">Mois</option>
+			</select>
+            </br>
+            <?php
+            	}
+            ?>
+            <?php
+            	} else {
+			?>
+			<p class="product-spec">2h</p>
+            <?php
+                }
+            ?>
 
 <label for="pickup-date">Date de retrait </label><input type="date" name="pickup-date" id="pickup-date" class="product-spec">
 <label>Heure de retrait </label>
