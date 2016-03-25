@@ -35,15 +35,32 @@ $(function(){
 		box = $(this).context.checked;
 		valeur = nomBox.split('-')[1];
 
-		//console.log(<?$categorie[0]['actif']?>)
-		
+		console.log(nomBox);
+		console.log(box);
+		if (box==true){
+			box = 1;
+		} else {
+			box = 0;
+		}
+		$.ajax({ 
+			url: 'functionBdd.php',
+			method: 'POST',
+			data: {
+				fonction: 'localisationEnBase',
+				data: nomBox,
+				donnees: box,
+				action: 'modification'
+			},
+		});
+
 		showHide(valeur, box);
+
+		
 	});
 
 });
 
 function showHide(valeur, box){
-	console.log("la");
 	switch(valeur){
 			case 'boulangerie':
 				if (box==false){

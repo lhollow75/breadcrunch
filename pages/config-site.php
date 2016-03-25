@@ -8,7 +8,7 @@ for ($i=0; $i < sizeof($categorie); $i++) {
 ?>
  <?php //echo utf8_encode($accueil['nom_boulangerie']) ?>
 
-<div>
+<div >
 	Catégories proposées : 
 	<?php
 	for ($i=0; $i < sizeof($categorie); $i++) { 
