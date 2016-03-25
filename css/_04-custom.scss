@@ -72,7 +72,6 @@
 	color: $quaternary-color;
 }
 #user-bar ul li a:hover{
-	text-decoration: underline;
 	color: $quaternary-color;
 	background-color: darken($primary-color, 30%);
 }
@@ -100,6 +99,15 @@
 	background-color: $primary-color;
 }
 
+#user-bar ul li span{
+	color: #fff;
+    display: inline-block;
+    position: relative;
+    top: initial;
+    right: initial;
+    line-height: 0.4em;
+    margin-right: 5px;
+}
 
 #titre_magasin{
 	text-align: center;
@@ -136,6 +144,7 @@
 }
 #second-menu ul li{
 	margin-left: -0.25em;/*delete white-space*/
+	display: inline-block !important;
 }
 
 #second-menu ul li a{
@@ -170,7 +179,7 @@
 #intro h1, #intro p{
 	text-align: center;
 }
-#intro h1{
+#intro h1, #story h1{
 	margin-bottom: 5px;
 }
 
@@ -180,7 +189,7 @@
 }	
 
 
-#intro hr{
+hr{
 	width:222px;
 	height: 4px;
 	background-color: $primary-color;
@@ -260,6 +269,12 @@
 }
 
 /*FIN HOME*/
+
+
+/*STORY*/
+.story-section{
+	margin: 20px 0px 30px 0px;
+}
 
 /*CONTACT*/
 #contact-form input,#contact-form textarea,#connect-form input,#chart-form input,#chart-form textarea{
@@ -495,6 +510,7 @@ input[type="checkbox"]{
 	background-color: darken($quaternary-color, 30%);
 }
 .product-photo-img-admin p{
+    font-size: 80px;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
@@ -521,6 +537,7 @@ input[type="checkbox"]{
 	position: absolute;
 	background-color: $primary-color;
 	width: 300px;
+    height: 100px;
 	right: 0px;
 	bottom: -110px;
 	text-align: center;
@@ -685,7 +702,7 @@ input[type="checkbox"]{
     transition: all 0.3s ease-out;
 }
 
-/*CONFIR SITE*/
+/*CONFIG SITE*/
 
 #config-site{
 	
@@ -722,3 +739,25 @@ input#admin-active {
 }
 /*FIN CONFIG SITE*/
 
+/*Fin FOOTER*/
+
+/*Page promotions*/
+.old-product-price{
+    text-decoration: line-through;
+}
+
+.product-infos li{
+    list-style-type: none;
+    display: inline-block;
+    
+}
+
+.product-infos ul{
+    padding-left: 0px;
+    margin-top: 1px;
+}
+
+#promo-title{
+    text-align: center;
+}
+/*Fin page promotions*/

@@ -3,6 +3,7 @@
     $categorie = recupTable($mysql,'categorie');
     ?>
 
+
     <img src="images/breadcrunch_00.jpg" alt="">
     
     <div class="wrapper" id="main-content">
@@ -20,6 +21,9 @@
 			    <div id="boulangerie" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			    	<div class="galery-section">
 				    	<img id="img_boulangerie" class="photo-galery" src="./img/<?php echo $categorie[0]['photo']?>" alt="">
+				    	<div id="presentation-boulangerie" contenteditable="<?php echo $activeContent; ?>">
+							<p><?php localisationEnBase($mysql, 'presentation-boulangerie','', 'recuperation') ?></p>
+						</div><!-- /#presentation-boulangerie -->
 				        <form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
 				            <input type="hidden" name="id_formulaire" value="envoyer_boulangerie">
@@ -34,6 +38,9 @@
 			    <div id="patisserie" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			    	<div class="galery-section">
 				    	<img id="img_patisserie" class="photo-galery" src="./img/<?php echo $categorie[1]['photo']?>" alt="">
+				    	<div id="presentation-patisserie" contenteditable="<?php echo $activeContent; ?>">
+							<p><?php localisationEnBase($mysql, 'presentation-patisserie','', 'recuperation') ?></p>
+						</div><!-- /#presentation-patisserie -->
 				    	<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
 				            <input type="hidden" name="id_formulaire" value="envoyer_patisserie">
@@ -48,6 +55,9 @@
 			    <div id="sandwich" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			    	<div class="galery-section">
 				    	<img id="img_sandwich" class="photo-galery" src="./img/<?php echo $categorie[2]['photo']?>" alt="">
+				    	<div id="presentation-sandwich" contenteditable="<?php echo $activeContent; ?>">
+							<p><?php localisationEnBase($mysql, 'presentation-sandwich','', 'recuperation') ?></p>
+						</div><!-- /#presentation-sandwich -->
 				    	<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
 				            <input type="hidden" name="id_formulaire" value="envoyer_sandwich">
@@ -62,6 +72,9 @@
 			    <div id="chocolaterie" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			    	<div class="galery-section">
 				    	<img id="img_chocolaterie" class="photo-galery" src="./img/<?php echo $categorie[3]['photo']?>" alt="">
+				    	<div id="presentation-chocolaterie" contenteditable="<?php echo $activeContent; ?>">
+							<p><?php localisationEnBase($mysql, 'presentation-chocolaterie','', 'recuperation') ?></p>
+						</div><!-- /#presentation-chocolaterie -->
 				    	<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
 				            <input type="hidden" name="id_formulaire" value="envoyer_chocolaterie">
@@ -76,6 +89,9 @@
 			    <div id="boisson" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 			    	<div class="galery-section">
 				        <img id="img_boisson" class="photo-galery" src="./img/<?php echo $categorie[4]['photo']?>" alt="">
+				        <div id="presentation-boisson" contenteditable="<?php echo $activeContent; ?>">
+							<p><?php localisationEnBase($mysql, 'presentation-boisson','', 'recuperation') ?> Boissons</p>
+						</div><!-- /#presentation-boisson -->
 				    	<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/png" multiple>
 				            <input type="hidden" name="id_formulaire" value="envoyer_boisson">
