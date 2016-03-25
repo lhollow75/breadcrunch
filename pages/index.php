@@ -3,6 +3,7 @@
     $categorie = recupTable($mysql,'categorie');
     ?>
 
+
     <img src="images/breadcrunch_00.jpg" alt="">
     
     <div class="wrapper" id="main-content">

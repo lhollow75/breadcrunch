@@ -43,6 +43,7 @@ $(function(){
 });
 
 function showHide(valeur, box){
+	console.log("la");
 	switch(valeur){
 			case 'boulangerie':
 				if (box==false){

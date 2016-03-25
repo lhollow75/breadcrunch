@@ -17,6 +17,10 @@
     include('./functionBdd.php');
     $accueil = recupAccueil($mysql);
     $categorie = recupTable($mysql,'categorie');
+    $taille_categorie = sizeof($categorie);
+    for($i=0; $i<$taille_categorie; $i++){
+        $affiche_categorie[] = $categorie[$i]["actif"];
+    }
     if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
     ?>
         <link rel="stylesheet" href="css-admin/admin.css">
@@ -76,4 +80,47 @@
                 <li><a id="menu-boisson" href="#">Boisson</a></li>
             </ul>
         </nav>
+        <script type="text/javascript">
+            produit = ['<?php echo $affiche_categorie[0] ?>', '<?php echo $affiche_categorie[1] ?>', '<?php echo $affiche_categorie[2] ?>', '<?php echo $affiche_categorie[3] ?>', '<?php echo $affiche_categorie[4] ?>'];
+
+            for(i=0; i<produit.length; i++){
+                switch(i){
+                    case 0:
+                        if (produit[i]==0){
+                            document.getElementById('menu-boulangerie').style.display = "none";
+                        }else {
+                            document.getElementById('menu-boulangerie').style.display = "block";
+                        }
+                        break;
+                    case 1:
+                       if (produit[i]==0){
+                            document.getElementById('menu-patisserie').style.display = "none";
+                        }else {
+                            document.getElementById('menu-patisserie').style.display = "block";
+                        }
+                        break;
+                    case 2:
+                        if (produit[i]==0){
+                            document.getElementById('menu-sandwich').style.display = "none";
+                        }else {
+                            document.getElementById('menu-sandwich').style.display = "block";
+                        }
+                        break;
+                    case 3:
+                        if (produit[i]==0){
+                            document.getElementById('menu-chocolaterie').style.display = "none";
+                        }else {
+                            document.getElementById('menu-chocolaterie').style.display = "block";
+                        }
+                        break;
+                    case 4:
+                        if (produit[i]==0){
+                            document.getElementById('menu-boisson').style.display = "none";
+                        }else {
+                            document.getElementById('menu-boisson').style.display = "block";
+                        }
+                        break;
+                }
+            }
+        </script>
     </header>
