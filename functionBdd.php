@@ -46,6 +46,8 @@ function recupTable($mysql, $table){
 	}
 }
 
+
+
 function recupAccueil($mysql){
 
 	$req = $mysql->prepare("SELECT * FROM configuration");
@@ -83,5 +85,33 @@ function modifEnBase($mysql, $insertion, $table, $colonne, $row){
 	':id'=> $row
 	));
 }
+
+function uniteDelaiEnBase ($mysql, $row){
+	$req = $mysql->prepare("SELECT unite 
+							FROM unite_delai, produits
+							WHERE unite_delai.id = produits.unite_delai
+							AND produit.id = :row");
+	$req->execute(array(
+		':row'=>$row
+		));
+}
+
+/*create a new empty product in database*/
+function productCreation ($mysql){
+	$req = $mysql->prepare("INSERT INTO produits 
+							VALUES ('', '', '', '', '', '', '', '','', '', '', '', '', ''");
+	$req->execute();
+}
+
+/*get une ligne from product table */
+function recupProduct($mysql, $id){
+	$req = $mysql->prepare("SELECT * FROM produits
+							WHERE id=:id");
+	$req->execute(array(
+		':id'=>$id);
+}
+
+
+
 
 ?>
