@@ -9,7 +9,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 contenteditable="<?php echo $activeContent; ?>">CONTACT</h1>
+				<h1 class="page_titre" contenteditable="<?php echo $activeContent; ?>">CONTACT</h1>
+				<hr>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<form action="" method="post" id="contact-form" class="row">

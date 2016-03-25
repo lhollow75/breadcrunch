@@ -193,7 +193,7 @@
 #intro h1, #intro p{
 	text-align: center;
 }
-#intro h1, #story h1{
+#intro h1, .page_titre{
 	margin-bottom: 5px;
 }
 
@@ -208,7 +208,7 @@ hr{
 	height: 4px;
 	background-color: $primary-color;
   	border: 0;
-  	margin-bottom: 0px !important;
+  	margin-bottom: 20px !important;
   	margin-top: 0px !important;
 }
 
