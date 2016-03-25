@@ -358,6 +358,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	display: inline-block;
 	margin-right: 10px;
 }
+span#dt {
+    display: block;
+    margin-top: 0;
+    height: 18px;
+    margin-bottom: 3px;
+}
 /*FIN CONTACT*/
 
 
@@ -679,4 +685,40 @@ input[type="checkbox"]{
     transition: all 0.3s ease-out;
 }
 
+/*CONFIR SITE*/
+
+#config-site{
+	
+}
+
+#config-site div{
+	margin-bottom: 20px;
+}
+#config-site label,#config-site p{
+	display: inline-block;
+}
+.theme label,.modules label,.cont label{
+	margin-right: 20px;
+}
+#config-site div > p{
+	margin-right: 30px;
+}
+#config-site .social-net >p{
+	margin-bottom: 20px;
+	display: block;
+}
+input#admin-active {
+    font-family: $base-font-family;
+    padding: 5px 0 0 5px;
+}
+.conf-bloc{
+	display: table;
+	border: 1px solid $primary-color;
+}
+.conf-bloc  h2{
+	color: $primary-color;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+/*FIN CONFIG SITE*/
 
