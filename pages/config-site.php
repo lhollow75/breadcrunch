@@ -111,28 +111,32 @@
 						<input class="col-lg-9" type="text" name="admin-active" id="admin-active" placeholder="Email..">
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div id="admin-card" class="col-lg-5">
+						<div id="admin-card" class="col-lg-5 col-md-5 col-sm-12">
 							<div class="col-lg-6">
 								<p>ADMINISTRATEUR</p>
 								<p class="name-of-admin">Marc DESBOS</p>
 							</div>
 							<div class="col-lg-6">
-								<p>Pseudo : </p><p>marcD</p>
-								<a href="">Modifier le mot de passe</a>
+								<p class="col-sm-12 col-xs-12">Pseudo : </p><p>marcD</p>
+								<a class="col-sm-12 col-xs-12" href="">Modifier le mot de passe</a>
 								<p>marc.desbos@gmail.com</p>
 							</div>
+							<span class="icon icon-squared-cross"></span>
+							<span class="icon2 icon-mail"></span>
 						</div>
 						<div class="space col-lg-1 col-md-1 hidden-sm hidden-xs"></div>
-						<div id="admin-card" class="col-lg-5">
+						<div id="admin-card" class="col-lg-5 col-md-5 col-sm-12">
 							<div class="col-lg-6">
 								<p>ADMINISTRATEUR</p>
 								<p class="name-of-admin">Marc DESBOS</p>
 							</div>
 							<div class="col-lg-6">
-								<p>Pseudo : </p><p>marcD</p>
-								<a href="">Modifier le mot de passe</a>
+								<p class="col-sm-12 col-xs-12">Pseudo : </p><p>marcD</p>
+								<a class="col-sm-12 col-xs-12"href="">Modifier le mot de passe</a>
 								<p>marc.desbos@gmail.com</p>
 							</div>
+							<span class="icon icon-squared-cross"></span>
+							<span class="icon2 icon-mail"></span>
 						</div>
 						<div class="space col-lg-1 col-md-1"></div>
 					</div>

@@ -9,16 +9,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 contenteditable="<?php echo $activeContent; ?>">CONTACT</h1>
+				<h1 class="page_titre" contenteditable="<?php echo $activeContent; ?>">CONTACT</h1>
+				<hr>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<form action="" method="post" id="contact-form" class="row">
-					<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
 						<input type="text" name="nom" value="" placeholder="Nom.." required>
 						<input type="email" name="email" value="" placeholder="Email.." required>
 						<input type="tel" name="tel" value="" placeholder="Sujet.." required>
 					</div>
-					<div class="col-lg-12">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<textarea rows="8" name="message" id="message" placeholder="Message.."></textarea>
 						<input class="btn" type="submit" name="sumbit" value="Envoyer">
 					</div>

@@ -28,14 +28,14 @@
     }
     ?>
 </head>
+
 <body>
     <header>
-        <nav id="user-bar">
-            <ul>
-            <?php
-                    if(isset($_SESSION['login'])) {
-                        if($_SESSION['admin']==true) {
-
+                <nav id="user-bar">
+                    <ul>
+                    <?php
+                        if(isset($_SESSION['login'])) {
+                            if($_SESSION['admin']==true) {
                         ?>
                         <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
                         <li><a class="btn_cart" href="index.php?page=liste-commande">Liste des commandes</a></li>
@@ -59,13 +59,38 @@
                 
             </ul>
         </nav>
+        <div class="wrapper contact" id="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <div id="logo_magasin">
+                <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
+            </div>
+        </div>
+    </div>
+</div>
+         <div class="col-lg-12">
         <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
+        </div>
+
+
+<div class="wrapper contact" id="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <div id="logo_magasin">
+                <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
         <nav id="first-menu">
             <ul>
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="index.php?page=categorie">Produits</a></li>
                 <li><a href="index.php?page=promotions">Promotions</a></li>
-                <li><a href="index.php"><img src="images/breadcrunch_logo.png" alt="Logo" id="logo"></a></li>
+                <!--<li><a href="index.php"><img src="images/breadcrunch_logo.png" alt="Logo" id="logo"></a></li>-->
                 <?php
                 if ($accueil['blog']!=""){
                 ?>
