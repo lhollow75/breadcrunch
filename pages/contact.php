@@ -33,9 +33,11 @@
 						<span class="details">Email</span>
 					</p>
 					<p class="col-lg-7">
-						<span class="dtl" contenteditable="<?php echo $activeContent; ?>">Siège Social<br>2, rue de la Monnaie<br>10000 Troyes</span>
+
+						<span id="dt" contenteditable="<?php echo $activeContent; ?>">Siège Social</span><span id="dt" contenteditable="<?php echo $activeContent; ?>">2, rue de la Monnaie</span><span id="dt" contenteditable="<?php echo $activeContent; ?>">10000 Troyes</span>
 						<span class="dtl" contenteditable="<?php echo $activeContent; ?>">+33 (0)3 25 80 38 38</span>
 						<span class="dtl" contenteditable="<?php echo $activeContent; ?>">infos@pascal-caffet.com</span>
+
 					</p>
 				</div>
 				<div class="social-network">
