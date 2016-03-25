@@ -109,6 +109,14 @@ function showPage(){
 			$_SESSION['context']="promotions.php";
 			return $page;
 			break;
+
+			case "demarrage":
+			$page['title']="Démarrage";
+			$page['desc']="Page de démarrage avant activation du thème";
+			$page['content']="demarrage.php";
+			$_SESSION['context']="demarrage.php";
+			return $page;
+			break;
 		}
 	}
 }

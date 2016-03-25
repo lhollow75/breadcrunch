@@ -367,6 +367,16 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	width: 80%;
 	margin: auto;
 }
+#connect-form > div + div {
+    padding-right: 0;
+    margin-left: -20px;
+}
+#connect-form div:first-child {
+    padding-left: 0;
+}
+/*FIN FORMULAIRE DE CONNEXION*/
+
+/*FORMULAIRE D'INSCRIPTION*/
 #register-form .column{
 	padding-right: 0;
 }
@@ -394,14 +404,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 #register-form .required{
 	display: block;
 }
-/*FIN FORMULAIRE DE CONNEXION*/
 
-
-/*FORMULAIRE DE S'INSCRIRE*/
 input[type="checkbox"]{
 	display: inline-block;
 }
-/*FIN FORMULAIRE DE S'INSCRIRE*/
+/*FIN FORMULAIRE D'INSCRIPTION*/
+
 
 /*PANIER*/
 #chart-form button{
