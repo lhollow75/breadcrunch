@@ -2,7 +2,8 @@
         <div class="container">
         	<div class="row">
         		<div class="col-lg-12">
-					<h2 id="promo-title">Promotions</h2>
+					<h1 id="promo-title" class="page_titre">Promotions</h1>
+					<hr>
 				</div>
 
 				<div class="product-categories">
