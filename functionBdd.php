@@ -83,4 +83,24 @@ function modifEnBase($mysql, $insertion, $table, $colonne, $row){
 	));
 }
 
+function recupProduitsParCategorie($mysql, $idCategorie){
+	$req = $mysql->prepare("SELECT *
+							FROM produits
+							WHERE idcategorie = :id");
+	$req->execute(array(
+	':id'=> $idCategorie
+	));
+
+	if($req->rowCount()>=1) {
+		while ($donnees = $req->fetch()){
+			$tab[] = $donnees;
+		}
+		//$reponse = $req->fetch();
+		//var_dump($tab);
+		return $tab;
+	} else {
+		return "Pas de produits dans cette catégorie";
+	}
+}
+
 ?>

@@ -38,6 +38,7 @@
 
                         ?>
                         <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
+                        <li><a class="btn_cart" href="index.php?page=liste-commande">Liste des commandes</a></li>
                         <?php
                         }
                         ?>
@@ -49,8 +50,13 @@
                         <li><a class="btn_login" href="index.php?page=login">Se connecter</a><li>
                         <?php
                     }
-                 ?>
-                <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>
+                    if($_SESSION['admin']!=true) {
+                        ?>
+                        <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>      
+                    <?php
+                    }
+                    ?>   
+                
             </ul>
         </nav>
         <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
