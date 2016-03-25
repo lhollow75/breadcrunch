@@ -93,6 +93,14 @@ function showPage(){
 			$_SESSION['context']="config-site.php";
 			return $page;
 			break;
+
+			case "panier":
+			$page['title']="Panier";
+			$page['desc']="Ajout des produits dans le panier";
+			$page['content']="panier.php";
+			$_SESSION['context']="panier.php";
+			return $page;
+			break;
 		}
 	}
 }

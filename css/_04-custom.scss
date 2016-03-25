@@ -211,12 +211,25 @@
 }
 
 #galery form button{
-	margin-top: 5px;
+	margin-top: 10px;
+	padding: 5px 10px;
 	font-size: 10px;
 	text-align: center;
 	color: #fff;
 	background-color: $primary-color;
 	border: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#galery form button:hover{
+	background-color: darken($primary-color, 30%);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 
@@ -249,10 +262,10 @@
 /*FIN HOME*/
 
 /*CONTACT*/
-#contact-form input,#contact-form textarea,#connect-form input{
+#contact-form input,#contact-form textarea,#connect-form input,#chart-form input,#chart-form textarea{
     width: 100%;
 }
-#contact-form input,#contact-form textarea,#connect-form input,#register-form input{
+#contact-form input,#contact-form textarea,#connect-form input,#register-form input,#chart-form input,#chart-form  button,#chart-form textarea{
     outline: none;
     padding: 10px 10px;
     margin: 10px 0;
@@ -263,7 +276,7 @@
     transition: all 0.3s ease-out;
 }
 
-#contact-form textarea{
+#contact-form textarea,#chart-form textarea{
     border-color: #e1e2e1;
 }
 
@@ -350,7 +363,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 
 /*FORMULAIRE DE CONNEXION*/
-#connect-form,#register-form{
+#connect-form,#register-form,#chart-form{
 	width: 80%;
 	margin: auto;
 }
@@ -367,7 +380,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	max-width: 220px;
 	float: right;
 }
-#register-form input[type="checkbox"]{
+#register-form input[type="checkbox"],#chart-form input[type="checkbox"]{
 	max-width: 30px;
 	display: inline-block;
 }
@@ -388,8 +401,49 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 input[type="checkbox"]{
 	display: inline-block;
 }
-
 /*FIN FORMULAIRE DE S'INSCRIRE*/
+
+/*PANIER*/
+#chart-form button{
+	float: right;
+	display: inline-block;
+}
+
+#chart-form img{
+	width: 140px;
+	border: 1px solid black;
+	padding: 5px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.gift{
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+.gift-msg{
+	width: 75%;
+}
+.gift-lab{
+	margin-top: 20px;
+}
+.chart-infos{
+    margin-top: 20px;
+}
+#chart-form input[type="checkbox"]{
+	margin-left: 10px;
+}
+.chart-infos p span:first-child {
+}
+.chart-infos p span:last-child {
+    text-align: right;
+}
+.chart-com{
+	margin-top: 20px;
+}
+/*FIN PANIER*/
+
 
 /*Category page*/
 
@@ -521,5 +575,56 @@ input[type="checkbox"]{
 }
 
 /*END Liste-commande*/
+
+/*FOOTER*/
+
+#footer-presentation, #footer-social, #footer-location{
+	margin-bottom: 30px;
+}
+
+
+#footer-presentation h3, #footer-social h3, #footer-location h3{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#footer-presentation p, #footer-social p, #footer-location p{
+	text-align: center;
+	line-height: 1.5em;
+	font-size: 12px;
+}
+
+#social-icons ul{
+	font-size: 20px;
+	text-align: center;
+	padding: 0px;
+}
+
+#social-icons ul li{
+	display: inline-block;
+	list-style: none;
+	padding: 5px;
+}
+
+
+#social-icons ul li a{
+	color: $quaternary-color;
+	text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#social-icons ul li a:hover{
+	color: $primary-color;
+	text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
 
 
