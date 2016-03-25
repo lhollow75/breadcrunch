@@ -1,14 +1,19 @@
+<?php
+$idProduct = htmlspecialchars($_GET["id"]);
+?>
+
 <div class="wrapper" id="main-content">
 <div class="container">
-<h1 class="product-name page_titre">Pain au chocolat</h1>
+<h1 id="product-name" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'product-ingredient','', 'recuperation') ?>Pain au chocolat</h1>
 <hr>
 <img class="col-lg-7  product-picture" src="images/breadcrunch_29.jpg" alt="">
 
 <div class="product-specs col-lg-5 col-sm-12 col-md-5 col-xs-12">
 <h4>Ingrédients</h4>
-<p class="product-spec" id="product-ingredient" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'product-ingredient','', 'recuperation') ?></p>
-
-<label>Délai de commande minimum : </label>
+<p class="product-spec" id="product-ingredient" contenteditable="<?php echo $activeContent; ?>">
+	<?php $tab = recupProduct($mysql, $idProduct); 
+	echo $tab[3];?></p>
+<label>Délai de commande minimum : </label>"
 
 <?php
     if(isset($_SESSION['login'])) {
@@ -16,16 +21,13 @@
 ?>
             <input type="text" name="write-min-timing" id="write-min-timing"></input>
             <select class="product-spec">
-				<?php
-			$tab = recupTable($mysql, 'unite_delai');
-			foreach ($tab as $key => $value) {
+			<?php
+				$tab = recupTable($mysql, 'unite_delai');
+				foreach ($tab as $key => $value) {
 				echo "<option value=".$value[1].">".$value[1]."</option>";
-			}
-				?>
-
+				}?>
 			</select>
 			
-            </br>
             <?php
             	}
             ?>
