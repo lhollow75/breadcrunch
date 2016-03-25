@@ -486,6 +486,7 @@ input[type="checkbox"]{
 
 .product-picture{
 	/*margin: 10px;*/
+    max-width: 500px;
 	border: 1px solid black;
 	padding: 10px;
     margin-bottom: 35px;
@@ -513,13 +514,50 @@ input[type="checkbox"]{
 /*Liste-commande*/
 .product{
 	border: 1px black solid;
-	margin: 20px;
+	padding: 10px;
 }
 .commande{
 	border: 1px black solid;
 	margin: 20px;
 }
-
+.filter-list li{
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+}
+.filter-list li img{
+    margin-right:20px;
+}
+.dataproduct-list li{
+    list-style-type: none;
+    display: inline-block;
+}
+#nom-client{
+    margin-right:20px;
+}
+#date-commande{
+    margin-right:20px;
+}
+.data-product{
+    margin-left: -20px;
+}
+.data-product ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+.product-contents{
+    margin: 15px;
+}
+#total-price{
+    background-color: $primary-color;
+    color: white;
+    padding: 15px;
+    padding-bottom: 5px;
+    font-size: 30px;
+}
+.productend li{
+    list-style-type: none;
+}
 /*END Liste-commande*/
 
 
