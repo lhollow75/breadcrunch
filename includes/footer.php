@@ -38,11 +38,14 @@
 					    </div>
 				    </div>
 
-
-
+				</div><!-- /.row  -->
+			</div><!-- /.container  -->
+		</div><!-- /.wrapper #main-content  -->
 
     </footer>
-
+		<div id="footer-breadcrunch">
+			<p>Réalisation Team. Fonctionne sous Breadcrunch.</p>
+		</div>
     <!-- message erreur or success -->
 	<div class="alert">
 		<p class="successMsg"></p>

@@ -119,6 +119,23 @@
 #logo_magasin a{
 	text-align: center;
 }
+#logo{
+	transform: rotate(0deg);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#logo_magasin a:hover #logo{
+	transform: rotate(360deg);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
 #logo_magasin{
 	width: 100%;
     text-align: center;
@@ -172,6 +189,12 @@
 
 
 /*HOME*/
+
+
+h2{
+	text-align: center;
+	margin-top: 30px;
+}
 
 #vid{
 	width: 100%;
@@ -715,6 +738,15 @@ input[type="checkbox"]{
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+}
+
+#footer-breadcrunch{
+	background-color: #101010;
+	text-align: center;
+	width: 100%;
+	color: $quaternary-color;
+	padding: 10px 0px;
+	font-size: 10px;
 }
 /*Fin FOOTER*/
 

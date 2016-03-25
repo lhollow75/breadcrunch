@@ -9,7 +9,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1>PANIER</h1>
+				<h1 class="page_titre">PANIER</h1>
+				<hr>
 			</div>
 			<form action="" method="post" id="chart-form" class="row">
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">

@@ -6,7 +6,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1>CONNEXION</h1>
+				<h1 class="page_titre">CONNEXION</h1>
+				<hr>
 			</div>
 			<form action="./formConnexion.php" method="post" id="connect-form" class="row">
 				<div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12">

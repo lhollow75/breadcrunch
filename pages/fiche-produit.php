@@ -1,6 +1,7 @@
 <div class="wrapper" id="main-content">
 <div class="container">
-<h1 class="product-name">Pain au chocolat</h1>
+<h1 class="product-name page_titre">Pain au chocolat</h1>
+<hr>
 <img class="col-lg-7  product-picture" src="images/breadcrunch_29.jpg" alt="">
 
 <div class="product-specs col-lg-5 col-sm-12 col-md-5 col-xs-12">
