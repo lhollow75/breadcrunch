@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="wrapper contact" id="main-content">
 	<div class="container">
 		<div id="config-site" class="row">
