@@ -33,7 +33,7 @@
 						<span class="details">Email</span>
 					</p>
 					<p class="col-lg-7">
-						<span class="dtl">Siège Social<br>2, rue de la Monnaie<br>10000 Troyes</span>
+						<span id="dt">Siège Social</span><span id="dt">2, rue de la Monnaie</span><span id="dt">10000 Troyes</span>
 						<span class="dtl">+33 (0)3 25 80 38 38</span>
 						<span class="dtl">infos@pascal-caffet.com</span>
 					</p>

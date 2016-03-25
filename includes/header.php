@@ -28,32 +28,47 @@
     }
     ?>
 </head>
+
 <body>
     <header>
-        <nav id="user-bar">
-            <ul>
-            <?php
-                    if(isset($_SESSION['login'])) {
-                        if($_SESSION['admin']==true) {
+                <nav id="user-bar">
+                    <ul>
+                    <?php
+                        if(isset($_SESSION['login'])) {
+                            if($_SESSION['admin']==true) {
+                                ?>
+                                <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
+                                <?php
+                                }
+                                ?>
+                                <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>
+                                <?php
+                            } else {
+                                ?>
+                                <li><a class="btn_inscription" href="index.php?page=logon">S'inscrire</a></li>
+                                <li><a class="btn_login" href="index.php?page=login">Se connecter</a></li>
+                                <?php
+                            }
+                         ?>
+                        <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>
+                    </ul>
+                </nav>
 
-                        ?>
-                        <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
-                        <?php
-                        }
-                        ?>
-                        <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>
-                        <?php
-                    } else {
-                        ?>
-                        <li><a class="btn_inscription" href="index.php?page=logon">S'inscrire</a></li>
-                        <li><a class="btn_login" href="index.php?page=login">Se connecter</a><li>
-                        <?php
-                    }
-                 ?>
-                <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>
-            </ul>
-        </nav>
-        <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
+
+<div class="wrapper contact" id="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <div id="logo_magasin">
+                <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
+            </div>
+       
+            <div class="col-lg-12">
+                <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
+            </div>
+        </div>
+    </div>
+</div>
         <nav id="first-menu">
             <ul>
                 <li><a href="index.php">Accueil</a></li>
