@@ -50,8 +50,8 @@
 						<div class="product-section">
 							<div class="product-photo-admin">
 								<div class="product-photo-img-admin">
-									<p>Uploader une image<p>
-									</div>
+									<p>+<p>
+								</div>
 							</div>
 						</div>
 					</div>
