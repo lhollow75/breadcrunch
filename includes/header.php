@@ -73,11 +73,11 @@
         </nav>
         <nav id="second-menu">
             <ul>
-                <li><a id="menu-boulangerie" href="#">Boulangerie</a></li>
-                <li><a id="menu-patisserie" href="#">Pâtisserie</a></li>
-                <li><a id="menu-sandwich" href="#">Sandwich / Salade</a></li>
-                <li><a id="menu-chocolaterie" href="#">Chocolaterie</a></li>
-                <li><a id="menu-boisson" href="#">Boisson</a></li>
+                <li id="menu-boulangerie"><a href="#">Boulangerie</a></li>
+                <li id="menu-patisserie"><a href="#">Pâtisserie</a></li>
+                <li id="menu-sandwich"><a href="#">Sandwich / Salade</a></li>
+                <li id="menu-chocolaterie"><a href="#">Chocolaterie</a></li>
+                <li id="menu-boisson"><a href="#">Boisson</a></li>
             </ul>
         </nav>
         <script type="text/javascript">

@@ -5,12 +5,29 @@
 
 <div class="product-specs col-lg-5 col-sm-12 col-md-5 col-xs-12">
 <h4>Ingrédients</h4>
-<p class="product-spec">Sucre, oeufs, farine, et d'autres trucs</p>
+<p class="product-spec" id="product-ingredient" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'product-ingredient','', 'recuperation') ?></p>
 
-<label>Délai de commande minimum : </label><p class="product-spec">2h</p>
-<label for="pickup-date" class="">Date de retrait </label><input type="date" name="pickup-date" id="pickup-date" class="product-spec">
+<label>Délai de commande minimum : </label>
 
-<label>Délai de commande : </label><p class="product-spec">2h</p>
+<?php
+                    if(isset($_SESSION['login'])) {
+                        if($_SESSION['admin']==true) {
+
+                        ?>
+                        	<input type="text" name="" id=""></input></br>
+                        <?php
+                        }
+                        ?>
+                        
+                        <?php
+                    } else {
+
+                        ?>
+							<p class="product-spec">2h</p>
+                        <?php
+                    }
+                 ?>
+
 <label for="pickup-date">Date de retrait </label><input type="date" name="pickup-date" id="pickup-date" class="product-spec">
 <label>Heure de retrait </label>
 	<select class="product-spec">
