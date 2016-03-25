@@ -74,19 +74,6 @@
         </div>
 
 
-<div class="wrapper contact" id="main-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-            <div id="logo_magasin">
-                <a href="index.php">
-                    <img src="images/logo_boulanger.png" alt="Revenir à l'accueil" id="logo">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
         <nav id="first-menu">
             <ul>
                 <li><a href="index.php">Accueil</a></li>
