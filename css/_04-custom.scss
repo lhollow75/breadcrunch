@@ -375,6 +375,16 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	width: 80%;
 	margin: auto;
 }
+#connect-form > div + div {
+    padding-right: 0;
+    margin-left: -20px;
+}
+#connect-form div:first-child {
+    padding-left: 0;
+}
+/*FIN FORMULAIRE DE CONNEXION*/
+
+/*FORMULAIRE D'INSCRIPTION*/
 #register-form .column{
 	padding-right: 0;
 }
@@ -402,14 +412,12 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 #register-form .required{
 	display: block;
 }
-/*FIN FORMULAIRE DE CONNEXION*/
 
-
-/*FORMULAIRE DE S'INSCRIRE*/
 input[type="checkbox"]{
 	display: inline-block;
 }
-/*FIN FORMULAIRE DE S'INSCRIRE*/
+/*FIN FORMULAIRE D'INSCRIPTION*/
+
 
 /*PANIER*/
 #chart-form button{
@@ -554,6 +562,7 @@ input[type="checkbox"]{
 
 .product-picture{
 	/*margin: 10px;*/
+    max-width: 500px;
 	border: 1px solid black;
 	padding: 10px;
     margin-bottom: 35px;
@@ -581,13 +590,50 @@ input[type="checkbox"]{
 /*Liste-commande*/
 .product{
 	border: 1px black solid;
-	margin: 20px;
+	padding: 10px;
 }
 .commande{
 	border: 1px black solid;
 	margin: 20px;
 }
-
+.filter-list li{
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+}
+.filter-list li img{
+    margin-right:20px;
+}
+.dataproduct-list li{
+    list-style-type: none;
+    display: inline-block;
+}
+#nom-client{
+    margin-right:20px;
+}
+#date-commande{
+    margin-right:20px;
+}
+.data-product{
+    margin-left: -20px;
+}
+.data-product ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+.product-contents{
+    margin: 15px;
+}
+#total-price{
+    background-color: $primary-color;
+    color: white;
+    padding: 15px;
+    padding-bottom: 5px;
+    font-size: 30px;
+}
+.productend li{
+    list-style-type: none;
+}
 /*END Liste-commande*/
 
 /*FOOTER*/
