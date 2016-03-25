@@ -103,7 +103,7 @@ function recupProduitsParCategorie($mysql, $idCategorie){
 		//var_dump($tab);
 		return $tab;
 	} else {
-		return "Pas de produits dans cette catégorie";
+		return "Vous n'avez pas encore ajouté de produits dans cette catégorie";
 	}
 }
 

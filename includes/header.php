@@ -50,7 +50,7 @@
                         <li><a class="btn_login" href="index.php?page=login">Se connecter</a><li>
                         <?php
                     }
-                    if($_SESSION['admin']!=true) {
+                    if(isset($_SESSION['login']) && $_SESSION['admin']!=true) {
                         ?>
                         <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>      
                     <?php

@@ -67,7 +67,7 @@
 		<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
 	</div> -->
 	<img id="map" src="https://maps.googleapis.com/maps/api/staticmap?size=1024x200&zoom=15&maptype=roadmap\
-&markers=size:mid%7Ccolor:red%7C6+rue=froment,Paris&key=AIzaSyDEIF4I4xIgInAxD6qxo52UzbTvi6KlO1k">
+&markers=size:mid%7Ccolor:red%7C<?php localisationEnBase($mysql, 'map','', 'recuperation') ?>&key=AIzaSyDEIF4I4xIgInAxD6qxo52UzbTvi6KlO1k">
 	<!-- <script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(48.86031277478549,2.3650750455994007),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.86031277478549,2.3650750455994007)});infowindow = new google.maps.InfoWindow({content:'<strong>Boulangerie </strong><br>Paris, France<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script> -->
 		
 </div>
