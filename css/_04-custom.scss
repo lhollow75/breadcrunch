@@ -504,6 +504,7 @@ input[type="checkbox"]{
 	background-color: darken($quaternary-color, 30%);
 }
 .product-photo-img-admin p{
+    font-size: 80px;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
@@ -530,6 +531,7 @@ input[type="checkbox"]{
 	position: absolute;
 	background-color: $primary-color;
 	width: 300px;
+    height: 100px;
 	right: 0px;
 	bottom: -110px;
 	text-align: center;
@@ -694,4 +696,25 @@ input[type="checkbox"]{
     transition: all 0.3s ease-out;
 }
 
+/*Fin FOOTER*/
 
+/*Page promotions*/
+.old-product-price{
+    text-decoration: line-through;
+}
+
+.product-infos li{
+    list-style-type: none;
+    display: inline-block;
+    
+}
+
+.product-infos ul{
+    padding-left: 0px;
+    margin-top: 1px;
+}
+
+#promo-title{
+    text-align: center;
+}
+/*Fin page promotions*/
