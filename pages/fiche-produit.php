@@ -15,11 +15,15 @@
 ?>
             <input type="text" name="write-min-timing" id="write-min-timing"></input>
             <select class="product-spec">
-				<option value="9h-10h">Heure</option>
-				<option value="10h-11h">Jours</option>
-				<option value="11h-12h">Semaines</option>
-				<option value="11h-12h">Mois</option>
+				<?php
+			$tab = recupTable($mysql, 'unite_delai');
+			foreach ($tab as $key => $value) {
+				echo "<option value=".$value[1].">".$value[1]."</option>";
+			}
+				?>
+
 			</select>
+			
             </br>
             <?php
             	}
