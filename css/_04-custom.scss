@@ -211,12 +211,25 @@
 }
 
 #galery form button{
-	margin-top: 5px;
+	margin-top: 10px;
+	padding: 5px 10px;
 	font-size: 10px;
 	text-align: center;
 	color: #fff;
 	background-color: $primary-color;
 	border: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#galery form button:hover{
+	background-color: darken($primary-color, 30%);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 
@@ -521,5 +534,56 @@ input[type="checkbox"]{
 }
 
 /*END Liste-commande*/
+
+/*FOOTER*/
+
+#footer-presentation, #footer-social, #footer-location{
+	margin-bottom: 30px;
+}
+
+
+#footer-presentation h3, #footer-social h3, #footer-location h3{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#footer-presentation p, #footer-social p, #footer-location p{
+	text-align: center;
+	line-height: 1.5em;
+	font-size: 12px;
+}
+
+#social-icons ul{
+	font-size: 20px;
+	text-align: center;
+	padding: 0px;
+}
+
+#social-icons ul li{
+	display: inline-block;
+	list-style: none;
+	padding: 5px;
+}
+
+
+#social-icons ul li a{
+	color: $quaternary-color;
+	text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#social-icons ul li a:hover{
+	color: $primary-color;
+	text-decoration: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
 
 
