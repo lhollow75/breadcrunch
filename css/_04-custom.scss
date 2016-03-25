@@ -111,13 +111,18 @@
 
 #titre_magasin{
 	text-align: center;
-	font-weight: 700;
-	font-size: 30px;
-	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 24px;
 	display: block;
-	margin: 20px 0px;
+	margin: 10px 0px;
 }
-
+#logo_magasin a{
+	text-align: center;
+}
+#logo_magasin{
+	width: 100%;
+    text-align: center;
+}
 #first-menu{
 	font-size: 14px;
 	font-weight: lighter;
@@ -126,12 +131,16 @@
 #first-menu ul{
 	margin: 0;
 }
+#first-menu ul li{
+	padding: 10px;
+}
 #first-menu ul li a{
 	color: lighten($tertiary-color, 30%);
+	border-bottom: solid 4px $quaternary-color;
 	padding: .2em 1.5em;
 }
 #first-menu ul li a:hover{
-	text-decoration: underline;
+	border-bottom: solid 4px $primary-color;
 }
 
 #second-menu{
@@ -163,9 +172,14 @@
 
 
 /*HOME*/
+
+#vid{
+	width: 100%;
+}
+
 #logo{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 
 .photo-galery{
@@ -663,6 +677,7 @@ input[type="checkbox"]{
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: bold;
+    letter-spacing: 0.05em;
 }
 
 #footer-presentation p, #footer-social p, #footer-location p{
@@ -701,6 +716,7 @@ input[type="checkbox"]{
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
+/*Fin FOOTER*/
 
 /*CONFIG SITE*/
 
@@ -770,7 +786,6 @@ div#admin-card {
 }
 /*FIN CONFIG SITE*/
 
-/*Fin FOOTER*/
 
 /*Page promotions*/
 .old-product-price{
