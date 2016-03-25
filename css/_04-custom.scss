@@ -744,7 +744,7 @@ input#admin-active {
     font-family: $base-font-family;
     padding: 5px 0 0 5px;
 }
-.conf-bloc{
+.conf-bloc,#admin-card{
 	display: table;
 	border: 1px solid $primary-color;
 }
@@ -753,6 +753,24 @@ input#admin-active {
 	font-weight: bold;
 	margin-bottom: 30px;
 }
+#admin-card>div {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom:0;
+}
+p.name-of-admin {
+    margin-top: 20px;
+}
+div#admin-card {
+    width: 49%;
+}
+.space{
+	max-width:20px;
+	padding: 0;
+}
+
 /*FIN CONFIG SITE*/
 
 

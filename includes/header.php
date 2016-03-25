@@ -95,6 +95,7 @@
                 <li><a id="menu-boisson" href="#">Boisson</a></li>
             </ul>
         </nav>
+
         <script type="text/javascript">
             produit = ['<?php echo $affiche_categorie[0] ?>', '<?php echo $affiche_categorie[1] ?>', '<?php echo $affiche_categorie[2] ?>', '<?php echo $affiche_categorie[3] ?>', '<?php echo $affiche_categorie[4] ?>'];
 

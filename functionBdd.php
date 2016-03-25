@@ -29,6 +29,7 @@ function recupEnBase($mysql, $table, $colonne, $row){
 	}
 }
 
+
 function recupTable($mysql, $table){
 	$req = $mysql->prepare("SELECT * FROM $table");
 	$req->execute();
