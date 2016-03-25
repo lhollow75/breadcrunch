@@ -14,7 +14,7 @@
 							 	<?php echo $produits; ?>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="ajoutProduit col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="product-section">
 								<div class="product-photo-admin">
 									<div class="product-photo-img-admin">
@@ -45,7 +45,7 @@
 							<?php
 							if (isset($_SESSION['login']) && $_SESSION['admin']==true){
 								?>
-							<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="ajoutProduit col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="product-section">
 									<div class="product-photo-admin">
 										<div class="product-photo-img-admin">

@@ -23,7 +23,7 @@
     }
     if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
     ?>
-        <link rel="stylesheet" href="css-admin/admin.css">
+        <link rel="stylesheet" href="css-admin/admin.css"> 
     <?php
     }
     ?>

@@ -57,6 +57,19 @@ $(function(){
 		
 	});
 
+	$(".ajoutProduit").click(function(){
+		//console.log($(this));
+		console.log("la");
+		$.ajax({ 
+			url: 'functionBdd.php',
+			method: 'POST',
+			data: {
+				fonction: 'productCreation',
+			},
+		});
+		console.log("ici");
+	});
+
 	$(".adresse").blur(function(d){
 		adresse = $(this).context.innerHTML;
 		adresse = adresse.replace(/ /g, '+');

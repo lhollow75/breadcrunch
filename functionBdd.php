@@ -5,6 +5,9 @@ if (isset($_POST['fonction'])){
 		case 'localisationEnBase':
 			localisationEnBase($mysql, $_POST['data'], $_POST['donnees'], $_POST['action']);
 			break;
+		case 'productCreation':
+			productCreation($mysql);
+			break;
 		
 		default:
 			# code...
@@ -119,10 +122,12 @@ function uniteDelaiEnBase ($mysql, $row){
 }
 
 /*create a new empty product in database*/
-function productCreation ($mysql){
-	$req = $mysql->prepare("INSERT INTO produits 
-							VALUES ('', '', '', '', '', '', '', '','', '', '', '', '', ''");
+function productCreation($mysql){
+	$req = $mysql->prepare("INSERT INTO produits (nom, description, ingredients, idcategorie, prix_TTC, prix_HT, prix_promo_TTC, prix_promo_HT,delai_minimum, unite_delai, promo_active, photo, active)
+							VALUES ('Nom du produit', 'Description du produit', 'Listes des ingredients', 1, 0, 0, 0, 0, 1, 1, 0, 'baguettes.jpg', 1)");
 	$req->execute();
+	$last_id = $req->insert_id;
+	header('index.php?page=fiche-produit&id='.$last_id);
 }
 
 /*get une ligne from product table */
