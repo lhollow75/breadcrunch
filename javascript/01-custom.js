@@ -1,35 +1,4 @@
-/* Test fenetre alert avec message "Hello World"
 $(function(){
-   alert('Hello world !'); 
-});
-*/
-
-$(function(){
-	//action burger navigation
-	$("nav span").click(function(){
-		$("nav ul").slideToggle(300);
-	})
-
-	//pour enregistrer les contenteditables avec ajax
-	$("#admin-publish").click(function(){
-		var data = [];
-		$("[contenteditable]").each(function(){
-			data.push($(this).html());
-		});
-		$.ajax({ 
-			url: 'mybase.php',
-			method: 'POST',
-			data: {
-				data: data
-			},
-			success: function(msg) {
-				$(".alert").fadeIn(100);
-				$(".successMsg").text(msg);
-			}
-		});
-	});
-
-
 	$("[contenteditable]").blur(function(d){
 		console.log(d);
 
@@ -58,5 +27,61 @@ $(function(){
 		});
 
 	})
+
+
+	$("input[type=checkbox]").click(function(d){
+		console.log($(this));
+		nomBox = $(this).context.id;
+		box = $(this).context.checked;
+		valeur = nomBox.split('-')[1];
+
+		//console.log(<?$categorie[0]['actif']?>)
+		
+		showHide(valeur, box);
+	});
+
 });
 
+function showHide(valeur, box){
+	switch(valeur){
+			case 'boulangerie':
+				if (box==false){
+					$("#menu-boulangerie").hide();
+				}else {
+					$("#menu-boulangerie").show();
+				}
+				
+				break;
+			case 'patisserie':
+				if (box==false){
+					$("#menu-patisserie").hide();
+				}else {
+					$("#menu-patisserie").show();
+				}
+				
+				break;
+			case 'chocolaterie':
+				if (box==false){
+					$("#menu-chocolaterie").hide();
+				}else {
+					$("#menu-chocolaterie").show();
+				}
+				
+				break;
+			case 'sandwich':
+				if (box==false){
+					$("#menu-sandwich").hide();
+				}else {
+					$("#menu-sandwich").show();
+				}
+				
+				break;
+			case 'boisson':
+				if (box==false){
+					$("#menu-boisson").hide();
+				}else {
+					$("#menu-boisson").show();
+				}
+				break;
+		}
+}

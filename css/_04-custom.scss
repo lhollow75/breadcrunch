@@ -59,12 +59,22 @@
 	font-size: 12px;
 	color: $quaternary-color;
 }
+#user-bar ul{
+	text-align: right;
+}
 
-
+#user-bar ul li{
+	margin-left: -0.5em;/*delete white-space*/
+}
 
 #user-bar ul li a{
 	text-transform: none !important;
 	color: $quaternary-color;
+}
+#user-bar ul li a:hover{
+	text-decoration: underline;
+	color: $quaternary-color;
+	background-color: darken($primary-color, 30%);
 }
 
 .btn_login{
@@ -74,7 +84,7 @@
 
 .btn_logout{
 	padding: 5px 20px;
-	background-color: #c78629;
+	background-color: #875427;
 }
 .btn_inscription{
 	padding: 5px 20px;
@@ -91,17 +101,17 @@
 }
 
 
-.title{
+#titre_magasin{
 	text-align: center;
 	font-weight: 700;
 	font-size: 30px;
 	text-transform: uppercase;
 	display: block;
-	margin-top: 10px;
+	margin: 20px 0px;
 }
 
 #first-menu{
-	font-size: 0.7em;
+	font-size: 14px;
 	font-weight: lighter;
 }
 
@@ -112,22 +122,34 @@
 	color: lighten($tertiary-color, 30%);
 	padding: .2em 1.5em;
 }
+#first-menu ul li a:hover{
+	text-decoration: underline;
+}
 
 #second-menu{
 	background-color: $primary-color;
 	color: $quaternary-color;
 	text-transform : uppercase;
-	font-size: 0.7em;
+	font-size: 16px;
 	font-weight: lighter;
 	padding: 10px 0px;
 }
+#second-menu ul li{
+	margin-left: -0.25em;/*delete white-space*/
+}
+
 #second-menu ul li a{
 	color: $quaternary-color;
-	padding: .2em 2em;
 	border-right: solid 1px #fff;
+    line-height: 1.5em;
+    padding: 5px 20px 0px 20px;
 }
+#second-menu ul li a:hover{
+	text-decoration: underline;
+}
+
 #second-menu ul li:last-child a{
-	border: none;
+	border-right: none;
 }
 
 
@@ -148,12 +170,23 @@
 #intro h1, #intro p{
 	text-align: center;
 }
+#intro h1{
+	margin-bottom: 5px;
+}
+
+#intro p{
+	font-size: 16px;
+	margin-top: 20px;
+}	
+
 
 #intro hr{
 	width:222px;
 	height: 4px;
 	background-color: $primary-color;
   	border: 0;
+  	margin-bottom: 0px !important;
+  	margin-top: 0px !important;
 }
 
 #galery{
@@ -161,18 +194,24 @@
 	margin: 30px auto;
 }
 
+.galery-section{
+	width: 200px;
+}
+
 #galery div{
 	display: inline-block;
-	width: 220px;
+	/*width: 220px;*/
 }
 
 #galery form{
 	font-size: 10px;
-	text-align: left;
+	text-align: center;
 	margin-left: 10px;
+	width: 200px;
 }
 
 #galery form button{
+	margin-top: 5px;
 	font-size: 10px;
 	text-align: center;
 	color: #fff;
@@ -180,13 +219,31 @@
 	border: none;
 }
 
+
+
+#presentation-text p{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+
 /**/
 #opening-hours{
 	background-color: $secondary-color;
-	height: 120px;
+	padding: 10px;
 }
-#opening-hours p{
 
+.dot{
+	border: dotted 1px #fff;
+}
+
+#opening-hours p{
+	font-size: 25px;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	padding: 20px 20px;
+	color: $quaternary-color;
 }
 
 /*FIN HOME*/
@@ -231,6 +288,19 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     font-weight: normal;
     padding: 20px 30px;
     text-transform: uppercase;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.btn2{
+    font-size: 20px;
+    color: #FFF;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    font-weight: normal;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 .contact-details h1{
 	text-align: left;
@@ -323,11 +393,91 @@ input[type="checkbox"]{
 
 /*Category page*/
 
+.product-section{
+	width: 310px;
+	height: 260px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+
 .product-photo{
 	width: 300px;
 	height: 250px;
 	margin: 10px;
 	padding: 10px;
+	border: dotted 1px $tertiary-color;
+}
+
+
+/*Category ADMIN page*/
+.product-photo-admin{
+	width: 300px;
+	height: 250px;
+	margin: 10px;
+	padding: 10px;
+	border: dotted 1px $tertiary-color;
+	background-color: $quaternary-color;
+}
+
+.product-photo-img-admin{
+	width: 278px;
+	height: 228px;
+	line-height: 228px;
+	background-color: darken($quaternary-color, 30%);
+}
+.product-photo-img-admin p{
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	color: $quaternary-color;
+}
+/*Fin Category ADMIN page*/
+
+
+
+.product-section:hover{
+	cursor: pointer;
+}
+
+.product-section:hover .product-infos{
+	bottom: 0px !important;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.product-infos{
+	position: absolute;
+	background-color: $primary-color;
+	width: 300px;
+	right: 0px;
+	bottom: -110px;
+	text-align: center;
+	padding: 10px 0px;
+	color: $quaternary-color;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
+
+.product-name{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.product-type{
+	font-size: 16px;
+}
+
+.product-price{
+	font-size: 31px;
+	font-weight: bold;
 }
 
 /*End category page*/
@@ -335,7 +485,6 @@ input[type="checkbox"]{
 /*Product page*/
 
 .product-picture{
-	
 	/*margin: 10px;*/
 	border: 1px solid black;
 	padding: 10px;
@@ -343,17 +492,20 @@ input[type="checkbox"]{
 }
 
 .product-specs{
-    bottom: 33px;
-    
+    bottom: 30px;
 }
 
 .product-specs li{
-    text-decoration: none;
     list-style-type: none;
 }
 
 .product-spec{
     display: block;
+    margin-bottom:15px; 
+}
+
+.price{
+    background-color:$secondary-color;
     margin-bottom:15px; 
 }
 /*FIN product page*/
