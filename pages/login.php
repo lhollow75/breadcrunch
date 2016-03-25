@@ -10,7 +10,7 @@
 			</div>
 			<form action="./formConnexion.php" method="post" id="connect-form" class="row">
 				<div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<input type="email" name="identifiant" value="" placeholder="Email.." required>
+					<input type="text" name="identifiant" value="" placeholder="Mail" required>
 					<p><a href="index.php?page=logon">Pas encore inscrit ?</a></p>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">

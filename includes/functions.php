@@ -93,6 +93,30 @@ function showPage(){
 			$_SESSION['context']="config-site.php";
 			return $page;
 			break;
+
+			case "panier":
+			$page['title']="Panier";
+			$page['desc']="Ajout des produits dans le panier";
+			$page['content']="panier.php";
+			$_SESSION['context']="panier.php";
+			return $page;
+			break;
+
+			case "promotions":
+			$page['title']="Promotions";
+			$page['desc']="Toutes les offres et promotions";
+			$page['content']="promotions.php";
+			$_SESSION['context']="promotions.php";
+			return $page;
+			break;
+
+			case "demarrage":
+			$page['title']="Démarrage";
+			$page['desc']="Page de démarrage avant activation du thème";
+			$page['content']="demarrage.php";
+			$_SESSION['context']="demarrage.php";
+			return $page;
+			break;
 		}
 	}
 }

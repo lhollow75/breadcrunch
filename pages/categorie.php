@@ -2,7 +2,7 @@
         <div class="container">
         	<div class="row">
         		<div class="col-lg-12">
-					<h1>Produits boulangers</h1>
+					<h2>Produits boulangers</h2>
 				</div>
 
 				<div class="product-categories">
@@ -12,7 +12,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -22,7 +22,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -32,7 +32,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -42,7 +42,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -59,7 +59,7 @@
 
 
         		<div class="col-lg-12">
-					<h1>Produits pâtissiers</h1>
+					<h2>Produits pâtissiers</h2>
 				</div>
 
 				<div class="product-categories">
@@ -69,7 +69,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -79,7 +79,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -89,7 +89,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -99,7 +99,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -107,7 +107,7 @@
 
 
         		<div class="col-lg-12">
-					<h1>Produits chocolatiers</h1>
+					<h2>Produits chocolatiers</h2>
 				</div>
 
 				<div class="product-categories">
@@ -117,7 +117,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -127,7 +127,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -137,7 +137,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -147,7 +147,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -157,7 +157,7 @@
 
 
         		<div class="col-lg-12">
-					<h1>Produits snacking</h1>
+					<h2>Produits snacking</h2>
 				</div>
 
 				<div class="product-categories">
@@ -167,7 +167,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -177,7 +177,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -187,7 +187,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
@@ -197,7 +197,7 @@
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
 								<p class="product-type">Viennoiserie</p>
-								<p class="product-price">1,50€</p>
+								<p class="product-price">1,50€ <span class="icon-shopping-cart"></span></p>
 							</div>
 						</div>
 					</div>
