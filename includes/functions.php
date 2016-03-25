@@ -101,6 +101,14 @@ function showPage(){
 			$_SESSION['context']="panier.php";
 			return $page;
 			break;
+
+			case "promotions":
+			$page['title']="Promotions";
+			$page['desc']="Toutes les offres et promotions";
+			$page['content']="promotions.php";
+			$_SESSION['context']="promotions.php";
+			return $page;
+			break;
 		}
 	}
 }

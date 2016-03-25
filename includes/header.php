@@ -46,15 +46,15 @@
                         <?php
                     }
                  ?>
-                <li><a class="btn_cart" href="#">Mon panier • (0)<span></a></li>
+                <li><a class="btn_cart" href="index.php?page=panier">Mon panier • (0)<span></a></li>
             </ul>
         </nav>
         <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
         <nav id="first-menu">
             <ul>
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="#">Produits</a></li>
-                <li><a href="#">Promotions</a></li>
+                <li><a href="index.php?page=categorie">Produits</a></li>
+                <li><a href="index.php?page=promotions">Promotions</a></li>
                 <li><a href="index.php"><img src="images/breadcrunch_logo.png" alt="Logo" id="logo"></a></li>
                 <?php
                 if ($accueil['blog']!=""){
