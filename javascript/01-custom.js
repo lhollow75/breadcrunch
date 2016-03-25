@@ -1,11 +1,10 @@
 $(function(){
 	$("[contenteditable]").blur(function(d){
-		console.log(d);
+		//console.log(d);
 
 		if (d.target.nodeName == 'IMG'){
 			insertion = d.target.currentSrc.split("/");
 			insertion = insertion[(insertion.length)-1]
-			//console.log(insertion);
 		} else {
 			insertion = d.target.innerText;
 		}
@@ -19,7 +18,7 @@ $(function(){
 				donnees: insertion,
 				action: 'modification'
 			},
-			success: function(m) {
+			success: function(m) { 
 				//console.log(m);
 				//$(".alert").fadeIn(100);
 				//$(".successMsg").text(m);
@@ -30,20 +29,37 @@ $(function(){
 
 
 	$("input[type=checkbox]").click(function(d){
-		console.log($(this));
+		//console.log($(this));
 		nomBox = $(this).context.id;
 		box = $(this).context.checked;
 		valeur = nomBox.split('-')[1];
 
-		//console.log(<?$categorie[0]['actif']?>)
-		
+		//console.log(nomBox);
+		//console.log(box);
+		if (box==true){
+			box = 1;
+		} else {
+			box = 0;
+		}
+		$.ajax({ 
+			url: 'functionBdd.php',
+			method: 'POST',
+			data: {
+				fonction: 'localisationEnBase',
+				data: nomBox,
+				donnees: box,
+				action: 'modification'
+			},
+		});
+
 		showHide(valeur, box);
+
+		
 	});
 
 });
 
 function showHide(valeur, box){
-	console.log("la");
 	switch(valeur){
 			case 'boulangerie':
 				if (box==false){
