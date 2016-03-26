@@ -12,7 +12,6 @@
 							<img src="images/breadcrunch_05.jpg" alt="" class="product-photo">
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
-								<p class="product-type">Viennoiserie</p>
 				                <ul>
                                 <li>
                                 <p class="old-product-price">2,50€</p>
@@ -29,7 +28,6 @@
 							<img src="images/breadcrunch_05.jpg" alt="" class="product-photo">
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
-								<p class="product-type">Viennoiserie</p>
 								<ul>
                                 <li>
                                 <p class="old-product-price">2,50€</p>
@@ -46,7 +44,6 @@
 							<img src="images/breadcrunch_05.jpg" alt="" class="product-photo">
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
-								<p class="product-type">Viennoiserie</p>
 								<ul>
                                 <li>
                                 <p class="old-product-price">2,50€</p>
@@ -63,7 +60,6 @@
 							<img src="images/breadcrunch_05.jpg" alt="" class="product-photo">
 							<div class="product-infos">
 								<p class="product-name">Pain au chocolat</p>
-								<p class="product-type">Viennoiserie</p>
 								<ul>
                                 <li>
                                 <p class="old-product-price">2,50€</p>
@@ -79,7 +75,10 @@
 						<div class="product-section">
 							<div class="product-photo-admin">
 								<div class="product-photo-img-admin">
-									<p>+<p>
+									<div class="product-add">
+											<p class="icon-circle-with-plus product-icon"></p>
+											<p class="product-text">Ajouter un produit</p>
+										</div>
 								</div>
 							</div>
 						</div>

@@ -158,6 +158,7 @@
 }
 #first-menu ul li a:hover{
 	border-bottom: solid 4px $primary-color;
+	font-weight: bold;
 }
 
 #second-menu{
@@ -201,8 +202,8 @@ h2{
 }
 
 #logo{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 
 .photo-galery{
@@ -607,8 +608,20 @@ input[type="checkbox"]{
     transition: all 0.3s ease-out;
 }
 
+h2{
+	text-align: center;
+    margin-top: 30px;
+    color: white;
+    background-color: $tertiary-color;
+    padding: 5px;
+    line-height: 2em;
+}
+
 /*Fin Category ADMIN page*/
 
+.product-section:last-child{
+	margin-bottom: 30px;
+}
 
 
 .product-section:hover{
@@ -890,7 +903,6 @@ input[type="checkbox"]{
 #footer-presentation, #footer-social, #footer-location{
 	margin-bottom: 30px;
 }
-
 
 #footer-presentation h3, #footer-social h3, #footer-location h3{
 	text-align: center;
