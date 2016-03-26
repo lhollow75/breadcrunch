@@ -115,10 +115,12 @@ function uniteDelaiEnBase ($mysql, $row){
 	$req = $mysql->prepare("SELECT unite 
 							FROM unite_delai, produits
 							WHERE unite_delai.id = produits.unite_delai
-							AND produit.id = :row");
+							AND produits.id = :row");
 	$req->execute(array(
 		':row'=>$row
 		));
+		$reponse = $req->fetch();
+		return $reponse;
 }
 
 /*create a new empty product in database*/
@@ -132,10 +134,14 @@ function productCreation($mysql){
 
 /*get une ligne from product table */
 function recupProduct($mysql, $id){
-	$req = $mysql->prepare("SELECT * FROM produits
-							WHERE id=:id");
+	$req = $mysql->prepare('SELECT * FROM produits
+							WHERE id=:id');
+	//$req->bindValue(':id', $id, PDO::PARAM_INT);
 	$req->execute(array(
-		':id'=>$id));
+		':id'=>$id
+		));
+	$reponse = $req->fetch();
+		return $reponse;
 }
 
 

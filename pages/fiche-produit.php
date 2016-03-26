@@ -1,19 +1,23 @@
 <?php
-$idProduct = htmlspecialchars($_GET["id"]);
+$idProduct = $_GET["id"];
+echo $idProduct;
 ?>
 
 <div class="wrapper" id="main-content">
 <div class="container">
-<h1 id="product-name" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'product-ingredient','', 'recuperation') ?>Pain au chocolat</h1>
+<h1 id="product-name" contenteditable="<?php echo $activeContent; ?>"><?php $tabi = recupProduct($mysql, $idProduct); 
+	echo $tabi[1];
+	?></h1>
 <hr>
 <img class="col-lg-7  product-picture" src="images/breadcrunch_29.jpg" alt="">
 
 <div class="product-specs col-lg-5 col-sm-12 col-md-5 col-xs-12">
 <h4>Ingrédients</h4>
 <p class="product-spec" id="product-ingredient" contenteditable="<?php echo $activeContent; ?>">
-	<?php $tab = recupProduct($mysql, $idProduct); 
-	echo $tab[3];?></p>
-<label>Délai de commande minimum : </label>"
+	<?php $tabi = recupProduct($mysql, $idProduct); 
+	echo $tabi[3];
+	?></p>
+<label>Délai de commande minimum : </label>
 
 <?php
     if(isset($_SESSION['login'])) {
@@ -34,8 +38,8 @@ $idProduct = htmlspecialchars($_GET["id"]);
             <?php
             	} else {
 			?>
-			<p class="product-spec" id="min-timing" ><?php localisationEnBase($mysql, 'min-timing','', 'recuperation') ?></p> 
-			<p class="product-spec" id="timing-unit" ><?php localisationEnBase($mysql, 'timing-unit','', 'recuperation') ?></p>
+			<p class="product-spec" id="min-timing" ><?php $tabi = recupProduct($mysql, $idProduct); echo $tabi[9];?></p> 
+			<p class="product-spec" id="timing-unit" ><?php $unit = uniteDelaiEnBase ($mysql, $idProduct); echo $unit[0]; ?></p>
             <?php
                 }
             ?>
@@ -92,7 +96,7 @@ $idProduct = htmlspecialchars($_GET["id"]);
 	    	<li><input type="checkbox" id="moutarde" name="moutarde">Moutarde et produits à base de moutarde</li>
 	    	<li><input type="checkbox" id="graine" name="graine">Graines de sésame et produits à base de graines de sésame</li>
 	    	<li><input type="checkbox" id="lupin" name="lupin">Lupin et produits à base de lupin</li>
-	    	<li><input type="checkbox" id="mollusque" name="mollusque">Mollusques et produits à base de mollusqu</li>
+	    	<li><input type="checkbox" id="mollusque" name="mollusque">Mollusques et produits à base de mollusque</li>
 		</ul>
 	</div>
    
@@ -103,7 +107,7 @@ $idProduct = htmlspecialchars($_GET["id"]);
 	    } else {
 	?>
 	<label>Allergène : </label>
-	<p class="product-spec" id="timing-unit" ><?php localisationEnBase($mysql, 'timing-unit','', 'recuperation') ?></p>
+	<p class="product-spec" >Mollusques et produits à base de mollusque</p>
 	<?php
 	    }
 	?>
@@ -159,7 +163,21 @@ $idProduct = htmlspecialchars($_GET["id"]);
 </div>
 <div class="row">
    </br>
-    <a class="btn2" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'product-price','', 'recuperation') ?>€</a></br></br></br>
+    <a class="btn2" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php $tabi = recupProduct($mysql, $idProduct); echo $tabi[5];?>€</a></br></br></br>
+<?php
+    if(isset($_SESSION['login'])) {
+        if($_SESSION['admin']==true) {
+	?>
+	<?php
+	    }
+	?>
+	<?php
+	    } else {
+	?>
 <a class="btn">Ajouter au panier</a>
+<?php
+	    }
+	?>
+
 </div>
-</br></br>
+
