@@ -42,11 +42,13 @@
 					</p>
 				</div>
 				<div class="social-network">
-					<img src="./img/facebook.png">
-					<img src="./img/twitter.png">
-					<img src="./img/insta.png">
-					<img src="./img/pinterest.png">
-					<img src="./img/youtube.png">
+					<ul>
+						<li><span class="icon-facebook"></span></li>
+						<li><span class="icon-twitter"></span></li>
+						<li><span class="icon-instagram"></span></li>
+						<li><span class="icon-pinterest"></span></li>
+						<li><span class="icon-youtube"></span></li>
+					</ul>
 				</div>
 			</div>
 		</div>
