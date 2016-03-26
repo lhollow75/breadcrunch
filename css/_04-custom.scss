@@ -677,10 +677,17 @@ h2{
 }
 
 #product-name{
-	font-size: 20px;
-	font-weight: bold;
+	margin-bottom: 5px
 }
-
+.product-spec{
+	font-size: 14px;
+	font-style: italic;
+}
+.product-title{
+	margin:0px;
+	font-weight: bold;
+	font-size: 16px;
+}
 .product-type{
 	font-size: 16px;
 }
@@ -702,31 +709,61 @@ h2{
 
 /*Product page*/
 
+.product-list-checkbox ul{
+	list-style: none;
+	padding-left: 0px;
+	margin: 0px 0px 30px 0px; 
+}
+
+.product-list-checkbox li{
+	list-style: none;
+	margin-bottom: 5px;
+}
+.checkbox{
+	margin-right: 5px;
+}
+
+.product-details-title{
+	font-family: helvetica !important;
+	font-size: 14px;
+	font-style: bold;
+	margin: 5px 0px;
+}
+.product-details-text{
+	font-size: 12px;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.product-detais-clock{
+	margin: 20px 0px;
+}
+
 .product-picture{
-	/*margin: 10px;*/
-    max-width: 500px;
-	border: 1px solid black;
+    /*max-width: 500px;*/
+	border: 1px dotted black;
 	padding: 10px;
     margin-bottom: 35px;
 }
 
-.product-specs{
-    bottom: 30px;
-}
-
-.product-specs li{
-    list-style-type: none;
-}
-
-.product-spec{
-    display: block;
-    margin-bottom:15px; 
-}
-
 .price{
-    background-color:$secondary-color;
-    margin-bottom:15px; 
+    font-family: helvetica !important;
+    font-size: 30px;
+    font-weight: bold;
+    color: $primary-color;
 }
+.btn-add-cart{
+    padding: 5px 20px;
+    font-size: 30px;
+    color: $quaternary-color;
+    background-color:$primary-color;
+    text-align: center;
+}
+.btn-add-cart:hover{
+    background-color: darken($primary-color, 30%);
+    cursor: pointer;
+}
+
 /*FIN product page*/
 
 /*Liste-commande*/

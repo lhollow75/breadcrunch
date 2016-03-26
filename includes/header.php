@@ -60,19 +60,19 @@
             </ul>
         </nav>
         <div class="wrapper contact" id="main-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-            <div id="logo_magasin">
-                <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
-            </div>
-        </div>
-    </div>
-</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="logo_magasin">
+                            <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
+                        </div>
+                    </div>
+
          <div class="col-lg-12">
         <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
         </div>
-
+                </div>
+            </div>
 
         <nav id="first-menu">
             <ul>
