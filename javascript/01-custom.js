@@ -70,6 +70,20 @@ $(function(){
 		console.log("ici");
 	});
 
+	$(".page_titre").keyup(function(d){
+		console.log(d);
+		console.log(d.target.innerHTML);
+		switch(d.target.id){
+			case 'histoire_titre' :
+				$("#menu-histoire").html(d.target.innerHTML);
+				break;
+			case 'contact_titre' :
+				$("#menu-contact").html(d.target.innerHTML);
+				break;
+		}
+
+	});
+
 	$(".adresse").blur(function(d){
 		adresse = $(this).context.innerHTML;
 		adresse = adresse.replace(/ /g, '+');

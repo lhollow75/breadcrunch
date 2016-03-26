@@ -87,8 +87,8 @@
                 <?php
                 }
                 ?>
-                <li><a href="index.php?page=a-propos">A Propos</a></li>
-                <li><a href="index.php?page=contact">Contact</a></li>
+                <li><a id="menu-histoire" href="index.php?page=a-propos"><?php localisationEnBase($mysql, 'histoire_titre','', 'recuperation') ?></a></li>
+                <li><a id="menu-contact" href="index.php?page=contact"><?php localisationEnBase($mysql, 'contact_titre','', 'recuperation') ?></a></li>
             </ul>
         </nav>
         <nav id="second-menu">
