@@ -349,7 +349,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     font-size: 20px;
     color: #FFF;
     background-color: $primary-color;
-    border-color: $primary-color;
+	border: none;
     font-weight: normal;
     padding: 20px 30px;
     text-transform: uppercase;
@@ -653,9 +653,77 @@ input[type="checkbox"]{
     text-decoration: none;
     display: inline-block;
 }
+.filter-list a{
+    text-decoration: none;
+}
 .filter-list li img{
     margin-right:20px;
 }
+
+[class^="filter-btn-"], [class*=" filter-btn-"] {
+	padding: 6px 10px 2px 10px;
+	color: #ffffff;
+	font-size: 12px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.filter-btn-untreated{
+	background-color: #000000;
+	border: solid 1px #000000;
+}
+.filter-btn-accepted{
+	background-color: #007c00;
+	border: solid 1px #007c00;
+}
+.filter-btn-waiting{
+	background-color: #ffb400;
+	border: solid 1px #ffb400;
+}
+.filter-btn-canceled{
+	background-color: #eb212e;
+	border: solid 1px #eb212e;
+}
+.filter-btn-untreated:hover{
+	background-color: #fff;
+	color: #000000;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.filter-btn-accepted:hover{
+	background-color: #fff;
+	color: #007c00;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.filter-btn-waiting:hover{
+	background-color: #fff;
+	color: #ffb400;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.filter-btn-canceled:hover{
+	background-color: #fff;
+	color: #eb212e;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#numero-commande, #nom-client, #date-commande, #heure-commande{
+	font-size: 16px;
+	font-family: helvetica !important;
+	font-weight: bold;
+}
+
 .dataproduct-list li{
     list-style-type: none;
     display: inline-block;
@@ -668,6 +736,7 @@ input[type="checkbox"]{
 }
 .data-product{
     margin-left: -20px;
+    position: relative;
 }
 .data-product ul li{
     list-style-type: none;
@@ -677,14 +746,89 @@ input[type="checkbox"]{
     margin: 15px;
 }
 #total-price{
-    background-color: $primary-color;
+	font-family: helvetica !important;
+    background-color: #CDBA72;
     color: white;
-    padding: 15px;
-    padding-bottom: 5px;
+    padding: 5px 10px;
     font-size: 30px;
 }
 .productend li{
     list-style-type: none;
+}
+.product-btn{
+	text-align: center;
+}
+
+.close-btn{
+	color: $primary-color;
+	position: absolute;
+	font-size: 30px;
+    top: -16px;
+    right: 0px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.close-btn:hover{
+	color: darken($primary-color, 30%);
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
+
+[class^="btn-"], [class*=" btn-"] {
+	padding: 10px 20px;
+	color: #ffffff;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin: 10px 0px;
+	border: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.btn-accept{
+	background-color: #007c00;
+}
+.btn-wait{
+	background-color: #ffb400;
+}
+.btn-cancel{
+	background-color: #eb212e;
+}
+.btn-accept:hover{
+	background-color: darken(#007c00, 10%);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.btn-wait:hover{
+	background-color: darken(#ffb400, 10%);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.btn-cancel:hover{
+	background-color: darken(#eb212e, 10%);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.icon-checkbox-checked{
+	color: #007c00;
+}
+.icon-squared-cross{
+	color: #eb212e;
 }
 /*END Liste-commande*/
 

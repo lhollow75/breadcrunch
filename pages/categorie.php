@@ -1,6 +1,11 @@
-    <div class="wrapper" id="main-content">
-        <div class="container">
-        	<div class="row">
+
+<div class="wrapper contact" id="main-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 id="contact" class="page_titre">Nos produits</h1>
+				<hr>
+			</div>
         		
 				<?php
 				for ($i=0; $i < sizeof($categorie); $i++) { 
