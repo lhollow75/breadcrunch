@@ -62,22 +62,23 @@ $idProduct = htmlspecialchars($_GET["id"]);
 		  <option value="16h-17h">16h - 17h</option>
 		  <option value="17h-18h">17h - 18h</option>
 		</select>
-	</div>
-	<div class="col-lg-2 col-sm-12 col-md-2 col-xs-12">
+	
+	<div class="col-lg-2 col-sm-12 col-md-2 col-xs-12" style="padding-left:0">
 	<label for="quantity">Quantité</label><input type="number" name="quantity" id="quantity" class="product-spec">
 	</div>
 	<?php
 	    }
 	?>
-
+</div>
+<div class="row">
 	<?php
     if(isset($_SESSION['login'])) {
         if($_SESSION['admin']==true) {
 	?>
-	<div class="col-lg-4 col-lg-offset-1 col-sm-12 col-md-4 col-xs-12">
-		<label>Allergène : </label>
-
+    
+    <div class="col-lg-4">
 		<ul>
+            <label>Allergène : </label>
 	    	<li><input type="checkbox" id="cereale" name="cereale">Céréales contenant du gluten</li>
 	    	<li><input type="checkbox" id="crustace" name="crustace">Crustacé et produits à base de crustacés</li>
 	    	<li><input type="checkbox" id="oeuf" name="oeuf">Oeufs et produits à base d'oeufs</li>
@@ -94,7 +95,7 @@ $idProduct = htmlspecialchars($_GET["id"]);
 	    	<li><input type="checkbox" id="mollusque" name="mollusque">Mollusques et produits à base de mollusqu</li>
 		</ul>
 	</div>
-
+   
 	<?php
 	    }
 	?>
@@ -107,8 +108,8 @@ $idProduct = htmlspecialchars($_GET["id"]);
 	    }
 	?>
 	
-
-	<div class="col-lg-5 col-sm-12 col-md-5 col-xs-2">
+     <div class="col-lg-4">
+	<!--<div class="col-lg-10 col-sm-12 col-md-5 col-xs-2">-->
 	<label>Taille gateaux</label>
 
 
@@ -138,14 +139,27 @@ $idProduct = htmlspecialchars($_GET["id"]);
 		  <option value="8pers">8 pers.</option>
 		  <option value="10pers">10 pers.</option>
 	</select>
+    </div>
+   
+    </div>
+    
+</div>
+
+</div>
+
+</div>
 
 	<?php
 	    }
 	?>
 
+</div>
+
+
+</div>
+<div class="row">
    </br>
     <a class="btn2" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'product-price','', 'recuperation') ?>€</a></br></br></br>
 <a class="btn">Ajouter au panier</a>
 </div>
-</div></div>
 </br></br>
