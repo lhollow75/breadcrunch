@@ -240,6 +240,23 @@ hr{
 	margin: 30px auto;
 }
 
+.photo-galery{
+	opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.photo-galery:hover{
+	cursor: pointer;
+	opacity: 0.7;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
 .galery-section{
 	width: 200px;
 }
@@ -543,17 +560,53 @@ input[type="checkbox"]{
 .product-photo-img-admin{
 	width: 278px;
 	height: 228px;
-	line-height: 228px;
 	background-color: darken($quaternary-color, 30%);
+	text-align: center;
+	display: flex;
 }
 .product-photo-img-admin p{
-    font-size: 80px;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
 	color: $quaternary-color;
 }
+
+
+.product-add{
+	margin: auto;
+}
+.product-photo-img-admin:hover{
+	opacity: 0.7;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.product-photo-img-admin:hover .product-icon, .product-photo-img-admin:hover .product-text{
+	color: #000 !important;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.product-icon{
+	font-size: 30px !important;
+	color: #fff;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.product-text{
+	font-size: 14px !important;
+	color: #fff;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
 /*Fin Category ADMIN page*/
 
 
@@ -574,7 +627,7 @@ input[type="checkbox"]{
 	position: absolute;
 	background-color: $primary-color;
 	width: 300px;
-    height: 100px;
+    height: 70px;
 	right: 0px;
 	bottom: -110px;
 	text-align: center;

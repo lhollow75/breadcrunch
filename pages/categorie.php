@@ -16,17 +16,17 @@
 						<div class="col-lg-12">
 							<h2><?php echo utf8_encode($categorie[$i]["description"]) ?></h2>
 							<div class="col-lg-12">
-							 	<?php echo $produits; ?>
+							 	<h3><?php echo $produits; ?></h3>
 							</div>
 						</div>
 						<div class="ajoutProduit col-lg-4 col-md-4 col-sm-6 col-xs-12">
 							<div class="product-section">
 								<div class="product-photo-admin">
 									<div class="product-photo-img-admin">
-										<p>+<p>
-									</div>
-									<div class="product-infos">
-										<p class="product-price">Ajouter un produit</p>
+										<div class="product-add">
+											<p class="icon-circle-with-plus product-icon"></p>
+											<p class="product-text">Ajouter un produit</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -40,7 +40,7 @@
 								if (isset($_SESSION['login']) && $_SESSION['admin']==true){
 									?>
 									<div class="col-lg-12">
-										 <?php echo "Vous avez ".sizeof($produits)." produit(s) dans cette catégorie" ?>
+										 <h3><?php echo "Vous avez ".sizeof($produits)." produit(s) dans cette catégorie" ?></h3>
 									</div>
 									<?php
 								}
@@ -53,12 +53,12 @@
 							<div class="ajoutProduit col-lg-4 col-md-4 col-sm-6 col-xs-12">
 								<div class="product-section">
 									<div class="product-photo-admin">
-										<div class="product-photo-img-admin">
-											<p>+<p>
+									<div class="product-photo-img-admin">
+										<div class="product-add">
+											<p class="icon-circle-with-plus product-icon"></p>
+											<p class="product-text">Ajouter un produit</p>
 										</div>
-										<div class="product-infos">
-											<p class="product-price">Ajouter un produit</p>
-										</div>
+									</div>
 									</div>
 								</div>
 							</div>
