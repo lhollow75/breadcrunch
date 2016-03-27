@@ -79,7 +79,6 @@
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="index.php?page=categorie">Produits</a></li>
                 <li><a href="index.php?page=promotions">Promotions</a></li>
-                <!--<li><a href="index.php"><img src="images/breadcrunch_logo.png" alt="Logo" id="logo"></a></li>-->
                 <?php
                 if ($accueil['blog']!=""){
                 ?>

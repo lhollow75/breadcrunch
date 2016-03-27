@@ -588,19 +588,47 @@ input[type="checkbox"]{
 	background-color: darken($quaternary-color, 30%);
 	text-align: center;
 	display: flex;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
+
 .product-photo-img-admin p{
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
 	color: $quaternary-color;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 
 .product-add{
 	margin: auto;
 }
+
+.product-add input{
+	border: none;
+	background-color: $quaternary-color;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.product-photo-img-admin:hover .product-add input, .product-photo-img-admin:hover .product-text{
+	background-color: $tertiary-color;
+	color: $quaternary-color;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
 .product-photo-img-admin:hover{
 	opacity: 0.7;
     -webkit-transition: all 0.3s ease-out;
@@ -608,8 +636,8 @@ input[type="checkbox"]{
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-.product-photo-img-admin:hover .product-icon, .product-photo-img-admin:hover .product-text{
-	color: #000 !important;
+.product-photo-img-admin:hover .product-icon{
+	color: $tertiary-color !important;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -625,12 +653,13 @@ input[type="checkbox"]{
 }
 .product-text{
 	font-size: 14px !important;
-	color: #fff;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
+
+
 
 h2{
 	text-align: center;
@@ -678,6 +707,9 @@ h2{
 
 #product-name{
 	margin-bottom: 5px
+}
+.product-infos p:first-letter{
+    text-transform:uppercase;
 }
 .product-spec{
 	font-size: 14px;
