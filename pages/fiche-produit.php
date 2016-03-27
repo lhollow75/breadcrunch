@@ -5,7 +5,7 @@ if (isset($_GET["id"])){
 	$idProduct = $last_id;
 }
 
-echo $idProduct;
+//echo $idProduct;
 ?>
 
 <div class="wrapper" id="main-content">
