@@ -117,6 +117,14 @@ function showPage(){
 			$_SESSION['context']="demarrage.php";
 			return $page;
 			break;
+
+			case "creation_produit":
+			$page['title']="Création d'un produit";
+			$page['desc']="Création d'un produit";
+			$page['content']="creation_produit.php";
+			$_SESSION['context']="creation_produit.php";
+			return $page;
+			break;
 		}
 	}
 }

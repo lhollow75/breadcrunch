@@ -57,7 +57,7 @@ $(function(){
 		
 	});
 
-	$(".ajoutProduit").click(function(){
+	/*$(".ajoutProduit").click(function(){
 		//console.log($(this));
 		console.log("la");
 		$.ajax({ 
@@ -68,6 +68,26 @@ $(function(){
 			},
 		});
 		console.log("ici");
+	});*/
+
+	$(".produit").click(function(){
+
+		console.log("la");
+
+	});
+
+	$(".page_titre").keyup(function(d){
+		console.log(d);
+		console.log(d.target.innerHTML);
+		switch(d.target.id){
+			case 'histoire_titre' :
+				$("#menu-histoire").html(d.target.innerHTML);
+				break;
+			case 'contact_titre' :
+				$("#menu-contact").html(d.target.innerHTML);
+				break;
+		}
+
 	});
 
 	$(".adresse").blur(function(d){

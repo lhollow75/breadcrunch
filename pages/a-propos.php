@@ -5,7 +5,7 @@
     <div class="wrapper" id="main-content">
         <div class="container">
 			<div id="story" class="row">
-				<h1 class="page_titre">Notre histoire</h1>
+				<h1 class="page_titre" id="histoire_titre" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'histoire_titre','', 'recuperation') ?></h1>
 		        <hr>
 
 				<div class="col-lg-6 col-xs-12">

@@ -60,19 +60,19 @@
             </ul>
         </nav>
         <div class="wrapper contact" id="main-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-            <div id="logo_magasin">
-                <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
-            </div>
-        </div>
-    </div>
-</div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="logo_magasin">
+                            <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
+                        </div>
+                    </div>
+
          <div class="col-lg-12">
         <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
         </div>
-
+                </div>
+            </div>
 
         <nav id="first-menu">
             <ul>
@@ -87,8 +87,8 @@
                 <?php
                 }
                 ?>
-                <li><a href="index.php?page=a-propos">A Propos</a></li>
-                <li><a href="index.php?page=contact">Contact</a></li>
+                <li><a id="menu-histoire" href="index.php?page=a-propos"><?php localisationEnBase($mysql, 'histoire_titre','', 'recuperation') ?></a></li>
+                <li><a id="menu-contact" href="index.php?page=contact"><?php localisationEnBase($mysql, 'contact_titre','', 'recuperation') ?></a></li>
             </ul>
         </nav>
         <nav id="second-menu">
@@ -105,8 +105,8 @@
             produit = ['<?php echo $affiche_categorie[0] ?>', '<?php echo $affiche_categorie[1] ?>', '<?php echo $affiche_categorie[2] ?>', '<?php echo $affiche_categorie[3] ?>', '<?php echo $affiche_categorie[4] ?>'];
 
             for(i=0; i<produit.length; i++){
-                switch(i){
-                    case 0:
+                switch(i){  
+                    case 0: 
                         if (produit[i]==0){
                             document.getElementById('menu-boulangerie').style.display = "none";
                         }else {
