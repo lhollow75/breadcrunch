@@ -1,3 +1,9 @@
+<?php
+$cmdIduser = recupCommander($mysql); 
+/*var_dump($cmdIduser);*/
+?>
+
+
 <h1 class="page_titre">Liste des commandes</h1>
 <hr>
 <div class="wrapper" id="main-content">
@@ -29,6 +35,7 @@
 		    </li>
 		</ul>
 
+
 <div class="commande row">
 <div class="data-product">
 	<div class="icon-squared-cross close-btn"></div>
@@ -37,7 +44,12 @@
 	    <p class="info-commande">N° Commande : </p>
 	    </li>
 	    <li>
-	    <p id="numero-commande" class="filter-btn-untreated">123456</p>
+	    <p id="numero-commande" class="filter-btn-untreated">
+	    <?php $cmd = recupCommande($mysql, $cmdIduser[1]); 
+	    echo $cmd[0][0];
+	    ?>
+
+	    </p>
 	    </li>
 	</ul>
 </div>
@@ -47,34 +59,44 @@
 	    <p class="info-commande">Nom : </p>
 	    </li>
 	    <li>
-	    <p id="nom-client">Pascal Poirey</p>
+	    <p id="nom-client"><?php echo $cmd[0][1];?></p>
 	    </li>
 	    <li>
 	    <p class="info-commande">Date : </p>
 	    </li>
 	    <li>
-	    <p id="date-commande">28/03/2016</p>
+	    <p id="date-commande"><?php echo $cmd[0][2];?></p>
 	    </li>
 	    <li>
 	    <p class="info-commande">Heure : </p>
 	    </li>
 	    <li>
-	    <p id="heure-commande">16h-17h</p>
+	    <p id="heure-commande"><?php echo $cmd[0][3];?></p>
 	    </li>
 	</ul>
 </div>
 <div class="product-contents">
+	<?php
+	for ($i = 0; $i < sizeof($cmd); $i++) {
+		echo '
 	<div class="product col-sm-offset-0 col-xs-offset-0 col-lg-5 col-md-5 col-sm-10 col-xs-10">
+
 	    <div class="product-space">
-		<img src="" alt="">
-		<p id="name-product">Pain au chocolat</p>
-		<p class="info">Pour offrir : <span class="icon-checkbox-checked"></span></p><!-- ou class="icon-squared-cross" -->
-		<p class="info">Message : <span id="message">Joyeux anniversaire Machin</span></p>
-		<p id="price">1,50€</p>
+		<img src="images/'.$cmd[$i][4].'" alt="">
+		<p id="name-product">'.$cmd[$i][5].'</p>
+		<p class="info">Pour offrir : <span ';
+		if ($cmd[$i][6] == 1){ 
+			echo 'class="icon-checkbox-checked"'; 
+		}else{ 
+			echo 'class="icon-squared-cross"';
+		} 
+		echo '></span></p>
+		<p class="info">Message : <span id="message">'.$cmd[$i][7].'</span></p>
+		<p id="price">'.$cmd[$i][8].'€</p>
         </div>
-	</div>
+	</div>';} ?> 
 	
-	<div class="product col-md-offset-1 col-sm-offset-0 col-xs-offset-0 col-lg-offset-1 col-lg-5 col-md-5 col-sm-10 col-xs-10">
+	<!--<div class="product col-md-offset-1 col-sm-offset-0 col-xs-offset-0 col-lg-offset-1 col-lg-5 col-md-5 col-sm-10 col-xs-10">
 	    <div class="product-space">
 		<img src="" alt="">
 		<p id="name-product">Pain au chocolat</p>
@@ -92,12 +114,12 @@
 		<p class="info">Message </p><p id="message">Joyeux anniversaire Machin</p>
 		<p id="price">1,50€</p>
         </div>
-	</div>
+	</div>-->
     
     <div class="row productend col-sm-10 col-xs-10">
         <div class="col-lg-8">
             <p></br>Commentaire (demande particulière,...) :</p>
-	        <textarea></textarea>
+	        <p><?php echo $cmd[0][9]?></p>
         </div>
 	        <div class="col-lg-4">
 	        <ul>
@@ -105,7 +127,7 @@
 	        <p>Total : </p>
             </li>
             <li>
-                <a id="total-price">13,50€</a>
+                <a id="total-price"><?php echo $cmd[0][10]?>€</a>
             </li>
             </ul>
             </div>
