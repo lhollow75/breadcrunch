@@ -13,7 +13,7 @@ $idProduct = htmlspecialchars($_GET["id"]);
 <p class="product-spec" id="product-ingredient" contenteditable="<?php echo $activeContent; ?>">
 	<?php $tab = recupProduct($mysql, $idProduct); 
 	echo $tab[3];?></p>
-<label>Délai de commande minimum : </label>"
+<label>Délai de commande minimum : </label>
 
 <?php
     if(isset($_SESSION['login'])) {
