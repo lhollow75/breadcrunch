@@ -136,7 +136,6 @@ function productCreation($mysql){
 function recupProduct($mysql, $id){
 	$req = $mysql->prepare('SELECT * FROM produits
 							WHERE id=:id');
-	//$req->bindValue(':id', $id, PDO::PARAM_INT);
 	$req->execute(array(
 		':id'=>$id
 		));
@@ -145,5 +144,37 @@ function recupProduct($mysql, $id){
 }
 
 
+
+/*get information about order from table commande,produits_commandes, produits and users */
+function recupCommande($mysql, $cmdIduser){
+	$req = $mysql->prepare('SELECT commande.id, login, DATE(date_retrait), TIME(date_retrait), photo, nom, cadeau, message, produits_commandes.prix_TTC, commentaire, prix_total_TTC 
+							FROM commande, produits_commandes, produits, users 
+							WHERE commande.id = produits_commandes.idcommande 
+							AND commande.iduser = users.id 
+							AND users.id = :cmdIduser
+							AND produits.id = produits_commandes.idproduit');
+	$req->execute(array(
+		':cmdIduser'=>$cmdIduser
+		));
+	if($req->rowCount()>=1) {
+		while ($donnees = $req->fetch()){
+			$tab[] = $donnees;
+		}
+	}
+		return $tab;
+}
+
+/*get id of people with unfinish order*/
+function recupCommander($mysql){
+	$req = $mysql->prepare('SELECT iduser FROM commande WHERE statut != 5');
+	$req->execute(array(
+		));
+	if($req->rowCount()>=1) {
+		while ($donnees = $req->fetch(PDO::FETCH_ASSOC)){
+			$tab[] = $donnees['iduser'];
+		}
+	}
+		return $tab;
+}
 
 ?>
