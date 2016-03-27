@@ -105,8 +105,8 @@
             produit = ['<?php echo $affiche_categorie[0] ?>', '<?php echo $affiche_categorie[1] ?>', '<?php echo $affiche_categorie[2] ?>', '<?php echo $affiche_categorie[3] ?>', '<?php echo $affiche_categorie[4] ?>'];
 
             for(i=0; i<produit.length; i++){
-                switch(i){
-                    case 0:
+                switch(i){  
+                    case 0: 
                         if (produit[i]==0){
                             document.getElementById('menu-boulangerie').style.display = "none";
                         }else {

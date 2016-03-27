@@ -57,7 +57,7 @@ $(function(){
 		
 	});
 
-	$(".ajoutProduit").click(function(){
+	/*$(".ajoutProduit").click(function(){
 		//console.log($(this));
 		console.log("la");
 		$.ajax({ 
@@ -68,6 +68,12 @@ $(function(){
 			},
 		});
 		console.log("ici");
+	});*/
+
+	$(".produit").click(function(){
+
+		console.log("la");
+
 	});
 
 	$(".page_titre").keyup(function(d){
