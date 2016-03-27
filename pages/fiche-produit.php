@@ -1,4 +1,4 @@
-<?php
+<?php 
 if (isset($_GET["id"])){
 	$idProduct = $_GET["id"];
 } else {
