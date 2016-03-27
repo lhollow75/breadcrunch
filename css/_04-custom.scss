@@ -176,18 +176,18 @@
 
 #second-menu ul li a{
 	color: $quaternary-color;
-	border-right: solid 1px #fff;
+	border-left: solid 1px #fff;
     line-height: 1.5em;
     padding: 5px 20px 0px 20px;
 }
+
 #second-menu ul li a:hover{
 	text-decoration: underline;
 }
 
-#second-menu ul li:last-child a{
-	border-right: none;
+#second-menu ul li:first-child a{
+	border-left: none;
 }
-
 
 /*HOME*/
 
