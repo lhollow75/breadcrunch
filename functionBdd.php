@@ -6,7 +6,7 @@ if (isset($_POST['fonction'])){
 			localisationEnBase($mysql, $_POST['data'], $_POST['donnees'], $_POST['action']);
 			break;
 		case 'productCreation':
-			productCreation($mysql);
+			//productCreation($mysql);
 			break;
 		
 		default:
@@ -124,12 +124,28 @@ function uniteDelaiEnBase ($mysql, $row){
 }
 
 /*create a new empty product in database*/
-function productCreation($mysql){
+function productCreation($mysql, $cat){
+	//echo $cat;
 	$req = $mysql->prepare("INSERT INTO produits (nom, description, ingredients, idcategorie, prix_TTC, prix_HT, prix_promo_TTC, prix_promo_HT,delai_minimum, unite_delai, promo_active, photo, active)
-							VALUES ('Nom du produit', 'Description du produit', 'Listes des ingredients', 1, 0, 0, 0, 0, 1, 1, 0, 'baguettes.jpg', 1)");
+							VALUES ('Nom du produit', 'Description du produit', 'Listes des ingredients', :cat, 0, 0, 0, 0, 1, 1, 0, 'baguettes.jpg', 1)");
+	$req->execute(array(
+		':cat'=>$cat
+		));
+	//echo "la";
+	$req->fetch();
+	$last_id = lastInsertId($mysql);
+	//echo "id : ".$last_id;
+	return $last_id;
+	//header('index.php?page=fiche-produit&id='.$last_id);
+}
+
+function lastInsertId($mysql){
+	$req = $mysql->prepare("SELECT id FROM produits WHERE nom = 'Nom du produit' ORDER BY id DESC");
 	$req->execute();
-	$last_id = $req->insert_id;
-	header('index.php?page=fiche-produit&id='.$last_id);
+
+	$reponse = $req->fetch();
+	//var_dump($reponse);
+	return $reponse["id"];
 }
 
 /*get une ligne from product table */

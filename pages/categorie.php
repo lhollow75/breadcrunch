@@ -19,17 +19,21 @@
 							 	<h3><?php echo $produits; ?></h3>
 							</div>
 						</div>
-						<div class="ajoutProduit col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="product-section">
-								<div class="product-photo-admin">
-									<div class="product-photo-img-admin">
-										<div class="product-add">
+						<div class=" ajoutProduit col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<form action="index.php?page=creation_produit" method="GET">
+							<input type="hidden" name="cat_produit" value="<?php echo $i; ?>">
+							<div class=" product-section">
+								<div class="product-photo-admin ">
+									<div class="product-photo-img-admin ">
+										<div class="product-add ">
 											<p class="icon-circle-with-plus product-icon"></p>
-											<p class="product-text">Ajouter un produit</p>
+											<input class="product-text " type="submit" value="Ajouter un produit">
 										</div>
 									</div>
 								</div>
 							</div>
+						</form>
+							
 						</div>
 						<?php
 						} else {
@@ -50,17 +54,21 @@
 							<?php
 							if (isset($_SESSION['login']) && $_SESSION['admin']==true){
 								?>
-							<div class="ajoutProduit col-lg-4 col-md-4 col-sm-6 col-xs-12">
-								<div class="product-section">
-									<div class="product-photo-admin">
-									<div class="product-photo-img-admin">
-										<div class="product-add">
-											<p class="icon-circle-with-plus product-icon"></p>
-											<p class="product-text">Ajouter un produit</p>
+							<div class=" ajoutProduit col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<form action="creation_produit.php" method="POST">
+								<input type="hidden" name="cat_produit" value="<?php echo $produits["$i"]["id"]; ?>">
+								<div class=" product-section">
+									<div class="product-photo-admin ">
+										<div class="product-photo-img-admin ">
+											<div class="product-add ">
+												<p class="icon-circle-with-plus product-icon"></p>
+												<input class="product-text" type="submit" value="Ajouter un produit">
+											</div>
 										</div>
 									</div>
-									</div>
 								</div>
+							</form>
+								
 							</div>
 							<?php
 							}

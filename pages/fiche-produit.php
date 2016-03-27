@@ -1,5 +1,10 @@
 <?php
-$idProduct = $_GET["id"];
+if (isset($_GET["id"])){
+	$idProduct = $_GET["id"];
+} else {
+	$idProduct = $last_id;
+}
+
 echo $idProduct;
 ?>
 
