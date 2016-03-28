@@ -122,7 +122,8 @@ foreach ($cmdIduser as $key => $value) {
    		</div>
 	</div>
 </div>
-</div>' 
+' 
 
     ;} 
     ?>
+    </div>
