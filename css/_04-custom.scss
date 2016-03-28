@@ -262,6 +262,11 @@ hr{
 	width: 200px;
 }
 
+.galery-section-title{
+	font-weight: bold;
+	margin: 10px 0px 0px 0px;
+}
+
 #galery div{
 	display: inline-block;
 	/*width: 220px;*/
@@ -327,17 +332,24 @@ hr{
 
 
 /*STORY*/
-.story-section{
+.story-section img{
 	margin: 20px 0px 30px 0px;
 }
 
+.story-section h2{
+	margin: 20px 0px 30px 0px;
+}
+
+.story-section img{
+    border: dotted 1px #000;
+}
 /*CONTACT*/
 #contact-form input,#contact-form textarea,#connect-form input,#chart-form input,#chart-form textarea{
     width: 100%;
 }
 #contact-form input,#contact-form textarea,#connect-form input,#register-form input,#chart-form input,#chart-form  button,#chart-form textarea{
     outline: none;
-    padding: 10px 10px;
+    padding: 10px 10px 4px 10px;
     margin: 0px 0px 20px 0px;
     font-family: $base-font-family;
     -webkit-transition: all 0.3s ease-out;
@@ -429,7 +441,21 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     text-transform: uppercase;
     margin-top:10px;
     margin-bottom:10px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
+
+.btn:hover{
+    color: #FFF;
+    background-color: darken($primary-color, 30%);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
 .btn2{
     font-size: 20px;
     color: #FFF;
@@ -440,6 +466,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     text-transform: uppercase;
     margin-top:10px;
     margin-bottom:10px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 .contact-details h1{
 	text-align: left;
@@ -696,7 +726,7 @@ input[type="checkbox"]{
 h2{
 	text-align: center;
     margin-top: 30px;
-    color: white;
+    color: $primary-color;
     background-color: $tertiary-color;
     padding: 5px;
     line-height: 2em;

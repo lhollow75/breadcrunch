@@ -25,7 +25,7 @@
 			    	<div class="galery-section">
 				    	<img id="img_boulangerie" class="photo-galery" src="./img/<?php echo $categorie[0]['photo']?>" alt="">
 				    	<div id="presentation-boulangerie" contenteditable="<?php echo $activeContent; ?>">
-							<p><?php localisationEnBase($mysql, 'presentation-boulangerie','', 'recuperation') ?></p>
+							<p class="galery-section-title"><?php localisationEnBase($mysql, 'presentation-boulangerie','', 'recuperation') ?></p>
 						</div><!-- /#presentation-boulangerie -->
 				        <form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
@@ -42,7 +42,7 @@
 			    	<div class="galery-section">
 				    	<img id="img_patisserie" class="photo-galery" src="./img/<?php echo $categorie[1]['photo']?>" alt="">
 				    	<div id="presentation-patisserie" contenteditable="<?php echo $activeContent; ?>">
-							<p><?php localisationEnBase($mysql, 'presentation-patisserie','', 'recuperation') ?></p>
+							<p class="galery-section-title"><?php localisationEnBase($mysql, 'presentation-patisserie','', 'recuperation') ?></p>
 						</div><!-- /#presentation-patisserie -->
 				    	<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
@@ -59,7 +59,7 @@
 			    	<div class="galery-section">
 				    	<img id="img_sandwich" class="photo-galery" src="./img/<?php echo $categorie[2]['photo']?>" alt="">
 				    	<div id="presentation-sandwich" contenteditable="<?php echo $activeContent; ?>">
-							<p><?php localisationEnBase($mysql, 'presentation-sandwich','', 'recuperation') ?></p>
+							<p class="galery-section-title"><?php localisationEnBase($mysql, 'presentation-sandwich','', 'recuperation') ?></p>
 						</div><!-- /#presentation-sandwich -->
 				    	<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
@@ -76,7 +76,7 @@
 			    	<div class="galery-section">
 				    	<img id="img_chocolaterie" class="photo-galery" src="./img/<?php echo $categorie[3]['photo']?>" alt="">
 				    	<div id="presentation-chocolaterie" contenteditable="<?php echo $activeContent; ?>">
-							<p><?php localisationEnBase($mysql, 'presentation-chocolaterie','', 'recuperation') ?></p>
+							<p class="galery-section-title"><?php localisationEnBase($mysql, 'presentation-chocolaterie','', 'recuperation') ?></p>
 						</div><!-- /#presentation-chocolaterie -->
 				    	<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
@@ -93,7 +93,7 @@
 			    	<div class="galery-section">
 				        <img id="img_boisson" class="photo-galery" src="./img/<?php echo $categorie[4]['photo']?>" alt="">
 				        <div id="presentation-boisson" contenteditable="<?php echo $activeContent; ?>">
-							<p><?php localisationEnBase($mysql, 'presentation-boisson','', 'recuperation') ?> Boissons</p>
+							<p class="galery-section-title"><?php localisationEnBase($mysql, 'presentation-boisson','', 'recuperation') ?> Boissons</p>
 						</div><!-- /#presentation-boisson -->
 				    	<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
 				            <input  class="fileimg" type="file" name="fichier"  accept="image/png" multiple>
@@ -108,7 +108,7 @@
 			</div><!-- /#galery -->
 
 			<div id="presentation-text" contenteditable="<?php echo $activeContent; ?>">
-				<p><?php localisationEnBase($mysql, 'presentation-text','', 'recuperation') ?></p>
+				<p class="galery-section-title"><?php localisationEnBase($mysql, 'presentation-text','', 'recuperation') ?></p>
 			</div><!-- /#presentation-text -->
 		</div><!-- /.container -->
     </div><!-- /#main-content -->
