@@ -75,8 +75,8 @@
             </div>
 
         <nav id="first-menu">
-            <span class="icon-menu"></span><!-- Menu burger -->
-            <ul>
+            <span class="icon-menu" style="color:black;cursor:pointer"></span><!-- Menu burger -->
+            <ul class="menu-burger">
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="index.php?page=categorie">Produits</a></li>
                 <li><a href="index.php?page=promotions">Promotions</a></li>
@@ -100,7 +100,7 @@
                 <li><a id="menu-boisson" href="#">Boisson</a></li>
             </ul>
         </nav>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script type="text/javascript">
             produit = ['<?php echo $affiche_categorie[0] ?>', '<?php echo $affiche_categorie[1] ?>', '<?php echo $affiche_categorie[2] ?>', '<?php echo $affiche_categorie[3] ?>', '<?php echo $affiche_categorie[4] ?>'];
 
@@ -143,5 +143,27 @@
                         break;
                 }
             }
+            
+            $(window).resize(function() {
+                if($(window).width() <= 640){
+                    $('.menu-burger').css("display","none");
+                    $('.icon-menu').css("z-index","50");
+                } else {
+                    $('.menu-burger').css("display","block");
+                    $('.icon-menu').css("z-index","0");
+                }
+            });
+            
+            if($(window).width() <= 640){
+                $('.menu-burger').css("display","none");
+                $('.icon-menu').css("z-index","50");
+            } else {
+                $('.menu-burger').css("display","block");
+                $('.icon-menu').css("z-index","0");
+            }
+            
+            $('.icon-menu').click(function(){
+                $('.menu-burger').toggle();
+            });    
         </script>
     </header>
