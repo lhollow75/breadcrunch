@@ -581,10 +581,10 @@ input[type="checkbox"]{
 
 #chart-form img{
 	width: 140px;
-	border: 1px dotted black;
+	border: 1px solid black;
 	padding: 5px;
 	display: block;
-	/*margin-bottom: 5px;*/
+	margin-bottom: 5px;
 }
 
 .gift{
@@ -612,8 +612,6 @@ input[type="checkbox"]{
 .chart-com{
 	margin-top: 20px;
 }
-
-
 /*FIN PANIER*/
 
 
@@ -1196,3 +1194,12 @@ div#admin-card {
     text-align: center;
 }
 /*Fin page promotions*/
+
+
+
+.product-space img {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+}
