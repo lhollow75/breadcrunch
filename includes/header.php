@@ -145,7 +145,7 @@
             }
             
             $(window).resize(function() {
-                if($(window).width() <= 640){
+                if($(window).width() <= 641){
                     $('.menu-burger').css("display","none");
                     $('.icon-menu').css("z-index","50");
                 } else {
@@ -154,7 +154,7 @@
                 }
             });
             
-            if($(window).width() <= 640){
+            if($(window).width() <= 641){
                 $('.menu-burger').css("display","none");
                 $('.icon-menu').css("z-index","50");
             } else {
