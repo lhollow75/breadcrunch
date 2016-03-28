@@ -338,7 +338,7 @@ hr{
 #contact-form input,#contact-form textarea,#connect-form input,#register-form input,#chart-form input,#chart-form  button,#chart-form textarea{
     outline: none;
     padding: 10px 10px;
-    margin: 10px 0;
+    margin: 0px 0px 20px 0px;
     font-family: $base-font-family;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -364,6 +364,48 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	margin: 0;
 }
 
+.icon-facebook:hover{
+	color: #3a5795;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.icon-twitter:hover{
+	color: #1da1f2;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.icon-instagram:hover{
+	color: #8e6051;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.icon-pinterest:hover{
+	color: #bd081c;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.icon-youtube:hover{
+	color: #e62117;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
 .social-network ul li{
 	display: inline-block;
 	list-style: none;
@@ -375,16 +417,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-
-.social-network ul li:hover{
-	color: darken($primary-color,30%);
-	cursor: pointer;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-
 
 
 .btn{
@@ -1032,7 +1064,7 @@ h2{
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-
+/*
 #social-icons ul li a:hover{
 	color: $primary-color;
 	text-decoration: none;
@@ -1041,7 +1073,7 @@ h2{
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-
+*/
 #footer-breadcrunch{
 	background-color: #101010;
 	text-align: center;

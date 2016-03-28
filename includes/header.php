@@ -30,35 +30,35 @@
 </head>
 
 <body>
-    <header>
-                <nav id="user-bar">
-                    <ul>
-                    <?php
-                        if(isset($_SESSION['login'])) {
-                            if($_SESSION['admin']==true) {
-                        ?>
-                        <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
-                        <li><a class="btn_cart" href="index.php?page=liste-commande">Liste des commandes</a></li>
-                        <?php
-                        }
-                        ?>
-                        <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>
-                        <?php
-                    } else {
-                        ?>
-                        <li><a class="btn_inscription" href="index.php?page=logon">S'inscrire</a></li>
-                        <li><a class="btn_login" href="index.php?page=login">Se connecter</a><li>
-                        <?php
-                    }
-                    if(isset($_SESSION['login']) && $_SESSION['admin']!=true) {
-                        ?>
-                        <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>      
-                    <?php
-                    }
-                    ?>   
-                
-            </ul>
-        </nav>
+    <header class="wrapper" id="main-header">
+                        <nav id="user-bar">
+                            <ul>
+                            <?php
+                                if(isset($_SESSION['login'])) {
+                                    if($_SESSION['admin']==true) {
+                                ?>
+                                <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
+                                <li><a class="btn_cart" href="index.php?page=liste-commande">Liste des commandes</a></li>
+                                <?php
+                                }
+                                ?>
+                                <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>
+                                <?php
+                            } else {
+                                ?>
+                                <li><a class="btn_inscription" href="index.php?page=logon">S'inscrire</a></li>
+                                <li><a class="btn_login" href="index.php?page=login">Se connecter</a><li>
+                                <?php
+                            }
+                            if(isset($_SESSION['login']) && $_SESSION['admin']!=true) {
+                                ?>
+                                <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>      
+                            <?php
+                            }
+                            ?>   
+                            </ul>
+                        </nav>
+
         <div class="wrapper contact" id="main-content">
             <div class="container">
                 <div class="row">
@@ -75,6 +75,7 @@
             </div>
 
         <nav id="first-menu">
+            <span class="icon-menu"></span><!-- Menu burger -->
             <ul>
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="index.php?page=categorie">Produits</a></li>
