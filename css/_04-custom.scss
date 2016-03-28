@@ -262,6 +262,11 @@ hr{
 	width: 200px;
 }
 
+.galery-section-title{
+	font-weight: bold;
+	margin: 10px 0px 0px 0px;
+}
+
 #galery div{
 	display: inline-block;
 	/*width: 220px;*/
@@ -327,18 +332,25 @@ hr{
 
 
 /*STORY*/
-.story-section{
+.story-section img{
 	margin: 20px 0px 30px 0px;
 }
 
+.story-section h2{
+	margin: 20px 0px 30px 0px;
+}
+
+.story-section img{
+    border: dotted 1px #000;
+}
 /*CONTACT*/
 #contact-form input,#contact-form textarea,#connect-form input,#chart-form input,#chart-form textarea{
     width: 100%;
 }
 #contact-form input,#contact-form textarea,#connect-form input,#register-form input,#chart-form input,#chart-form  button,#chart-form textarea{
     outline: none;
-    padding: 10px 10px;
-    margin: 10px 0;
+    padding: 10px 10px 4px 10px;
+    margin: 0px 0px 20px 0px;
     font-family: $base-font-family;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -364,6 +376,48 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	margin: 0;
 }
 
+.icon-facebook:hover{
+	color: #3a5795;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.icon-twitter:hover{
+	color: #1da1f2;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.icon-instagram:hover{
+	color: #8e6051;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.icon-pinterest:hover{
+	color: #bd081c;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.icon-youtube:hover{
+	color: #e62117;
+	cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+
 .social-network ul li{
 	display: inline-block;
 	list-style: none;
@@ -376,16 +430,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     transition: all 0.3s ease-out;
 }
 
-.social-network ul li:hover{
-	color: darken($primary-color,30%);
-	cursor: pointer;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-
-
 
 .btn{
     font-size: 20px;
@@ -397,7 +441,21 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     text-transform: uppercase;
     margin-top:10px;
     margin-bottom:10px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
+
+.btn:hover{
+    color: #FFF;
+    background-color: darken($primary-color, 30%);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
 .btn2{
     font-size: 20px;
     color: #FFF;
@@ -408,6 +466,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     text-transform: uppercase;
     margin-top:10px;
     margin-bottom:10px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 .contact-details h1{
 	text-align: left;
@@ -588,19 +650,47 @@ input[type="checkbox"]{
 	background-color: darken($quaternary-color, 30%);
 	text-align: center;
 	display: flex;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
+
 .product-photo-img-admin p{
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
 	color: $quaternary-color;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 
 .product-add{
 	margin: auto;
 }
+
+.product-add input{
+	border: none;
+	background-color: $quaternary-color;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.product-photo-img-admin:hover .product-add input, .product-photo-img-admin:hover .product-text{
+	background-color: $tertiary-color;
+	color: $quaternary-color;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
 .product-photo-img-admin:hover{
 	opacity: 0.7;
     -webkit-transition: all 0.3s ease-out;
@@ -608,8 +698,8 @@ input[type="checkbox"]{
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-.product-photo-img-admin:hover .product-icon, .product-photo-img-admin:hover .product-text{
-	color: #000 !important;
+.product-photo-img-admin:hover .product-icon{
+	color: $tertiary-color !important;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -625,17 +715,18 @@ input[type="checkbox"]{
 }
 .product-text{
 	font-size: 14px !important;
-	color: #fff;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
+
+
 h2{
 	text-align: center;
     margin-top: 30px;
-    color: white;
+    color: $primary-color;
     background-color: $tertiary-color;
     padding: 5px;
     line-height: 2em;
@@ -678,6 +769,9 @@ h2{
 
 #product-name{
 	margin-bottom: 5px
+}
+.product-infos p:first-letter{
+    text-transform:uppercase;
 }
 .product-spec{
 	font-size: 14px;
@@ -961,6 +1055,11 @@ h2{
 
 /*FOOTER*/
 
+.footer-logo{
+	width: 50px;
+	height: 50px;
+}
+
 #footer-presentation, #footer-social, #footer-location{
 	margin-bottom: 30px;
 }
@@ -991,18 +1090,8 @@ h2{
 	padding: 5px;
 }
 
-
 #social-icons ul li a{
 	color: $quaternary-color;
-	text-decoration: none;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-
-#social-icons ul li a:hover{
-	color: $primary-color;
 	text-decoration: none;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -1015,16 +1104,12 @@ h2{
 	text-align: center;
 	width: 100%;
 	color: $quaternary-color;
-	padding: 10px 0px;
+	padding: 0px;
 	font-size: 10px;
 }
 /*Fin FOOTER*/
 
 /*CONFIG SITE*/
-
-#config-site{
-	
-}
 
 #config-site div{
 	margin-bottom: 20px;

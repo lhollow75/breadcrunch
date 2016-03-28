@@ -5,7 +5,6 @@ if (isset($_GET["id"])){
 	$idProduct = $last_id;
 }
 
-echo $idProduct;
 ?>
 
 <div class="wrapper" id="main-content">
@@ -17,14 +16,16 @@ echo $idProduct;
 		<hr>
 		<div class="row">
 			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-				<img class="product-picture" src="images/breadcrunch_29.jpg" alt="">
+				<img class="product-picture" src="images/<?php 
+						echo $tabi[12];
+						?>" alt="">
 			</div>
 
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 				<div class="product-details">
 					<p class="product-details-title">Ingrédients :</p>
 					<p class="product-details-text" id="product-ingredient" contenteditable="<?php echo $activeContent; ?>">
-						<?php $tabi = recupProduct($mysql, $idProduct); 
+						<?php 
 						echo $tabi[3];
 						?>
 					</p>
@@ -52,7 +53,7 @@ echo $idProduct;
 			        <?php
 			          	} else {
 					?>
-					<span class="product-details-title" id="min-timing" ><?php $tabi = recupProduct($mysql, $idProduct); echo $tabi[9];?></span> 
+					<span class="product-details-title" id="min-timing" ><?php echo $tabi[9];?></span> 
 					<span class="product-details-title" id="timing-unit" ><?php $unit = uniteDelaiEnBase ($mysql, $idProduct); echo $unit[0]; ?></span>
 					<?php
 				        }
@@ -91,7 +92,7 @@ echo $idProduct;
 						<input type="number" name="quantity" id="quantity" class="product-spec">
 					</p>
 					<p><span class="product-details-title">Prix :</span>
-		    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php $tabi = recupProduct($mysql, $idProduct); echo $tabi[5];?>€</span>
+		    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?>€</span>
 					<div class="btn-add-cart">Ajouter au panier</div>
 					<?php
 					    }
