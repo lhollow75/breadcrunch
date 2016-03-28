@@ -44,7 +44,8 @@
 
     </footer>
 		<div id="footer-breadcrunch">
-			<p>Réalisation Team. Fonctionne sous Breadcrunch.</p>
+			<img class="footer-logo" src="./img/logo_breadcrunch_white.png" alt="Breadcrunch, artisan digital">
+			<span>Fonctionne sous Breadcrunch</span>
 		</div>
     <!-- message erreur or success -->
 	<div class="alert">

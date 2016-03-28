@@ -1025,6 +1025,11 @@ h2{
 
 /*FOOTER*/
 
+.footer-logo{
+	width: 50px;
+	height: 50px;
+}
+
 #footer-presentation, #footer-social, #footer-location{
 	margin-bottom: 30px;
 }
@@ -1055,7 +1060,6 @@ h2{
 	padding: 5px;
 }
 
-
 #social-icons ul li a{
 	color: $quaternary-color;
 	text-decoration: none;
@@ -1064,31 +1068,18 @@ h2{
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
-/*
-#social-icons ul li a:hover{
-	color: $primary-color;
-	text-decoration: none;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-*/
+
 #footer-breadcrunch{
 	background-color: #101010;
 	text-align: center;
 	width: 100%;
 	color: $quaternary-color;
-	padding: 10px 0px;
+	padding: 0px;
 	font-size: 10px;
 }
 /*Fin FOOTER*/
 
 /*CONFIG SITE*/
-
-#config-site{
-	
-}
 
 #config-site div{
 	margin-bottom: 20px;
