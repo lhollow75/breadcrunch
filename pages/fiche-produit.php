@@ -53,7 +53,7 @@ if (isset($_GET["id"])){
 			        <?php
 			          	} else {
 					?>
-					<span class="product-details-title" id="min-timing" ><?php $tabi = recupProduct($mysql, $idProduct); echo $tabi[9];?></span> 
+					<span class="product-details-title" id="min-timing" ><?php echo $tabi[9];?></span> 
 					<span class="product-details-title" id="timing-unit" ><?php $unit = uniteDelaiEnBase ($mysql, $idProduct); echo $unit[0]; ?></span>
 					<?php
 				        }
@@ -92,7 +92,7 @@ if (isset($_GET["id"])){
 						<input type="number" name="quantity" id="quantity" class="product-spec">
 					</p>
 					<p><span class="product-details-title">Prix :</span>
-		    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php $tabi = recupProduct($mysql, $idProduct); echo $tabi[5];?>€</span>
+		    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?>€</span>
 					<div class="btn-add-cart">Ajouter au panier</div>
 					<?php
 					    }
