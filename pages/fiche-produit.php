@@ -5,7 +5,6 @@ if (isset($_GET["id"])){
 	$idProduct = $last_id;
 }
 
-//echo $idProduct;
 ?>
 
 <div class="wrapper" id="main-content">
@@ -17,14 +16,16 @@ if (isset($_GET["id"])){
 		<hr>
 		<div class="row">
 			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-				<img class="product-picture" src="images/breadcrunch_29.jpg" alt="">
+				<img class="product-picture" src="images/<?php 
+						echo $tabi[12];
+						?>" alt="">
 			</div>
 
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 				<div class="product-details">
 					<p class="product-details-title">Ingrédients :</p>
 					<p class="product-details-text" id="product-ingredient" contenteditable="<?php echo $activeContent; ?>">
-						<?php $tabi = recupProduct($mysql, $idProduct); 
+						<?php 
 						echo $tabi[3];
 						?>
 					</p>

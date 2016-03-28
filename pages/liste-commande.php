@@ -35,6 +35,7 @@ $cmdIduser = recupCommander($mysql);
 		</ul>
 
 <?php 
+//Begining of order
 foreach ($cmdIduser as $key => $value) {
 	$cmd = recupCommande($mysql, $cmdIduser[$key]);
 	echo
@@ -74,6 +75,7 @@ foreach ($cmdIduser as $key => $value) {
 			    </li>
 			</ul>
 		</div>'; 
+		//Begining of ordered product
 		for ($i = 0; $i < sizeof($cmd); $i++) {
 			echo '
 	    		<div class="product-contents">
@@ -93,7 +95,8 @@ foreach ($cmdIduser as $key => $value) {
 		        		</div>
 					</div>';
 		} 
-		//information on global order
+		//End of ordered product
+		//rest of information on global order
 		echo '  
 		    <div class="row productend col-sm-10 col-xs-10">
 		        <div class="col-lg-8">
