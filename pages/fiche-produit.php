@@ -4,12 +4,15 @@ if (isset($_GET["id"])){
 } else {
 	$idProduct = $last_id;
 }
+$tabi = recupProduct($mysql, $idProduct);
+$unit = uniteDelaiEnBase ($mysql, $idProduct);
+$tab = recupTable($mysql, 'unite_delai');
 
 ?>
 
 <div class="wrapper" id="main-content">
 	<div class="container">
-		<h1 id="product-name" contenteditable="<?php echo $activeContent; ?>"><?php $tabi = recupProduct($mysql, $idProduct); 
+		<h1 id="product-name" contenteditable="<?php echo $activeContent; ?>"><?php  
 			echo $tabi[1];
 			?>
 		</h1>
@@ -24,7 +27,7 @@ if (isset($_GET["id"])){
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 				<div class="product-details">
 					<p class="product-details-title">Ingrédients :</p>
-					<p class="product-details-text" id="product-ingredient" contenteditable="<?php echo $activeContent; ?>">
+					<p class="product-details-text produits" id="product-ingredients-<?php echo $idProduct; ?>" contenteditable="<?php echo $activeContent; ?>">
 						<?php 
 						echo $tabi[3];
 						?>
@@ -34,69 +37,63 @@ if (isset($_GET["id"])){
 						<span class="product-details-title">Délai de commande minimum :</span>
 						
 
-					<?php
-					    if(isset($_SESSION['login'])) {
-					        if($_SESSION['admin']==true) {
-					?>
-            		<input type="text" name="write-min-timing" id="write-min-timing"></input>
-           			<select class="product-details-text">
-					<?php
-								$tab = recupTable($mysql, 'unite_delai');
+						<?php
+							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
+								?>
+			            		<input type="text" name="write-min-timing" id="product-delai_minimum-<?php echo $idProduct; ?>" value="<?php echo $tabi['delai_minimum']; ?>"></input>
+			           			<select id="select-unite_delai-<?php echo $idProduct; ?>" class="product-details-text select">
+								<?php		
 								foreach ($tab as $key => $value) {
-								echo "<option value=".$value[1].">".$value[1]."</option>";
-							}?>
-					</select>
+									?>
+									<option value="<?php echo $value[0]; ?>" <?php if ($tabi['unite_delai']==$value[0]) echo "selected"?>><?php echo $value[1]; ?></option>
+									<?php
+								}
+								?>
+								</select>
 						
-			        <?php
-			           	}
-			        ?>
-			        <?php
-			          	} else {
-					?>
-					<span class="product-details-title" id="min-timing" ><?php echo $tabi[9];?></span> 
-					<span class="product-details-title" id="timing-unit" ><?php $unit = uniteDelaiEnBase ($mysql, $idProduct); echo $unit[0]; ?></span>
-					<?php
-				        }
-				    ?>
-					<?php
+				        		<?php
+				           	
+				          	} else {
+								?>
+								<span class="product-details-title" id="min-timing" ><?php echo $tabi['delai_minimum'];?></span> 
+								<span class="product-details-title" id="timing-unit" ><?php  echo $tabi['unite']; ?></span>
+								<?php
+					        }
+					        ?>
+				    </p>
+				        <?php
 					    if(isset($_SESSION['login'])) {
-				        	if($_SESSION['admin']==true) {
-					?>
-					<?php
-				    		}
-					?>
-					<?php
-							} else {
-					?>
-					</p>
-					<p>
-						<label class="product-details-title" for="pickup-date">Date de retrait :</label>
-						<input type="date" name="pickup-date" id="pickup-date" class="product-spec">
-					</p>
-					<p>
-						<label class="product-details-title">Heure de retrait :</label>
-						<select class="product-details-text">
-				    		<option value="9h-10h">9h - 10h</option>
-							<option value="10h-11h">10h - 11h</option>
-							<option value="11h-12h">11h - 12h</option>
-							<option value="12h-13h">12h - 13h</option>
-							<option value="13h-14h">13h - 14h</option>
-							<option value="14h-15h">14h - 15h</option>
-							<option value="15h-16h">15h - 16h</option>
-							<option value="16h-17h">16h - 17h</option>
-							<option value="17h-18h">17h - 18h</option>
-						</select>
-					</p>
-					<p>
-						<label class="product-details-title" for="quantity">Quantité :</label>
-						<input type="number" name="quantity" id="quantity" class="product-spec">
-					</p>
-					<p><span class="product-details-title">Prix :</span>
-		    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?>€</span>
-					<div class="btn-add-cart">Ajouter au panier</div>
-					<?php
-					    }
-					?>
+				        	if($_SESSION['admin']!=true) {
+								?>
+								<p>
+									<label class="product-details-title" for="pickup-date">Date de retrait :</label>
+									<input type="date" name="pickup-date" id="pickup-date" class="product-spec">
+								</p>
+								<p>
+									<label class="product-details-title">Heure de retrait :</label>
+									<select class="product-details-text">
+							    		<option value="9h-10h">9h - 10h</option>
+										<option value="10h-11h">10h - 11h</option>
+										<option value="11h-12h">11h - 12h</option>
+										<option value="12h-13h">12h - 13h</option>
+										<option value="13h-14h">13h - 14h</option>
+										<option value="14h-15h">14h - 15h</option>
+										<option value="15h-16h">15h - 16h</option>
+										<option value="16h-17h">16h - 17h</option>
+										<option value="17h-18h">17h - 18h</option>
+									</select>
+								</p>
+								<p>
+									<label class="product-details-title" for="quantity">Quantité :</label>
+									<input type="number" name="quantity" id="quantity" class="product-spec">
+								</p>
+								<p><span class="product-details-title">Prix :</span>
+					    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?>€</span>
+								<div class="btn-add-cart">Ajouter au panier</div>
+								<?php
+					   		}
+					   	}
+							?>
 				</div><!-- /.product-details -->
 			</div><!-- /.col-lg-5 col-md-5 col-sm-12 col-xs-12 -->
 		</div><!-- /.row -->

@@ -5,8 +5,8 @@ if (isset($_POST['fonction'])){
 		case 'localisationEnBase':
 			localisationEnBase($mysql, $_POST['data'], $_POST['donnees'], $_POST['action']);
 			break;
-		case 'productCreation':
-			//productCreation($mysql);
+		case 'modifEnBase':
+			modifEnBase($mysql, $_POST['donnees'], 'produits', $_POST['colonne'], $_POST['idproduit']);
 			break;
 		
 		default:
@@ -145,7 +145,7 @@ function uniteDelaiEnBase ($mysql, $row){
 function productCreation($mysql, $cat){
 	//echo $cat;
 	$req = $mysql->prepare("INSERT INTO produits (nom, description, ingredients, idcategorie, prix_TTC, prix_HT, prix_promo_TTC, prix_promo_HT,delai_minimum, unite_delai, promo_active, photo, active)
-							VALUES ('Nom du produit', 'Description du produit', 'Listes des ingredients', :cat, 0, 0, 0, 0, 1, 1, 0, 'baguettes.jpg', 1)");
+							VALUES ('Nom du produit', 'Description du produit', 'Liste des ingredients', :cat, 0, 0, 0, 0, 1, 1, 0, 'baguettes.jpg', 1)");
 	$req->execute(array(
 		':cat'=>$cat
 		));
@@ -168,8 +168,9 @@ function lastInsertId($mysql){
 
 /*get une ligne from product table */
 function recupProduct($mysql, $id){
-	$req = $mysql->prepare('SELECT * FROM produits
-							WHERE id=:id');
+	$req = $mysql->prepare('SELECT produits.*, unite_delai.unite FROM produits, unite_delai
+							WHERE produits.id=:id
+							AND produits.unite_delai = unite_delai.id');
 	$req->execute(array(
 		':id'=>$id
 		));

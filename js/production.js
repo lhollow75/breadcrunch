@@ -7,39 +7,110 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 
 
 	$("[contenteditable]").blur(function(d){
-		//console.log(d);
+		produit = d.target;
+		console.log("idProduit: "+d.target.id.split("-")[3]);
+		console.log("colonne: "+d.target.id.split("-")[2]);
+		console.log("text: "+d.target.innerText);
 
+
+		//console.log(d.target.id.split("-",2));
+		decoupageId = d.target.id.split("-")[0];
 		insertion = d.target.innerText;
+
+		if (decoupageId == "product"){
+			console.log("je suis la");
+
+			idProduit = d.target.id.split("-")[2];
+			colonne = d.target.id.split("-")[1];
+
+			$.ajax({ 
+				url: 'functionBdd.php',
+				method: 'POST',
+				data: {
+					fonction: 'modifEnBase',
+					idproduit: idProduit,
+					donnees: insertion,
+					colonne: colonne 
+				},
+				success: function(m) { 
+					//console.log(m);
+					//$(".alert").fadeIn(100);
+					//$(".successMsg").text(m);
+				}
+			});
+		} else {
+
 		
+
+			$.ajax({ 
+				url: 'functionBdd.php',
+				method: 'POST',
+				data: {
+					fonction: 'localisationEnBase',
+					data: d.target.id,
+					donnees: insertion,
+					action: 'modification'
+				},
+				success: function(m) { 
+					//console.log(m);
+					//$(".alert").fadeIn(100);
+					//$(".successMsg").text(m);
+				}
+			});
+		}
+
+		
+
+	})
+
+	$('input[type=text]').blur(function(d){
+		console.log(d);
+		nomChamps = $(this).context.id;
+		valeur = d.target.value;
+		idProduit = nomChamps.split("-")[2];
+		colonne = nomChamps.split("-")[1];
 
 		$.ajax({ 
 			url: 'functionBdd.php',
 			method: 'POST',
 			data: {
-				fonction: 'localisationEnBase',
-				data: d.target.id,
-				donnees: insertion,
-				action: 'modification'
+				fonction: 'modifEnBase',
+				idproduit: idProduit,
+				donnees: valeur,
+				colonne: colonne 
 			},
-			success: function(m) { 
-				//console.log(m);
-				//$(".alert").fadeIn(100);
-				//$(".successMsg").text(m);
-			}
 		});
+	});
 
-	})
+	$('.select').change(function(d){
+		console.log($(this).context.value);
+		nomChamps = $(this).context.id;
+		valeur = $(this).context.value;
+		idProduit = nomChamps.split("-")[2];
+		colonne = nomChamps.split("-")[1];
+
+		$.ajax({ 
+			url: 'functionBdd.php',
+			method: 'POST',
+			data: {
+				fonction: 'modifEnBase',
+				idproduit: idProduit,
+				donnees: valeur,
+				colonne: colonne 
+			},
+		});
+	});
 
 
-	$("input").click(function(d){
-		//console.log($("#lien-blog")[0].value);
+	$('input:not([type=image],[type=button],[type=submit],[type=text])').click(function(d){
+		console.log(d);
 		nomBox = $(this).context.id;
 		box = $(this).context.checked;
 		valeur = nomBox.split('-')[1];
 
-		//console.log(nomBox);
-		//console.log(box);
-		//console.log(valeur);
+		console.log("nomBox: "+nomBox);
+		
+		console.log("valeur: "+valeur);
 		
 		switch (nomBox){
 			case 'box-blog':
@@ -51,6 +122,9 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 					$("#bloc-blog").hide();
 					box = "";
 				}
+				break;
+			case 'write-min-timing':
+				box = $("#write-min-timing")[0].value;
 				break;
 			case 'lien-blog':
 				box = $("#lien-blog")[0].value;
@@ -111,6 +185,7 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 				}
 				break;
 		}
+		console.log("box: "+box);
 
 		//console.log("envoie nomBox "+nomBox);
 		//console.log("envoi box: "+box);
