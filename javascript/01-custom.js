@@ -36,13 +36,13 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 
 
 	$("input").click(function(d){
-		console.log($(this));
+		console.log($("#lien-blog")[0].value);
 		nomBox = $(this).context.id;
 		box = $(this).context.checked;
 		valeur = nomBox.split('-')[1];
 
-		//console.log(nomBox);
-		//console.log(box);
+		console.log(nomBox);
+		console.log(box);
 		//console.log(valeur);
 		/*if (box==true && nomBox != "box-blog"){
 			if (nomBox == "commande-desactive"){
@@ -76,6 +76,9 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 					$("#bloc-blog").hide();
 					box = "";
 				}
+				break;
+			case 'lien-blog':
+				box = $("#lien-blog")[0].value;
 				break;
 			case 'commande-desactive':
 				if (box == true){
@@ -134,6 +137,8 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 				break;
 		}
 
+		console.log("envoie nomBox "+nomBox);
+		console.log("envoi box: "+box);
 		
 		$.ajax({ 
 			url: 'functionBdd.php',

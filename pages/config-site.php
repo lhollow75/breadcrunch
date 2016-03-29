@@ -46,7 +46,7 @@
 						<p>Je souhaite faire apparaître les pages suivantes dans le menu : </p>
 						<input type="checkbox" name="promotions-active" id="box-promotions" <?php if ($accueil['module_promotion']==1) echo "checked"?>>
 						<label for="promotions-active">Promotions</label>
-						<input type="checkbox" name="blog-active" id="box-blog"  >
+						<input type="checkbox" name="blog-active" id="box-blog" <?php if ($accueil['blog']!="") echo "checked"?> >
 						<label for="blog-active">Blog</label>
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="bloc-blog">
