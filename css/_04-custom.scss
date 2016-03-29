@@ -877,6 +877,7 @@ h2{
 .product{
 	border: 1px black solid;
 	padding: 10px;
+    margin: 10px;
 }
 .commande{
 	border: 1px black solid;
@@ -1222,10 +1223,9 @@ div#admin-card {
 
 span#contact-magasin, span#contact-adresse {
     display: block;
-    height: 20px;
 }
 span#contact-adresse {
-    margin-top: 0px;
+    margin-top: -20px;
 }
 #row-panier{
 	margin-left: 0px;
