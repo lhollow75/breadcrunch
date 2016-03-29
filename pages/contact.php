@@ -35,7 +35,10 @@
 					</p>
 					<p class="col-lg-7">
 
-						<span contenteditable="<?php echo $activeContent; ?>" id="contact-magasin"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span> <span class="adresse" id="contact-adresse" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'adresse','', 'recuperation') ?></span> <span class="cp" id="contact-cp" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'code_postal','', 'recuperation') ?></span> <span id="contact-ville" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'ville','', 'recuperation') ?></span>
+						<span contenteditable="<?php echo $activeContent; ?>" id="contact-magasin"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
+						 <span class="adresse" id="contact-adresse" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'adresse','', 'recuperation') ?></span>
+						 <span class="cp" id="contact-cp" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'code_postal','', 'recuperation') ?></span> 
+						 <span id="contact-ville" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'ville','', 'recuperation') ?></span>
 						<span class="dtl" contenteditable="<?php echo $activeContent; ?>" id="contact-telephone"><?php localisationEnBase($mysql, 'telephone','', 'recuperation') ?></span>
 						<span class="dtl" contenteditable="<?php echo $activeContent; ?>" id="contact-email"><?php localisationEnBase($mysql, 'email','', 'recuperation') ?></span>
 

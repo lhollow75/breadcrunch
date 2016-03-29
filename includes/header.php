@@ -81,8 +81,8 @@
             <ul class="menu-burger">
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="index.php?page=categorie">Produits</a></li>
-                <li><a id="menu-promotions" href="index.php?page=promotions">Promotions</a></li>
-                <li><a id="menu-blog" href="#">Blog</a></li>
+                <li id="menu-promotions" ><a href="index.php?page=promotions">Promotions</a></li>
+                <li id="menu-blog"><a  href="#">Blog</a></li>
                 <li><a id="menu-histoire" href="index.php?page=a-propos"><?php localisationEnBase($mysql, 'histoire_titre','', 'recuperation') ?></a></li>
                 <li><a id="menu-contact" href="index.php?page=contact"><?php localisationEnBase($mysql, 'contact_titre','', 'recuperation') ?></a></li>
             </ul>
@@ -105,15 +105,15 @@
             //console.log(module_blog);
 
             if (module_blog != "" || module_blog != " "){
-                document.getElementById('menu-blog').style.display = "none";
+                $("#menu-blog").hide();
             } else {
-                document.getElementById('menu-blog').style.display = "block";
+                $("#menu-blog").show();
             }
 
             if (module_promotions==1){
-                document.getElementById('menu-promotions').style.display = "block";
+                $("#menu-promotions").show();
             } else {
-                document.getElementById('menu-promotions').style.display = "none";
+                $("#menu-promotions").hide();
             }
 
 
