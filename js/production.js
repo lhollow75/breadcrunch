@@ -9,12 +9,8 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 	$("[contenteditable]").blur(function(d){
 		//console.log(d);
 
-		if (d.target.nodeName == 'IMG'){
-			insertion = d.target.currentSrc.split("/");
-			insertion = insertion[(insertion.length)-1]
-		} else {
-			insertion = d.target.innerText;
-		}
+		insertion = d.target.innerText;
+		
 
 		$.ajax({ 
 			url: 'functionBdd.php',
@@ -36,36 +32,15 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 
 
 	$("input").click(function(d){
-		console.log($("#lien-blog")[0].value);
+		//console.log($("#lien-blog")[0].value);
 		nomBox = $(this).context.id;
 		box = $(this).context.checked;
 		valeur = nomBox.split('-')[1];
 
-		console.log(nomBox);
-		console.log(box);
+		//console.log(nomBox);
+		//console.log(box);
 		//console.log(valeur);
-		/*if (box==true && nomBox != "box-blog"){
-			if (nomBox == "commande-desactive"){
-				nomBox = "commande";
-				box = 0;
-			} else {
-				box = 1;
-			}
-		} else if (box==false && nomBox != "box-blog"){
-			if (nomBox == "commande-desactive"){
-				nomBox = "commande";
-				box = 1;
-			} else {
-				box = 0;
-			}
-		} else if (box==true){
-			$("#bloc-blog").show();
-			$("#lien-blog").val("URL de votre blog");
-			box = "URL de votre blog"
-		} else {
-			$("#bloc-blog").hide();
-			box = "";
-		}*/
+		
 		switch (nomBox){
 			case 'box-blog':
 				if (box == true){
@@ -137,8 +112,8 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 				break;
 		}
 
-		console.log("envoie nomBox "+nomBox);
-		console.log("envoi box: "+box);
+		//console.log("envoie nomBox "+nomBox);
+		//console.log("envoi box: "+box);
 		
 		$.ajax({ 
 			url: 'functionBdd.php',

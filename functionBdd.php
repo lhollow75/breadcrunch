@@ -15,6 +15,23 @@ if (isset($_POST['fonction'])){
 	}
 }
 
+function recupPromotions($mysql){
+	$req = $mysql->prepare("SELECT *
+							FROM produits
+							WHERE promo_active = 1
+							AND active = 1");
+	$req->execute();
+	if($req->rowCount()>=1) {
+		while ($donnees = $req->fetch()){
+			$tab[] = $donnees;
+		}
+		//var_dump($reponse[$colonne]);
+		return $tab;
+	} else {
+		return "Pas de promotions en cours";
+	}
+}
+
 
 function recupEnBase($mysql, $table, $colonne, $row){
 	$req = $mysql->prepare("SELECT $colonne
@@ -93,7 +110,8 @@ function modifEnBase($mysql, $insertion, $table, $colonne, $row){
 function recupProduitsParCategorie($mysql, $idCategorie){
 	$req = $mysql->prepare("SELECT *
 							FROM produits
-							WHERE idcategorie = :id");
+							WHERE idcategorie = :id
+							AND active = 1");
 	$req->execute(array(
 	':id'=> $idCategorie
 	));

@@ -25,7 +25,7 @@
 							<label for="gift">Pour offrir<input id="gift" type="checkbox"></label>
 						</div>
 						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-							<input type="text" name="message" value="" placeholder="Message.." required>
+							<input type="text" name="message" value="" placeholder="Message..">
 						</div>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 							<label for="gift">Pour offrir<input id="gift" type="checkbox"></label>
 						</div>
 						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-							<input type="text" name="message" value="" placeholder="Message.." required>
+							<input type="text" name="message" value="" placeholder="Message..">
 						</div>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 							<label for="gift">Pour offrir<input id="gift" type="checkbox"></label>
 						</div>
 						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-							<input type="text" name="message" value="" placeholder="Message.." required>
+							<input type="text" name="message" value="" placeholder="Message..">
 						</div>
 					</div>
 				</div>
