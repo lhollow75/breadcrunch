@@ -81,7 +81,7 @@
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="index.php?page=categorie">Produits</a></li>
                 <li id="menu-promotions" ><a href="index.php?page=promotions">Promotions</a></li>
-                <li id="menu-blog"><a  href="#">Blog</a></li>
+                <li id="menu-blog"><a href="#">Blog</a></li>
                 <li><a id="menu-histoire" href="index.php?page=a-propos"><?php localisationEnBase($mysql, 'histoire_titre','', 'recuperation') ?></a></li>
                 <li><a id="menu-contact" href="index.php?page=contact"><?php localisationEnBase($mysql, 'contact_titre','', 'recuperation') ?></a></li>
             </ul>
