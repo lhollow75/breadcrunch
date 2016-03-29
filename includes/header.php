@@ -34,7 +34,9 @@
 
 <body>
     <header class="wrapper" id="main-header">
-                        <nav id="user-bar">
+                    <span class="icon-menu"></span><!-- Menu burger -->
+
+                        <nav id="user-bar" class="menu-burger">
                             <ul>
                             <?php
                                 if(isset($_SESSION['login'])) {
@@ -76,7 +78,6 @@
                 </div>
             </div>
         <nav id="first-menu">
-            <span class="icon-menu" style="color:black;cursor:pointer"></span><!-- Menu burger -->
             <ul class="menu-burger">
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="index.php?page=categorie">Produits</a></li>
@@ -86,7 +87,7 @@
                 <li><a id="menu-contact" href="index.php?page=contact"><?php localisationEnBase($mysql, 'contact_titre','', 'recuperation') ?></a></li>
             </ul>
         </nav>
-        <nav id="second-menu">
+        <nav id="second-menu" class="menu-burger">
             <ul>
                 <li><a id="menu-boulangerie" href="#">Boulangerie</a></li>
                 <li><a id="menu-patisserie" href="#">Pâtisserie</a></li>
@@ -164,9 +165,11 @@
                 if($(window).width() <= 641){
                     $('.menu-burger').css("display","none");
                     $('.icon-menu').css("z-index","50");
+                    $('.icon-menu').css("display","block");
                 } else {
                     $('.menu-burger').css("display","block");
                     $('.icon-menu').css("z-index","0");
+                    $('.icon-menu').css("display","none");
                 }
             });
             
