@@ -1,9 +1,9 @@
 $(function(){
 
 // Cache la div du lien du blog si la case d'activation dans les paramètres n'est pas cochée
-if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=config-site' && $("#box-blog")[0].checked == false){
+//if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=config-site' && $("#box-blog")[0].checked == false){
 	$("#bloc-blog").hide();
-}
+//}
 
 
 	$("[contenteditable]").blur(function(d){
@@ -101,7 +101,6 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 		});
 	});
 
-
 	$('input:not([type=image],[type=button],[type=submit],[type=text])').click(function(d){
 		console.log(d);
 		nomBox = $(this).context.id;
@@ -112,6 +111,8 @@ if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=confi
 		
 		console.log("valeur: "+valeur);
 		
+	
+
 		switch (nomBox){
 			case 'box-blog':
 				if (box == true){
