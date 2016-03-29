@@ -16,8 +16,11 @@
     require_once ('php/config.php');
     include('./functionBdd.php');
     $accueil = recupAccueil($mysql);
+    //print_r($accueil);
     $categorie = recupTable($mysql,'categorie');
     $taille_categorie = sizeof($categorie);
+    $module_promotion = $accueil["module_promotion"];
+    $module_blog = $accueil["blog"];
     for($i=0; $i<$taille_categorie; $i++){
         $affiche_categorie[] = $categorie[$i]["actif"];
     }
@@ -67,26 +70,18 @@
                             <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
                         </div>
                     </div>
-
-         <div class="col-lg-12">
-        <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
-        </div>
+                    <div class="col-lg-12">
+                        <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
+                    </div>
                 </div>
             </div>
-
         <nav id="first-menu">
             <span class="icon-menu" style="color:black;cursor:pointer"></span><!-- Menu burger -->
             <ul class="menu-burger">
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="index.php?page=categorie">Produits</a></li>
-                <li><a href="index.php?page=promotions">Promotions</a></li>
-                <?php
-                if ($accueil['blog']!=""){
-                ?>
-                    <li><a href="#">Blog</a></li>
-                <?php
-                }
-                ?>
+                <li><a id="menu-promotions" href="index.php?page=promotions">Promotions</a></li>
+                <li><a id="menu-blog" href="#">Blog</a></li>
                 <li><a id="menu-histoire" href="index.php?page=a-propos"><?php localisationEnBase($mysql, 'histoire_titre','', 'recuperation') ?></a></li>
                 <li><a id="menu-contact" href="index.php?page=contact"><?php localisationEnBase($mysql, 'contact_titre','', 'recuperation') ?></a></li>
             </ul>
@@ -102,7 +97,28 @@
         </nav>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script type="text/javascript">
+
+            module_promotions = '<?php echo $module_promotion ?>';
+            module_blog = '<?php echo $module_blog ?>';
+            //console.log("la :"+module_promotions);
+            //console.log(module_blog);
+
+            if (module_blog != "" || module_blog != " "){
+                document.getElementById('menu-blog').style.display = "none";
+            } else {
+                document.getElementById('menu-blog').style.display = "block";
+            }
+
+            if (module_promotions==1){
+                document.getElementById('menu-promotions').style.display = "block";
+            } else {
+                document.getElementById('menu-promotions').style.display = "none";
+            }
+
+
             produit = ['<?php echo $affiche_categorie[0] ?>', '<?php echo $affiche_categorie[1] ?>', '<?php echo $affiche_categorie[2] ?>', '<?php echo $affiche_categorie[3] ?>', '<?php echo $affiche_categorie[4] ?>'];
+
+
 
             for(i=0; i<produit.length; i++){
                 switch(i){  

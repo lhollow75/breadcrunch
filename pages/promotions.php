@@ -1,3 +1,6 @@
+<?php
+if ($accueil["module_promotion"]==1){
+?>
     <div class="wrapper" id="main-content">
         <div class="container">
         	<div class="row">
@@ -88,6 +91,11 @@
         </div>
         </br>
 </div>
+<?php
+} else {
+	echo "La page demandée n'existe pas";
+}
+?>
                 
 
         		

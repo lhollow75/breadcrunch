@@ -1,4 +1,11 @@
 $(function(){
+
+// Cache la div du lien du blog si la case d'activation dans les paramètres n'est pas cochée
+if ($(location).attr('href')=='http://localhost/breadcrunch/index.php?page=config-site' && $("#box-blog")[0].checked == false){
+	$("#bloc-blog").hide();
+}
+
+
 	$("[contenteditable]").blur(function(d){
 		//console.log(d);
 
@@ -28,19 +35,106 @@ $(function(){
 	})
 
 
-	$("input[type=checkbox]").click(function(d){
-		//console.log($(this));
+	$("input").click(function(d){
+		console.log($(this));
 		nomBox = $(this).context.id;
 		box = $(this).context.checked;
 		valeur = nomBox.split('-')[1];
 
 		//console.log(nomBox);
 		//console.log(box);
-		if (box==true){
-			box = 1;
+		//console.log(valeur);
+		/*if (box==true && nomBox != "box-blog"){
+			if (nomBox == "commande-desactive"){
+				nomBox = "commande";
+				box = 0;
+			} else {
+				box = 1;
+			}
+		} else if (box==false && nomBox != "box-blog"){
+			if (nomBox == "commande-desactive"){
+				nomBox = "commande";
+				box = 1;
+			} else {
+				box = 0;
+			}
+		} else if (box==true){
+			$("#bloc-blog").show();
+			$("#lien-blog").val("URL de votre blog");
+			box = "URL de votre blog"
 		} else {
-			box = 0;
+			$("#bloc-blog").hide();
+			box = "";
+		}*/
+		switch (nomBox){
+			case 'box-blog':
+				if (box == true){
+					$("#bloc-blog").show();
+					$("#lien-blog").val("URL de votre blog");
+					box = "URL de votre blog"
+				} else {
+					$("#bloc-blog").hide();
+					box = "";
+				}
+				break;
+			case 'commande-desactive':
+				if (box == true){
+					box = 0;
+				} else {
+					box = 1;
+				}
+				nomBox = "commande";
+				break;
+			case 'commande-active':
+				if (box == true){
+					box = 1;
+				} else {
+					box = 0;
+				}
+				nomBox = "commande";
+				break;
+			case 'paiement-desactive':
+				if (box == true){
+					box = 0;
+				} else {
+					box = 1;
+				}
+				nomBox = "paiement";
+				break;
+			case 'paiement-active':
+				if (box == true){
+					box = 1;
+				} else {
+					box = 0;
+				}
+				nomBox = "paiement";
+				break;
+			case 'recapitulatif-desactive':
+				if (box == true){
+					box = 0;
+				} else {
+					box = 1;
+				}
+				nomBox = "recapitulatif";
+				break;
+			case 'recapitulatif-active':
+				if (box == true){
+					box = 1;
+				} else {
+					box = 0;
+				}
+				nomBox = "recapitulatif";
+				break;
+			default :
+				if (box == true){
+					box = 1;
+				} else {
+					box = 0;
+				}
+				break;
 		}
+
+		
 		$.ajax({ 
 			url: 'functionBdd.php',
 			method: 'POST',
@@ -70,11 +164,6 @@ $(function(){
 		console.log("ici");
 	});*/
 
-	$(".produit").click(function(){
-
-		console.log("la");
-
-	});
 
 	$(".page_titre").keyup(function(d){
 		console.log(d);
@@ -153,6 +242,20 @@ function showHide(valeur, box){
 					$("#menu-boisson").hide();
 				}else {
 					$("#menu-boisson").show();
+				}
+				break;
+			case 'promotions':
+				if (box==false){
+					$("#menu-promotions").hide();
+				}else {
+					$("#menu-promotions").show();
+				}
+				break;
+			case 'blog':
+				if (box==false){
+					$("#menu-blog").hide();
+				}else {
+					$("#menu-blog").show();
 				}
 				break;
 		}

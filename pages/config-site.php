@@ -27,7 +27,7 @@
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<p>Thème du site : </p>
-						<input type="radio" name="theme-active" id="theme1-active">
+						<input type="radio" name="theme-active" id="theme1-active" checked>
 						<label for="theme1-active">Thème 1</label>
 						<input type="radio" name="theme-active" id="theme2-active">
 						<label for="theme2-active">Thème 2</label>
@@ -44,14 +44,14 @@
 					<div class="cont col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<h2>CONTENU DU SITE</h2>
 						<p>Je souhaite faire apparaître les pages suivantes dans le menu : </p>
-						<input type="checkbox" name="promotions-active" id="promotions-active">
+						<input type="checkbox" name="promotions-active" id="box-promotions" <?php if ($accueil['module_promotion']==1) echo "checked"?>>
 						<label for="promotions-active">Promotions</label>
-						<input type="checkbox" name="blog-active" id="blog-active">
+						<input type="checkbox" name="blog-active" id="box-blog"  >
 						<label for="blog-active">Blog</label>
 					</div>
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="bloc-blog">
 						<label class="col-lg-3 col-md-3" for="blog-active">Lien vers mon blog : </label>
-						<input class="col-lg-9 col-md-9" type="text" name="blog-active" id="blog-active">
+						<input class="col-lg-9 col-md-9" type="text" name="blog-active" id="lien-blog" value="<?php echo $module_blog ?>">
 					</div>
 				</div>
 				<div class="conf-bloc">
@@ -84,23 +84,23 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<h2>MODULES</h2>
 						<p>Je souhaite activer le module de commande en ligne avec retrait en magasin : </p>
-						<input type="radio" name="commande" id="commande-active">
+						<input type="radio" name="commande" id="commande-active" <?php if ($accueil["module_commande"]==true) echo "checked"?>>
 						<label for="commande-active">Oui</label>
-						<input type="radio" name="commande" id="commande-desactive">
+						<input type="radio" name="commande" id="commande-desactive" <?php if ($accueil["module_commande"]==false) echo "checked"?>>
 						<label for="commande-desactive">Non</label>
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<p>Je souhaite activer le module de paiement en ligne : </p>
-						<input type="radio" name="paiement" id="paiement-active">
+						<input type="radio" name="paiement" id="paiement-active" <?php if ($accueil["module_paiement"]==true) echo "checked"?>>
 						<label for="paiement-active">Oui</label>
-						<input type="radio" name="paiement" id="paiement-desactive">
+						<input type="radio" name="paiement" id="paiement-desactive" <?php if ($accueil["module_paiement"]==false) echo "checked"?>>
 						<label for="paiement-desactive">Non</label>
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<p>Je souhaite recevoir le récapitulatif des commandes : </p>
-						<input type="radio" name="recapitulatif" id="recapitulatif-active">
+						<input type="radio" name="recapitulatif" id="recapitulatif-active" <?php if ($accueil["envoi_recapitulatif"]==true) echo "checked"?>>
 						<label for="recapitulatif-active">Oui</label>
-						<input type="radio" name="recapitulatif" id="recapitulatif-desactive">
+						<input type="radio" name="recapitulatif" id="recapitulatif-desactive" <?php if ($accueil["envoi_recapitulatif"]==false) echo "checked"?>>
 						<label for="recapitulatif-desactive">Non</label>
 					</div>
 				</div>
