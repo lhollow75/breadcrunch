@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="logo_magasin">
-                            <a href="index.php"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
+                            <a href="javascript:window.location.reload()"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-12">
@@ -176,9 +176,11 @@
             if($(window).width() <= 641){
                 $('.menu-burger').css("display","none");
                 $('.icon-menu').css("z-index","50");
+                $('.icon-menu').css("display","block");
             } else {
                 $('.menu-burger').css("display","block");
                 $('.icon-menu').css("z-index","0");
+                $('.icon-menu').css("display","none");
             }
             
             $('.icon-menu').click(function(){
