@@ -71,7 +71,7 @@
                             <a href="javascript:window.location.reload()"><img src="images/<?php localisationEnBase($mysql, 'logo','', 'recuperation')?>" alt="Logo" id="logo"></a>
                         </div>
                         <form id="img_head" style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
-                            <p>Choisissez une image :</p>
+                            <p>Choisissez un logo :</p>
 				            <input class="fileimg" type="file" name="fichier" accept="image/*" multiple>
 				            <input type="hidden" name="logo_input" value="logo_img">
 				            <button type="submit">Envoyer</button>
