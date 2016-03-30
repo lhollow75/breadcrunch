@@ -19,9 +19,13 @@ $tab = recupTable($mysql, 'unite_delai');
 		<hr>
 		<div class="row">
 			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-				<img class="product-picture" src="images/<?php 
-						echo $tabi[12];
-						?>" alt="">
+				<img class="product-picture" src="images/<?php echo $tabi[12];?>" alt="">
+						<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
+                            <p>Choisissez une image :</p>
+				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
+				            <input type="hidden" name="product-photo-<?php echo $idProduct; ?>" value="product-photo-<?php echo $idProduct; ?>">
+				            <button type="submit" >Envoyer</button>
+				        </form>
 			</div>
 
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
