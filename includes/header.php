@@ -34,36 +34,35 @@
 
 <body>
     <header class="wrapper" id="main-header">
-                   <!--  <span class="icon-menu"></span>Menu burger -->
-
-                        <nav id="user-bar" class="menu-burger">
-                            <ul>
-                            <?php
-                                if(isset($_SESSION['login'])) {
-                                    if($_SESSION['admin']==true) {
-                                ?>
-                                <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
-                                <li><a class="btn_cart" href="index.php?page=liste-commande">Liste des commandes</a></li>
-                                <?php
-                                }
-                                ?>
-                                <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>
-                                <?php
-                            } else {
-                                ?>
-                                <li><a class="btn_inscription" href="index.php?page=logon">S'inscrire</a></li>
-                                <li><a class="btn_login" href="index.php?page=login">Se connecter</a><li>
-                                <?php
-                            }
-                            if(isset($_SESSION['login']) && $_SESSION['admin']!=true) {
-                                ?>
-                                <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>      
-                            <?php
-                            }
-                            ?>   
-                            </ul>
-                        </nav>
-
+        <!-- admin-menu -->
+        <nav id="user-bar" class="menu-burger">
+            <ul>
+                <?php
+                if(isset($_SESSION['login'])) {
+                    if($_SESSION['admin']==true) {
+                ?>
+                <li><a class="btn_admin" href="index.php?page=config-site">Administration</a></li>
+                <li><a class="btn_cart" href="index.php?page=liste-commande">Liste des commandes</a></li>
+                <?php
+                    }
+                ?>
+                <li><a class="btn_logout" href="index.php?page=logout">Deconnexion</a></li>
+                <?php
+                    } else {
+                ?>
+                <li><a class="btn_inscription" href="index.php?page=logon">S'inscrire</a></li>
+                <li><a class="btn_login" href="index.php?page=login">Se connecter</a><li>
+                <?php
+                    }
+                if(isset($_SESSION['login']) && $_SESSION['admin']!=true) {
+                ?>
+                <li><a class="btn_cart" href="index.php?page=panier"><span>Mon panier</span><span class="icon-shopping-cart"></span></a></li>      
+                <?php
+                    }
+                ?>   
+            </ul>
+        </nav>
+        <!-- / admin-menu -->
         <div class="wrapper contact" id="main-content">
             <div class="container">
                 <div class="row">
@@ -77,6 +76,8 @@
                     </div>
                 </div>
             </div>
+
+        <!-- first-menu -->    
         <nav id="first-menu">
             <ul class="menu-burger">
                 <li><a href="index.php">Accueil</a></li>
@@ -87,6 +88,9 @@
                 <li><a id="menu-contact" href="index.php?page=contact"><?php localisationEnBase($mysql, 'contact_titre','', 'recuperation') ?></a></li>
             </ul>
         </nav>
+        <!-- / first-menu -->
+
+        <!-- second-menu -->  
         <nav id="second-menu" class="menu-burger">
             <ul>
                 <li><a id="menu-boulangerie" href="#">Boulangerie</a></li>
@@ -96,129 +100,70 @@
                 <li><a id="menu-boisson" href="#">Boisson</a></li>
             </ul>
         </nav>
+        <!-- second-menu -->  
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script type="text/javascript">
 
-            module_promotions = '<?php echo $module_promotion ?>';
-            module_blog = '<?php echo $module_blog ?>';
-            //console.log("la :"+module_promotions);
-            //console.log(module_blog);
+        module_promotions = '<?php echo $module_promotion ?>';
+        module_blog = '<?php echo $module_blog ?>';
+        //console.log("la :"+module_promotions);
+        //console.log(module_blog);
 
-            if (module_blog != "" || module_blog != " "){
-                $("#menu-blog").hide();
-            } else {
-                $("#menu-blog").show();
-            }
+        if (module_blog != "" || module_blog != " "){
+            $("#menu-blog").hide();
+        } else {
+            $("#menu-blog").show();
+        }
 
-            if (module_promotions==1){
-                $("#menu-promotions").show();
-            } else {
-                $("#menu-promotions").hide();
-            }
+        if (module_promotions==1){
+            $("#menu-promotions").show();
+        } else {
+            $("#menu-promotions").hide();
+        }
 
-
-            produit = ['<?php echo $affiche_categorie[0] ?>', '<?php echo $affiche_categorie[1] ?>', '<?php echo $affiche_categorie[2] ?>', '<?php echo $affiche_categorie[3] ?>', '<?php echo $affiche_categorie[4] ?>'];
-
+        produit = ['<?php echo $affiche_categorie[0] ?>', '<?php echo $affiche_categorie[1] ?>', '<?php echo $affiche_categorie[2] ?>', '<?php echo $affiche_categorie[3] ?>', '<?php echo $affiche_categorie[4] ?>'];
 
 
-            for(i=0; i<produit.length; i++){
-                switch(i){  
-                    case 0: 
-                        if (produit[i]==0){
-                            document.getElementById('menu-boulangerie').style.display = "none";
-                        }else {
-                            document.getElementById('menu-boulangerie').style.display = "block";
-                        }
-                        break;
-                    case 1:
-                       if (produit[i]==0){
-                            document.getElementById('menu-patisserie').style.display = "none";
-                        }else {
-                            document.getElementById('menu-patisserie').style.display = "block";
-                        }
-                        break;
-                    case 2:
-                        if (produit[i]==0){
-                            document.getElementById('menu-sandwich').style.display = "none";
-                        }else {
-                            document.getElementById('menu-sandwich').style.display = "block";
-                        }
-                        break;
-                    case 3:
-                        if (produit[i]==0){
-                            document.getElementById('menu-chocolaterie').style.display = "none";
-                        }else {
-                            document.getElementById('menu-chocolaterie').style.display = "block";
-                        }
-                        break;
-                    case 4:
-                        if (produit[i]==0){
-                            document.getElementById('menu-boisson').style.display = "none";
-                        }else {
-                            document.getElementById('menu-boisson').style.display = "block";
-                        }
-                        break;
-                }
-            }
-            
-            /*$(window).resize(function() {
-                if($(window).width() <= 641){
-                    $('.menu-burger').css("display","none");
-                    $('.icon-menu').css("z-index","50");
-                    $('.icon-menu').css("display","block");
-                } else {
-                    $('.menu-burger').css("display","block");
-                    $('.icon-menu').css("z-index","0");
-                    $('.icon-menu').css("display","none");
-                }
-            });
-            
-            if($(window).width() <= 641){
-                $('.menu-burger').css("display","none");
-                $('.icon-menu').css("z-index","50");
-                $('.icon-menu').css("display","block");
-            } else {
-                $('.menu-burger').css("display","block");
-                $('.icon-menu').css("z-index","0");
-                $('.icon-menu').css("display","none");
-            }
-            
-            $('.icon-menu').click(function(){
-                $('.menu-burger').toggle();
-            });*/
-
-// targeting navigation
-    var n = document.getElementById('user-bar');
-    var v = document.getElementById('first-menu');
-    var i = document.getElementById('second-menu');
-    // nav initially closed is JS enabled
-
-    
-    function navi() {
-        // when small screen, create a switch button, and toggle navigation class
-        if (window.matchMedia("(max-width: 640px)").matches && document.getElementById("toggle-nav")==undefined) {          
-            n.insertAdjacentHTML('afterBegin','<span id="toggle-nav" class="icon-menu"></span>');
-            t = document.getElementById('toggle-nav');  
-            n.classList.add('is-closed');
-            v.classList.add('is-closed');
-            i.classList.add('is-closed');
-            t.onclick=function(){
-                n.classList.toggle('is-closed');
-                v.classList.toggle('is-closed');
-                i.classList.toggle('is-closed');
+        for(i=0; i<produit.length; i++){
+            switch(i){  
+                case 0: 
+                    if (produit[i]==0){
+                        document.getElementById('menu-boulangerie').style.display = "none";
+                    }else {
+                        document.getElementById('menu-boulangerie').style.display = "block";
+                    }
+                    break;
+                case 1:
+                   if (produit[i]==0){
+                        document.getElementById('menu-patisserie').style.display = "none";
+                    }else {
+                        document.getElementById('menu-patisserie').style.display = "block";
+                    }
+                    break;
+                case 2:
+                    if (produit[i]==0){
+                        document.getElementById('menu-sandwich').style.display = "none";
+                    }else {
+                        document.getElementById('menu-sandwich').style.display = "block";
+                    }
+                    break;
+                case 3:
+                    if (produit[i]==0){
+                        document.getElementById('menu-chocolaterie').style.display = "none";
+                    }else {
+                        document.getElementById('menu-chocolaterie').style.display = "block";
+                    }
+                    break;
+                case 4:
+                    if (produit[i]==0){
+                        document.getElementById('menu-boisson').style.display = "none";
+                    }else {
+                        document.getElementById('menu-boisson').style.display = "block";
+                    }
+                    break;
             }
         }
-        // when big screen, delete switch button, and toggle navigation class
-        if (window.matchMedia("(min-width: 641px)").matches && document.getElementById("toggle-nav")) {
-            document.getElementById("toggle-nav").outerHTML="";
-            n.classList.toggle('is-closed');
-            v.classList.toggle('is-closed');
-            i.classList.toggle('is-closed');
-        }
-    }
-    navi();
-    // when resize or orientation change, reload function
-    window.addEventListener('resize', navi);
 
         </script>
     </header>
