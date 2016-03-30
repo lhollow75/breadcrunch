@@ -68,8 +68,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="logo_magasin">
-                            <a href="javascript:window.location.reload()"><img src="images/logo_boulanger.png" alt="Logo" id="logo"></a>
+                            <a href="javascript:window.location.reload()"><img src="images/<?php localisationEnBase($mysql, 'logo','', 'recuperation')?>" alt="Logo" id="logo"></a>
                         </div>
+                        <form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
+                            <p>Choisissez une image :</p>
+				            <input class="fileimg" type="file" name="fichier" accept="image/*" multiple>
+				            <input type="hidden" name="logo_input" value="logo_img">
+				            <button type="submit">Envoyer</button>
+				        </form>
                     </div>
                     <div class="col-lg-12">
                         <span id="titre_magasin" contenteditable="<?php echo $activeContent; ?>" class="title"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
