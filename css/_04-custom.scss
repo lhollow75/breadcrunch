@@ -382,6 +382,14 @@ hr{
     border: dotted 1px #000;
 }
 /*CONTACT*/
+
+span#contact-magasin, span#contact-adresse {
+    display: block;
+}
+span#contact-adresse {
+    margin-top: -40px;
+}
+
 #contact-form input,#contact-form textarea,#connect-form input,#chart-form input,#chart-form textarea{
     width: 100%;
 }
@@ -1259,12 +1267,6 @@ div#admin-card {
     margin-right: 10px;
 }
 
-span#contact-magasin, span#contact-adresse {
-    display: block;
-}
-span#contact-adresse {
-    margin-top: -40px;
-}
 #row-panier{
 	margin-left: 0px;
 	margin-right: 0px;
