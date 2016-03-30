@@ -3,9 +3,9 @@ require_once ('php/config.php');
 include('./functionBdd.php');
 // Constantes
 define('TARGET', './img/');    // Repertoire cible
-define('MAX_SIZE', 1000000);    // Taille max en octets du fichier
-define('WIDTH_MAX', 800);    // Largeur max de l'image en pixels
-define('HEIGHT_MAX', 800);    // Hauteur max de l'image en pixels
+define('MAX_SIZE', 10000000);    // Taille max en octets du fichier
+define('WIDTH_MAX', 1800);    // Largeur max de l'image en pixels
+define('HEIGHT_MAX', 1800);    // Hauteur max de l'image en pixels
  
 // Tableaux de donnees
 $tabExt = array('jpg','gif','png','jpeg');    // Extensions autorisees
@@ -58,6 +58,10 @@ if(!empty($_POST))
               } else if(isset($_POST['logo_input'])){
                   //var_dump($_POST['id_about']); die;
                   localisationEnBase($mysql,$_POST['logo_input'],$nomImage, 'modification');
+                  header('location:./index.php');
+              } else if(isset($_POST['home_img'])){
+                  //var_dump($_POST['id_about']); die;
+                  localisationEnBase($mysql,$_POST['home_img'],$nomImage, 'modification');
                   header('location:./index.php');
               } else if(isset($_POST['id_about'])){
                   //var_dump($_POST['id_about']); die;
