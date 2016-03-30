@@ -68,7 +68,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="logo_magasin">
-                            <a href="javascript:window.location.reload()"><img src="images/<?php localisationEnBase($mysql, 'logo','', 'recuperation')?>" alt="Logo" id="logo"></a>
+                            <a href="javascript:window.location.reload()"><img src="img/<?php localisationEnBase($mysql, 'logo','', 'recuperation')?>" alt="Logo" id="logo"></a>
                         </div>
                         <form id="img_head" style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
                             <p>Choisissez une image :</p>
