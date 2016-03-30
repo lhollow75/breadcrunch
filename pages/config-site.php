@@ -4,13 +4,6 @@
 			<div class="col-lg-12">
 				<h1>Configuration du site</h1>
 			</div>
-				<?php
-				for ($i=0; $i < sizeof($categorie); $i++) { 
-					//echo $categorie[$i]['nom'];
-					# code...
-				}
-				?>
-				 <?php //echo utf8_encode($accueil['nom_boulangerie']) ?>
 
 				<div class="conf-bloc theme">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

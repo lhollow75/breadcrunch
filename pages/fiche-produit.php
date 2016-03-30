@@ -1,10 +1,15 @@
 <?php 
-if (isset($_GET["id"])){
+if (isset($_GET["id"]) && ctype_digit(strval($_GET["id"]))){
 	$idProduct = $_GET["id"];
-} else {
+} else if(isset($last_id)){
 	$idProduct = $last_id;
+} else {
+	echo "Le produit recherché n'existe pas"; die;
 }
 $tabi = recupProduct($mysql, $idProduct);
+if (!is_array($tabi)){
+	echo "Le produit recherché n'existe pas"; die;
+}
 $unit = uniteDelaiEnBase ($mysql, $idProduct);
 $tab = recupTable($mysql, 'unite_delai');
 
@@ -12,7 +17,7 @@ $tab = recupTable($mysql, 'unite_delai');
 
 <div class="wrapper" id="main-content">
 	<div class="container">
-		<h1 id="product-name" contenteditable="<?php echo $activeContent; ?>"><?php  
+		<h1 id="product-nom-<?php echo $idProduct; ?>" contenteditable="<?php echo $activeContent; ?>"><?php  
 			echo $tabi[1];
 			?>
 		</h1>
@@ -95,24 +100,24 @@ $tab = recupTable($mysql, 'unite_delai');
 							}
 							?>
 							<p><span class="product-details-title">Prix :</span>
-				    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?></span><span class="price">€</span></p>
+				    		<span class="price <?php if ($tabi[11]==1) echo "old-product-price"; ?>" id="product-prix_TTC-<?php echo $idProduct; ?>" contenteditable="<?php echo $activeContent; ?>"><?php echo number_format($tabi[5],2);?></span><span class="price">€</span></p>
 							<?php 
 							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {?>	
 							<div class="prom">
-								<input id="prix-promo" type="checkbox">		    
-								<label for="prix-promo" class="product-details-title">Prix Promo</label>
+								<input id="prix-promo-<?php echo $idProduct; ?>" type="checkbox" <?php if ($tabi[11]==1) echo "checked"; ?>>		    
+								<label for="prix-promo-<?php echo $idProduct; ?>" class="product-details-title">Prix Promo</label>
 							</div>
 							<?php } ?>	
-				    		<p><span class="product-details-title">Prix Promo:</span>
-				    		<span class="price" id="product-price-sales" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi["prix_promo_TTC"];?></span><span class="price">€</span></p>
+				    		<p id="prix-promo"><span class="product-details-title">Prix Promo:</span>
+				    		<span class="price" id="product-prix_promo_TTC-<?php echo $idProduct; ?>" contenteditable="<?php echo $activeContent; ?>"><?php echo number_format($tabi["prix_promo_TTC"],2);?></span><span class="price">€</span></p>
 							
 							<?php
 							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {?>
 							<div class="btn-product row">
 								<!--ajouter la classe selected si le bouton ne peut pas être cliqué-->
-							    <button class="col-lg-4 col-sm-12 btn-accept selected" id="awc">Ajouter le produit</button>
-							    <button class="col-lg-4 col-sm-12 btn-wait" id="awc">Masquer le produit</button>
-							    <button class="col-lg-4 col-sm-12 btn-cancel" id="awc">Supprimer le produit</button>
+							    <button class="col-lg-4 col-sm-12 btn-accept" id="awc">Ajouter le produit à la vente</button>
+							    <button class="col-lg-4 col-sm-12 btn-wait" id="awc">Masquer le produit de la vente</button>
+							    <button class="col-lg-4 col-sm-12 btn-cancel" id="awc">Supprimer le produit définitivement</button>
 						    </div>	
 							 <?php }
 					        ?>
