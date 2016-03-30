@@ -55,10 +55,14 @@ if(!empty($_POST))
               if(isset($_POST['id_formulaire'])){
                   localisationEnBase($mysql,$_POST['id_formulaire'],$nomImage, 'modification');
                   header('location:./index.php'); 
+              } else if(isset($_POST['logo_input'])){
+                  //var_dump($_POST['id_about']); die;
+                  localisationEnBase($mysql,$_POST['logo_input'],$nomImage, 'modification');
+                  header('location:./index.php');
               } else if(isset($_POST['id_about'])){
                   //var_dump($_POST['id_about']); die;
                   localisationEnBase($mysql,$_POST['id_about'],$nomImage, 'modification');
-                  header('location:./index.php?page=a-propos'); 
+                  header('location:./index.php?page=a-propos');      
               } else {
                   foreach ($_POST as $key => $value) {
                       $colonne = explode("-",$key);
