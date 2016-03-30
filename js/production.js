@@ -207,9 +207,9 @@ $(function(){
 		
 	});
 
-	/*$(".ajoutProduit").click(function(){
-		//console.log($(this));
-		console.log("la");
+	$(".choix-produit").click(function(){
+		console.log($(this));
+		/*console.log("la");
 		$.ajax({ 
 			url: 'functionBdd.php',
 			method: 'POST',
@@ -217,8 +217,8 @@ $(function(){
 				fonction: 'productCreation',
 			},
 		});
-		console.log("ici");
-	});*/
+		console.log("ici");*/
+	});
 
 
 	$(".page_titre").keyup(function(d){
