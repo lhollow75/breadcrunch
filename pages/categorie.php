@@ -6,7 +6,23 @@
 				<h1 id="contact" class="page_titre">Nos produits</h1>
 				<hr>
 			</div>
-        		
+        		<script type="text/javascript">
+    $(document).ready(function() {
+        $('html, body').hide();
+
+        if (window.location.hash) {
+            setTimeout(function() {
+                $('html, body').scrollTop(0).show();
+                $('html, body').animate({
+                    scrollTop: $(window.location.hash).offset().top
+                    }, 1000)
+            }, 0);
+        }
+        else {
+            $('html, body').show();
+        }
+    });
+</script>
 				<?php
 				for ($i=0; $i < sizeof($categorie); $i++) {
 					if ($categorie[$i]["actif"]==1){ 

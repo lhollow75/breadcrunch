@@ -111,6 +111,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script type="text/javascript">
 
+
         module_promotions = '<?php echo $module_promotion ?>';
         module_blog = '<?php echo $module_blog ?>';
         //console.log("la :"+module_promotions);
