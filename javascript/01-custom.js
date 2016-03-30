@@ -208,16 +208,11 @@ $(function(){
 	});
 
 	$(".choix-produit").click(function(){
-		console.log($(this));
-		/*console.log("la");
-		$.ajax({ 
-			url: 'functionBdd.php',
-			method: 'POST',
-			data: {
-				fonction: 'productCreation',
-			},
-		});
-		console.log("ici");*/
+		//console.log($(this).context.id);
+		id = $(this).context.id;
+		id = id.split("-")[1];
+		console.log(id);
+		window.location.replace("./index.php?page=fiche-produit&id="+id);
 	});
 
 
