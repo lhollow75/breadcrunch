@@ -99,11 +99,11 @@
         <!-- second-menu -->  
         <nav id="second-menu" class="menu-burger">
             <ul>
-                <li><a id="menu-boulangerie" class="js-scrollTo" href="index.php?page=categorie#description-Boulangerie">Boulangerie</a></li>
-                <li><a id="menu-patisserie" class="js-scrollTo" href="index.php?page=categorie#description-Patisserie">Pâtisserie</a></li>
-                <li><a id="menu-sandwich" class="js-scrollTo" href="index.php?page=categorie#description-Sandwich">Sandwich / Salade</a></li>
-                <li><a id="menu-chocolaterie" class="js-scrollTo" href="index.php?page=categorie#description-Chocolaterie">Chocolaterie</a></li>
-                <li><a id="menu-boisson" class="js-scrollTo" href="index.php?page=categorie#description-Boissons">Boisson</a></li>
+                <li><a id="menu-boulangerie" href="index.php?page=categorie#description-Boulangerie">Boulangerie</a></li>
+                <li><a id="menu-patisserie" href="index.php?page=categorie#description-Patisserie">Pâtisserie</a></li>
+                <li><a id="menu-sandwich" href="index.php?page=categorie#description-Sandwich">Sandwich / Salade</a></li>
+                <li><a id="menu-chocolaterie" href="index.php?page=categorie#description-Chocolaterie">Chocolaterie</a></li>
+                <li><a id="menu-boisson" href="index.php?page=categorie#description-Boisson">Boisson</a></li>
             </ul>
         </nav>
         <!-- second-menu -->  

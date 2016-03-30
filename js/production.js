@@ -345,6 +345,9 @@ function showHide(valeur, box){
         window.addEventListener('resize', navi);
 
 
+        
+
+
 
 //on cible tous les éléments required
 $("#contact-form [required]").each(function(){
