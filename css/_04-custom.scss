@@ -328,7 +328,7 @@ hr{
 	width: 200px;
 }
 
-#galery form button{
+#galery form button, #img_head button{
 	margin: 10px 0px 20px 0px;
 	padding: 5px 10px;
 	font-size: 10px;
@@ -342,7 +342,7 @@ hr{
     transition: all 0.3s ease-out;
 }
 
-#galery form button:hover{
+#galery form button:hover,#img_head button:hover{
 	background-color: darken($primary-color, 30%);
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -1294,4 +1294,6 @@ span.details.tel {
     margin-top: 20px;
 }
 
+form#img_head {
+}
 
