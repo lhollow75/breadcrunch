@@ -43,8 +43,8 @@
 									<div class="product-photo-admin ">
 										<div class="product-photo-img-admin ">
 											<div class="product-add ">
-												<p class="icon-circle-with-plus product-icon"></p>
-												<input class="product-text " type="submit" value="Ajouter un produit">
+												<input class="product-text" type="submit"  style="background-image:url(img/plus.png);">
+													<span class="add-prod">Ajouter un produit</span>
 											</div>
 										</div>
 									</div>
@@ -67,7 +67,6 @@
 									}
 									?>
 								</div>
-								<div class="product-categories">
 								<?php
 								if (isset($_SESSION['login']) && $_SESSION['admin']==true){
 									?>
@@ -75,11 +74,11 @@
 								<form action="creation_produit.php" method="POST">
 									<input type="hidden" name="cat_produit" value="<?php echo $produits["$i"]["id"]; ?>">
 									<div class=" product-section">
-										<div class="product-photo-admin ">
-											<div class="product-photo-img-admin ">
-												<div class="product-add ">
-													<p class="icon-circle-with-plus product-icon"></p>
-													<input class="product-text" type="submit" value="Ajouter un produit">
+										<div class="product-photo-admin " >
+											<div class="product-photo-img-admin " >
+												<div class="product-add " >
+													<input class="product-text" type="submit"  style="background-image:url(img/plus.png);">
+													<span class="add-prod">Ajouter un produit</span>
 												</div>
 											</div>
 										</div>
@@ -104,7 +103,6 @@
 									<?php
 								}
 								?>
-								</div><!--/.product-categories -->
 							<?php
 							}						
 						}

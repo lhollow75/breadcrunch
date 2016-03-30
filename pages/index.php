@@ -7,7 +7,13 @@
 		<source src="./video/video_boulanger.mp4" type="video/mp4">
 	</video>-->
 
-    <img src="images/breadcrunch_00.jpg" alt="">
+    <img src="images/<?php localisationEnBase($mysql, 'homeimg','', 'recuperation')?>" id="homeimg" alt="">
+    <form id="img_head" style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
+            <p>Choisissez une image :</p>
+            <input class="fileimg" type="file" name="fichier" accept="image/*" multiple>
+            <input type="hidden" name="home_img" value="home">
+            <button type="submit">Envoyer</button>
+    </form>
 
     <div class="wrapper" id="main-content">
         <div class="container">

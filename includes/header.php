@@ -70,7 +70,7 @@
                         <div id="logo_magasin">
                             <a href="javascript:window.location.reload()"><img src="images/<?php localisationEnBase($mysql, 'logo','', 'recuperation')?>" alt="Logo" id="logo"></a>
                         </div>
-                        <form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
+                        <form id="img_head" style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
                             <p>Choisissez une image :</p>
 				            <input class="fileimg" type="file" name="fichier" accept="image/*" multiple>
 				            <input type="hidden" name="logo_input" value="logo_img">
@@ -110,6 +110,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script type="text/javascript">
+
 
         module_promotions = '<?php echo $module_promotion ?>';
         module_blog = '<?php echo $module_blog ?>';

@@ -376,3 +376,8 @@ function showHide(valeur, box){
         navi();
         // when resize or orientation change, reload function
         window.addEventListener('resize', navi);
+
+
+        
+
+

@@ -376,6 +376,12 @@ function showHide(valeur, box){
         navi();
         // when resize or orientation change, reload function
         window.addEventListener('resize', navi);
+
+
+        
+
+
+
 //on cible tous les éléments required
 $("#contact-form [required]").each(function(){
 	$(this).val( $(this).attr("data-form") );
