@@ -1250,9 +1250,13 @@ span#contact-magasin, span#contact-adresse {
     display: block;
 }
 span#contact-adresse {
-    margin-top: -20px;
+    margin-top: -40px;
 }
 #row-panier{
 	margin-left: 0px;
 	margin-right: 0px;
+}
+
+span.details.tel {
+    margin-top: 20px;
 }

@@ -28,12 +28,12 @@
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<div class="contact-details">
 					<p class="col-lg-12" id="text-contact" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'text-contact','', 'recuperation') ?></p>
-					<p class="col-lg-5 ">
+					<p class="col-lg-4 ">
 						<span class="details">Adresse</span>
-						<span class="details">Téléphone</span>
+						<span class="details tel">Téléphone</span>
 						<span class="details">Email</span>
 					</p>
-					<p class="col-lg-7">
+					<p class="col-lg-8">
 
 						<span contenteditable="<?php echo $activeContent; ?>" id="contact-magasin"><?php echo utf8_encode($accueil['nom_boulangerie']) ?></span>
 						 <span class="adresse" id="contact-adresse" contenteditable="<?php echo $activeContent; ?>"><?php localisationEnBase($mysql, 'adresse','', 'recuperation') ?></span>
