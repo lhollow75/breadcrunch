@@ -75,8 +75,8 @@
 								}
 								for ($j=0; $j < sizeof($produits); $j++) { 
 									?>
-									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-										<div class="product-section">
+									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+										<div class="product-section choix-produit" >
 											<img src="images/<?php echo $produits["$j"]["photo"]; ?>" alt="" class="product-photo">
 											<div class="product-infos">
 												<p class="product-name"><?php echo $produits["$j"]["nom"]; ?></p>

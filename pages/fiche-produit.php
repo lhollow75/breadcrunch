@@ -95,8 +95,16 @@ $tab = recupTable($mysql, 'unite_delai');
 									<label class="product-details-title" for="quantity">Quantité :</label>
 									<input type="number" name="quantity" id="quantity" class="product-spec">
 								</p>
-								<p><span class="product-details-title">Prix :</span></p>
-					    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?>€</span>
+							<?php
+							}
+							?>
+							<p><span class="product-details-title">Prix :</span>
+				    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?></span>€</p>
+				    		<p><span class="product-details-title">Prix Promo:</span>
+				    		<span class="price" id="product-price-sales" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi["prix_promo_TTC"];?></span>€</p>
+							<?php
+							if($_SESSION['admin']!=true) {
+							?>
 								<div class="btn-add-cart">Ajouter au panier</div>
 								<?php
 					   		}
