@@ -9,7 +9,7 @@
 
     <img src="img/<?php localisationEnBase($mysql, 'homeimg','', 'recuperation')?>" id="homeimg" alt="">
     <form id="img_head" style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
-            <p>Choisissez une image :</p>
+            <p>Choisissez une image de bannière :</p>
             <input class="fileimg" type="file" name="fichier" accept="image/*" multiple>
             <input type="hidden" name="home_img" value="home">
             <button type="submit">Envoyer</button>
