@@ -27,8 +27,8 @@
 									<div class="product-photo-admin ">
 										<div class="product-photo-img-admin ">
 											<div class="product-add ">
-												<p class="icon-circle-with-plus product-icon"></p>
-												<input class="product-text " type="submit" value="Ajouter un produit">
+												<input class="product-text" type="submit"  style="background-image:url(img/plus.png);">
+													<span class="add-prod">Ajouter un produit</span>
 											</div>
 										</div>
 									</div>
