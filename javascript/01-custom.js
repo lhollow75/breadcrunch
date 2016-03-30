@@ -7,9 +7,10 @@ $(function(){
 
 
 	$("[contenteditable]").blur(function(d){
-		produit = d.target;
-		console.log("idProduit: "+d.target.id.split("-")[3]);
-		console.log("colonne: "+d.target.id.split("-")[2]);
+		//produit = d.target;
+		console.log("id: ".d);
+		console.log("idProduit: "+d.target.id.split("-")[2]);
+		console.log("colonne: "+d.target.id.split("-")[1]);
 		console.log("text: "+d.target.innerText);
 
 
@@ -22,6 +23,12 @@ $(function(){
 
 			idProduit = d.target.id.split("-")[2];
 			colonne = d.target.id.split("-")[1];
+
+			if (colonne == 'prix_TTC' || colonne == 'prix_promo_TTC'){
+				tab = insertion.split(",");
+				insertion = tab[0]+"."+tab[1];
+			}
+			console.log(insertion);
 
 			$.ajax({ 
 				url: 'functionBdd.php',
@@ -125,6 +132,32 @@ $(function(){
 			case 'write-min-timing':
 				box = $("#write-min-timing")[0].value;
 				break;
+			case 'prix-promo-'+nomBox.split('-')[2]:
+				idProduit = nomBox.split('-')[2];
+				console.log("id produit: "+idProduit);
+				if (box == true){
+					box = 1;
+					$("#product-prix_TTC-"+idProduit).addClass('old-product-price');
+					$("#prix-promo").show();
+				} else {
+					box = 0;
+					$("#product-prix_TTC-"+idProduit).removeClass('old-product-price');
+					$("#prix-promo").hide();
+					
+				}
+				
+
+				$.ajax({ 
+					url: 'functionBdd.php',
+					method: 'POST',
+					data: {
+						fonction: 'modifEnBase',
+						colonne: 'promo_active',
+						donnees: box,
+						idproduit: idProduit
+					},
+				});
+				break;
 			case 'lien-blog':
 				box = $("#lien-blog")[0].value;
 				break;
@@ -184,7 +217,7 @@ $(function(){
 				}
 				break;
 		}
-		console.log("box: "+box);
+		//console.log("box: "+box);
 
 		//console.log("envoie nomBox "+nomBox);
 		//console.log("envoi box: "+box);
