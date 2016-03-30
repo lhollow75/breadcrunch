@@ -896,6 +896,16 @@ h2{
     cursor: pointer;
 }
 
+#awc{
+	font-size: 12px;
+	border: 1px solid #fff;
+}
+#awc.selected{
+	background-color: #C4C4C4;
+}
+input#product-delai_minimum-2 {
+    width: 50px;
+}
 /*FIN product page*/
 
 /*Liste-commande*/
@@ -1260,3 +1270,5 @@ span#contact-adresse {
 span.details.tel {
     margin-top: 20px;
 }
+
+
