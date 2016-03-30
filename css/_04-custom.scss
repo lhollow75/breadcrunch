@@ -54,14 +54,39 @@
 }
 */
 
+nav > span {
+    position: absolute;
+    top: .8rem;
+    left: 1rem;
+    width: 2.5rem;
+    z-index: 100;
+    cursor: pointer;
+}
+nav ul {
+  /* maximum height */
+  max-height: 25em;
+  transform: translateZ(0);
+  transition: max-height .4s;
+}
+/* Theming closed nav */
+nav.is-closed ul {
+  max-height: 0;
+  overflow: hidden;
+  /* translate with hardware acceleration */
+  transform: translateZ(0);
+  transition: max-height .4s;
+}
+
+
+
 /*HEADER*/
 .icon-menu{
-	font-size:30px;
-	background-color:$tertiary-color;
-	padding:5px;
-	color:$primary-color;
-	cursor:pointer;
-	position:absolute;
+	font-size: 30px;
+	background-color: $tertiary-color;
+	padding: 5px;
+	color: $primary-color;
+	cursor: pointer;
+	position: absolute;
 }
 
 #user-bar{

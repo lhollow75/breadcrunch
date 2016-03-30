@@ -199,21 +199,21 @@
         if (window.matchMedia("(max-width: 640px)").matches && document.getElementById("toggle-nav")==undefined) {          
             n.insertAdjacentHTML('afterBegin','<span id="toggle-nav" class="icon-menu"></span>');
             t = document.getElementById('toggle-nav');  
-            n.classList.add('is-closed');
-            v.classList.add('is-closed');
-            i.classList.add('is-closed');
+                n.classList.add('is-closed');
+                //v.classList.add('is-closed');
+                //i.classList.add('is-closed');
             t.onclick=function(){
                 n.classList.toggle('is-closed');
-                v.classList.toggle('is-closed');
-                i.classList.toggle('is-closed');
+                //v.classList.toggle('is-closed');
+                //i.classList.toggle('is-closed');
             }
         }
         // when big screen, delete switch button, and toggle navigation class
         if (window.matchMedia("(min-width: 641px)").matches && document.getElementById("toggle-nav")) {
             document.getElementById("toggle-nav").outerHTML="";
             n.classList.toggle('is-closed');
-            v.classList.toggle('is-closed');
-            i.classList.toggle('is-closed');
+            //v.classList.toggle('is-closed');
+            //i.classList.toggle('is-closed');
         }
     }
     navi();
