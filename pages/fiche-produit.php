@@ -43,7 +43,7 @@ $tab = recupTable($mysql, 'unite_delai');
 						<?php
 							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
 								?>
-			            		<input type="text" name="write-min-timing" id="product-delai_minimum-<?php echo $idProduct; ?>" value="<?php echo $tabi['delai_minimum']; ?>"></input>
+			            		<input type="text" class="inp-delai" name="write-min-timing" id="product-delai_minimum-<?php echo $idProduct; ?>" value="<?php echo $tabi['delai_minimum']; ?>"></input>
 			           			<select id="select-unite_delai-<?php echo $idProduct; ?>" class="product-details-text select">
 								<?php		
 								foreach ($tab as $key => $value) {

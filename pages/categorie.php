@@ -6,7 +6,23 @@
 				<h1 id="contact" class="page_titre">Nos produits</h1>
 				<hr>
 			</div>
-        		
+        		<script type="text/javascript">
+				    $(document).ready(function() {
+				        $('html, body').hide();
+
+				        if (window.location.hash) {
+				            setTimeout(function() {
+				                $('html, body').scrollTop(0).show();
+				                $('html, body').animate({
+				                    scrollTop: $(window.location.hash).offset().top
+				                    }, 1000)
+				            }, 0);
+				        }
+				        else {
+				            $('html, body').show();
+				        }
+				    });
+				</script>
 				<?php
 				for ($i=0; $i < sizeof($categorie); $i++) {
 					if ($categorie[$i]["actif"]==1){ 
@@ -27,8 +43,8 @@
 									<div class="product-photo-admin ">
 										<div class="product-photo-img-admin ">
 											<div class="product-add ">
-												<p class="icon-circle-with-plus product-icon"></p>
-												<input class="product-text " type="submit" value="Ajouter un produit">
+												<input class="product-text" type="submit"  style="background-image:url(img/plus.png);">
+													<span class="add-prod">Ajouter un produit</span>
 											</div>
 										</div>
 									</div>
@@ -59,11 +75,11 @@
 								<form action="creation_produit.php" method="POST">
 									<input type="hidden" name="cat_produit" value="<?php echo $produits["$i"]["id"]; ?>">
 									<div class=" product-section">
-										<div class="product-photo-admin ">
-											<div class="product-photo-img-admin ">
-												<div class="product-add ">
-													<p class="icon-circle-with-plus product-icon"></p>
-													<input class="product-text" type="submit" value="Ajouter un produit">
+										<div class="product-photo-admin " >
+											<div class="product-photo-img-admin " >
+												<div class="product-add " >
+													<input class="product-text" type="submit"  style="background-image:url(img/plus.png);">
+													<span class="add-prod">Ajouter un produit</span>
 												</div>
 											</div>
 										</div>

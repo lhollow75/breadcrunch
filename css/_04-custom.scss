@@ -201,11 +201,6 @@ nav.is-closed ul {
 	width: 50px;
 	height: 50px;
 }
-
-[id^="footer-"], [id*="footer-"] {
-	margin-bottom: 30px;
-}
-
 [id^="footer-"] h3, [id*="footer-"] h3{
 	text-align: center;
 	text-transform: uppercase;
@@ -328,7 +323,7 @@ hr{
 	width: 200px;
 }
 
-#galery form button{
+#galery form button, #img_head button{
 	margin: 10px 0px 20px 0px;
 	padding: 5px 10px;
 	font-size: 10px;
@@ -342,7 +337,7 @@ hr{
     transition: all 0.3s ease-out;
 }
 
-#galery form button:hover{
+#galery form button:hover,#img_head button:hover{
 	background-color: darken($primary-color, 30%);
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -683,6 +678,19 @@ input[type="checkbox"]{
 
 /* ======= CATEGORY ========= */
 /*Category ADMIN page*/
+
+.product-categories{
+	display: table;
+}
+input.product-text {
+    background-color: transparent!important;
+}
+input.product-text {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
 .product-photo-admin{
 	width: 300px;
 	height: 250px;
@@ -691,7 +699,11 @@ input[type="checkbox"]{
 	border: dotted 1px $tertiary-color;
 	background-color: $quaternary-color;
 }
-
+.add-prod{
+	color: #fff;
+	display:block;
+	margin-top: 10px;
+}
 .product-photo-img-admin{
 	width: 278px;
 	height: 228px;
@@ -722,6 +734,7 @@ input[type="checkbox"]{
 
 .product-add input{
 	border: none;
+	color: transparent;
 	background-color: $quaternary-color;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -731,7 +744,7 @@ input[type="checkbox"]{
 
 .product-photo-img-admin:hover .product-add input, .product-photo-img-admin:hover .product-text{
 	background-color: $tertiary-color;
-	color: $quaternary-color;
+	color: transparent;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -947,6 +960,9 @@ input#product-delai_minimum-2 {
 /* ======= END PRODUCT PAGE ========= */
 
 /* ======= COMMAND LIST ========= */
+.inp-delai{
+	width: 60px;
+}
 .product{
 	border: 1px black solid;
 	padding: 10px;
@@ -1281,4 +1297,6 @@ span.details.tel {
     margin-top: 20px;
 }
 
+form#img_head {
+}
 

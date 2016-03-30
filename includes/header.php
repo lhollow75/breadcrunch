@@ -99,17 +99,18 @@
         <!-- second-menu -->  
         <nav id="second-menu" class="menu-burger">
             <ul>
-                <li><a id="menu-boulangerie" href="#">Boulangerie</a></li>
-                <li><a id="menu-patisserie" href="#">Pâtisserie</a></li>
-                <li><a id="menu-sandwich" href="#">Sandwich / Salade</a></li>
-                <li><a id="menu-chocolaterie" href="#">Chocolaterie</a></li>
-                <li><a id="menu-boisson" href="#">Boisson</a></li>
+                <li><a id="menu-boulangerie" href="index.php?page=categorie#description-Boulangerie">Boulangerie</a></li>
+                <li><a id="menu-patisserie" href="index.php?page=categorie#description-Patisserie">Pâtisserie</a></li>
+                <li><a id="menu-sandwich" href="index.php?page=categorie#description-Sandwich">Sandwich / Salade</a></li>
+                <li><a id="menu-chocolaterie" href="index.php?page=categorie#description-Chocolaterie">Chocolaterie</a></li>
+                <li><a id="menu-boisson" href="index.php?page=categorie#description-Boisson">Boisson</a></li>
             </ul>
         </nav>
         <!-- second-menu -->  
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script type="text/javascript">
+
 
         module_promotions = '<?php echo $module_promotion ?>';
         module_blog = '<?php echo $module_blog ?>';
