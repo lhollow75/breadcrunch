@@ -17,7 +17,7 @@ if ($accueil["module_promotion"]==1){
 						//print_r($promotions[$i]["nom"]);
 						?>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-							<div class="product-section">
+							<div class="product-section choix-produit" id="promo-<?php echo $promotions["$i"]["id"]; ?>">
 								<img src="images/breadcrunch_05.jpg" alt="" class="product-photo">
 								<div class="product-infos">
 									<p class="product-name"><?php echo utf8_encode($promotions[$i]["nom"]); ?></p>
