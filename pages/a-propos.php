@@ -10,8 +10,15 @@
 
 				<div class="col-lg-6 col-xs-12">
 					<div class="story-section">
-						<img src="./img/story_boulanger.jpg" alt="">
+						<img src="./img/<?php localisationEnBase($mysql, 'img_propos','', 'recuperation')?>" id="img_propos" alt="">
+						<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
+                            <p>Choisissez une image :</p>
+				            <input class="fileimg" type="file" name="fichier" accept="image/*" multiple>
+				            <input type="hidden" name="id_about" value="img_apropos">
+				            <button type="submit">Envoyer</button>
+				        </form>
 					</div>
+					
 				</div>
 
 				<div class="col-lg-6 col-xs-12">

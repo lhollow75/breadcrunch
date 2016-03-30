@@ -19,9 +19,13 @@ $tab = recupTable($mysql, 'unite_delai');
 		<hr>
 		<div class="row">
 			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-				<img class="product-picture" src="images/<?php 
-						echo $tabi[12];
-						?>" alt="">
+				<img class="product-picture" src="images/<?php echo $tabi[12];?>" alt="">
+						<form style="display:<?php echo $appear; ?>;" method="post" enctype="multipart/form-data" action="./img_upload.php">
+                            <p>Choisissez une image :</p>
+				            <input  class="fileimg" type="file" name="fichier"  accept="image/*" multiple>
+				            <input type="hidden" name="product-photo-<?php echo $idProduct; ?>" value="product-photo-<?php echo $idProduct; ?>">
+				            <button type="submit" >Envoyer</button>
+				        </form>
 			</div>
 
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -36,7 +40,6 @@ $tab = recupTable($mysql, 'unite_delai');
 						<span class="icon-clock"></span>
 						<span class="product-details-title">Délai de commande minimum :</span>
 						
-
 						<?php
 							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
 								?>
@@ -50,7 +53,7 @@ $tab = recupTable($mysql, 'unite_delai');
 								}
 								?>
 								</select>
-						
+					
 				        		<?php
 				           	
 				          	} else {
@@ -61,6 +64,7 @@ $tab = recupTable($mysql, 'unite_delai');
 					        }
 					        ?>
 				    </p>
+				    
 				        <?php
 					    if(isset($_SESSION['login'])) {
 				        	if($_SESSION['admin']!=true) {
@@ -91,9 +95,28 @@ $tab = recupTable($mysql, 'unite_delai');
 							}
 							?>
 							<p><span class="product-details-title">Prix :</span>
-				    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?></span>€</p>
+				    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?></span><span class="price">€</span></p>
+							<?php 
+							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {?>	
+							<div class="prom">
+								<input id="prix-promo" type="checkbox">		    
+								<label for="prix-promo" class="product-details-title">Prix Promo</label>
+							</div>
+							<?php } ?>	
 				    		<p><span class="product-details-title">Prix Promo:</span>
-				    		<span class="price" id="product-price-sales" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi["prix_promo_TTC"];?></span>€</p>
+				    		<span class="price" id="product-price-sales" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi["prix_promo_TTC"];?></span><span class="price">€</span></p>
+							
+							<?php
+							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {?>
+							<div class="btn-product row">
+								<!--ajouter la classe selected si le bouton ne peut pas être cliqué-->
+							    <button class="col-lg-4 col-sm-12 btn-accept selected" id="awc">Ajouter le produit</button>
+							    <button class="col-lg-4 col-sm-12 btn-wait" id="awc">Masquer le produit</button>
+							    <button class="col-lg-4 col-sm-12 btn-cancel" id="awc">Supprimer le produit</button>
+						    </div>	
+							 <?php }
+					        ?>
+								
 							<?php
 							if($_SESSION['admin']!=true) {
 							?>

@@ -51,8 +51,23 @@ if(!empty($_POST))
             // Si c'est OK, on teste l'upload
             if(move_uploaded_file($_FILES['fichier']['tmp_name'], TARGET.$nomImage))
             {
-              $message = 'Upload réussi !'; localisationEnBase($mysql,$_POST['id_formulaire'],$nomImage);
-              header('location:./index.php');    
+              $message = 'Upload réussi !';
+              if(isset($_POST['id_formulaire'])){
+                  localisationEnBase($mysql,$_POST['id_formulaire'],$nomImage, 'modification');
+                  header('location:./index.php'); 
+              } else if(isset($_POST['id_about'])){
+                  //var_dump($_POST['id_about']); die;
+                  localisationEnBase($mysql,$_POST['id_about'],$nomImage, 'modification');
+                  header('location:./index.php?page=a-propos'); 
+              } else {
+                  foreach ($_POST as $key => $value) {
+                      $colonne = explode("-",$key);
+                      $idProduct = $colonne[2];
+                      $colonne = $colonne[1];
+                      modifEnBase($mysql,$nomImage,'produits',$colonne,$idProduct);
+                      header('location:./index.php?page=fiche-produit&id='.$idProduct); 
+                  }
+              }
             }
             else
             {

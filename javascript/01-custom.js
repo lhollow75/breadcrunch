@@ -40,8 +40,6 @@ $(function(){
 			});
 		} else {
 
-		
-
 			$.ajax({ 
 				url: 'functionBdd.php',
 				method: 'POST',
@@ -311,3 +309,37 @@ function showHide(valeur, box){
 				break;
 		}
 }
+
+		//Menu-burger
+        // targeting navigation
+        var n = document.getElementById('user-bar');
+        var v = document.getElementById('first-menu');
+        var i = document.getElementById('second-menu');
+        // nav initially closed is JS enabled
+
+    
+        function navi() {
+            // when small screen, create a switch button, and toggle navigation class
+            if (window.matchMedia("(max-width: 640px)").matches && document.getElementById("toggle-nav")==undefined) {          
+                n.insertAdjacentHTML('afterBegin','<span id="toggle-nav" class="icon-menu"></span>');
+                t = document.getElementById('toggle-nav');  
+                n.classList.add('is-closed');
+                v.classList.add('is-closed');
+                i.classList.add('is-closed');
+                t.onclick=function(){
+                    n.classList.toggle('is-closed');
+                    v.classList.toggle('is-closed');
+                    i.classList.toggle('is-closed');
+                }
+            }
+            // when big screen, delete switch button, and toggle navigation class
+            if (window.matchMedia("(min-width: 641px)").matches && document.getElementById("toggle-nav")) {
+                document.getElementById("toggle-nav").outerHTML="";
+                n.classList.toggle('is-closed');
+                v.classList.toggle('is-closed');
+                i.classList.toggle('is-closed');
+            }
+        }
+        navi();
+        // when resize or orientation change, reload function
+        window.addEventListener('resize', navi);
