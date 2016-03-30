@@ -1,10 +1,10 @@
 /*
 Error: Invalid CSS after "": expected selector, was "<<<<<<< HEAD"
-        on line 920 of css/_04-custom.scss
+        on line 389 of css/_04-custom.scss
         from line 5 of css/starter.scss
 
 Backtrace:
-css/_04-custom.scss:920
+css/_04-custom.scss:389
 css/starter.scss:5
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
@@ -50,10 +50,10 @@ css/starter.scss:5
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"\": expected selector, was \"<<<<<<< HEAD\"\A         on line 920 of css/_04-custom.scss\A         from line 5 of css/starter.scss"; }
+  content: "Error: Invalid CSS after \"\": expected selector, was \"<<<<<<< HEAD\"\A         on line 389 of css/_04-custom.scss\A         from line 5 of css/starter.scss"; }
