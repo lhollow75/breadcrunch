@@ -917,7 +917,24 @@ h2{
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* ======= END PRODUCT PAGE ========= */
+=======
+#awc{
+	font-size: 12px;
+	border: 1px solid #fff;
+}
+#awc.selected{
+	background-color: #C4C4C4;
+}
+input#product-delai_minimum-2 {
+    width: 50px;
+}
+.prom {
+    margin-top: 10px;
+}
+/*FIN product page*/
+>>>>>>> e3fc857dc6efc0c8328236ab36a996a79ccca40f
 
 /* ======= COMMAND LIST ========= */
 .product{
@@ -1233,7 +1250,22 @@ div#admin-card {
     margin-right: 10px;
 }
 
+<<<<<<< HEAD
+=======
+span#contact-magasin, span#contact-adresse {
+    display: block;
+}
+span#contact-adresse {
+    margin-top: -40px;
+}
+>>>>>>> e3fc857dc6efc0c8328236ab36a996a79ccca40f
 #row-panier{
 	margin-left: 0px;
 	margin-right: 0px;
 }
+
+span.details.tel {
+    margin-top: 20px;
+}
+
+
