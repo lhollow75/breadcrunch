@@ -140,10 +140,17 @@
 						</div>
 						<div class="space col-lg-1 col-md-1"></div>
 					</div>
-				</div>
+					<button id="formconfigvalid">Valider</button>
+                </div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+    $('#formconfigvalid').click(function(){
+        $(this).css("background-color","red");
+    });
+</script>
 
 
