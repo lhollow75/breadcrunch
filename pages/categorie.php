@@ -67,7 +67,6 @@
 									}
 									?>
 								</div>
-								<div class="product-categories">
 								<?php
 								if (isset($_SESSION['login']) && $_SESSION['admin']==true){
 									?>
@@ -104,7 +103,6 @@
 									<?php
 								}
 								?>
-								</div><!--/.product-categories -->
 							<?php
 							}						
 						}
