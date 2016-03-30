@@ -99,17 +99,26 @@
         <!-- second-menu -->  
         <nav id="second-menu" class="menu-burger">
             <ul>
-                <li><a id="menu-boulangerie" href="#">Boulangerie</a></li>
-                <li><a id="menu-patisserie" href="#">Pâtisserie</a></li>
-                <li><a id="menu-sandwich" href="#">Sandwich / Salade</a></li>
-                <li><a id="menu-chocolaterie" href="#">Chocolaterie</a></li>
-                <li><a id="menu-boisson" href="#">Boisson</a></li>
+                <li><a id="menu-boulangerie" class="js-scrollTo" href="#description-Boulangerie">Boulangerie</a></li>
+                <li><a id="menu-patisserie" class="js-scrollTo" href="#description-Patisserie">Pâtisserie</a></li>
+                <li><a id="menu-sandwich" class="js-scrollTo" href="#description-Sandwich">Sandwich / Salade</a></li>
+                <li><a id="menu-chocolaterie" class="js-scrollTo" href="#description-Chocolaterie">Chocolaterie</a></li>
+                <li><a id="menu-boisson" class="js-scrollTo" href="#description-Boissons">Boisson</a></li>
             </ul>
         </nav>
         <!-- second-menu -->  
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript">
+            $(document).ready(function() {
+                $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                    var page = $(this).attr('href'); // Page cible
+                    var speed = 750; // Durée de l'animation (en ms)
+                    $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                    return false;
+                });
+            });
 
         module_promotions = '<?php echo $module_promotion ?>';
         module_blog = '<?php echo $module_blog ?>';
