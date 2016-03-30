@@ -36,7 +36,6 @@ $tab = recupTable($mysql, 'unite_delai');
 						<span class="icon-clock"></span>
 						<span class="product-details-title">Délai de commande minimum :</span>
 						
-
 						<?php
 							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {
 								?>
