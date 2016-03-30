@@ -50,14 +50,7 @@ $tab = recupTable($mysql, 'unite_delai');
 								}
 								?>
 								</select>
-						
-
-								<div class="btn-product row">
-									<!--ajouter la classe selected si le bouton ne peut pas être cliqué-->
-								    <button class="col-lg-4 col-sm-12 btn-accept selected" id="awc">Ajouter le produit</button>
-								    <button class="col-lg-4 col-sm-12 btn-wait" id="awc">Masquer le produit</button>
-								    <button class="col-lg-4 col-sm-12 btn-cancel" id="awc">Supprimer le produit</button>
-							    </div>
+					
 				        		<?php
 				           	
 				          	} else {
@@ -99,9 +92,28 @@ $tab = recupTable($mysql, 'unite_delai');
 							}
 							?>
 							<p><span class="product-details-title">Prix :</span>
-				    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?></span>€</p>
+				    		<span class="price" id="product-price" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi[5];?></span><span class="price">€</span></p>
+							<?php 
+							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {?>	
+							<div class="prom">
+								<input id="prix-promo" type="checkbox">		    
+								<label for="prix-promo" class="product-details-title">Prix Promo</label>
+							</div>
+							<?php } ?>	
 				    		<p><span class="product-details-title">Prix Promo:</span>
-				    		<span class="price" id="product-price-sales" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi["prix_promo_TTC"];?></span>€</p>
+				    		<span class="price" id="product-price-sales" contenteditable="<?php echo $activeContent; ?>"><?php echo $tabi["prix_promo_TTC"];?></span><span class="price">€</span></p>
+							
+							<?php
+							if(isset($_SESSION['login']) && $_SESSION['admin']==true) {?>
+							<div class="btn-product row">
+								<!--ajouter la classe selected si le bouton ne peut pas être cliqué-->
+							    <button class="col-lg-4 col-sm-12 btn-accept selected" id="awc">Ajouter le produit</button>
+							    <button class="col-lg-4 col-sm-12 btn-wait" id="awc">Masquer le produit</button>
+							    <button class="col-lg-4 col-sm-12 btn-cancel" id="awc">Supprimer le produit</button>
+						    </div>	
+							 <?php }
+					        ?>
+								
 							<?php
 							if($_SESSION['admin']!=true) {
 							?>
