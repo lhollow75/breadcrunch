@@ -203,7 +203,7 @@ nav.is-closed ul {
 }
 
 [id^="footer-"], [id*="footer-"] {
-	margin-bottom: 30px;
+	/*margin-bottom: 30px;*/
 }
 
 [id^="footer-"] h3, [id*="footer-"] h3{
@@ -684,7 +684,9 @@ input[type="checkbox"]{
 /* ======= CATEGORY ========= */
 /*Category ADMIN page*/
 
-
+.product-categories{
+	display: table;
+}
 input.product-text {
     background-color: transparent!important;
 }

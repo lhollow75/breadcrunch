@@ -7,22 +7,22 @@
 				<hr>
 			</div>
         		<script type="text/javascript">
-    $(document).ready(function() {
-        $('html, body').hide();
+				    $(document).ready(function() {
+				        $('html, body').hide();
 
-        if (window.location.hash) {
-            setTimeout(function() {
-                $('html, body').scrollTop(0).show();
-                $('html, body').animate({
-                    scrollTop: $(window.location.hash).offset().top
-                    }, 1000)
-            }, 0);
-        }
-        else {
-            $('html, body').show();
-        }
-    });
-</script>
+				        if (window.location.hash) {
+				            setTimeout(function() {
+				                $('html, body').scrollTop(0).show();
+				                $('html, body').animate({
+				                    scrollTop: $(window.location.hash).offset().top
+				                    }, 1000)
+				            }, 0);
+				        }
+				        else {
+				            $('html, body').show();
+				        }
+				    });
+				</script>
 				<?php
 				for ($i=0; $i < sizeof($categorie); $i++) {
 					if ($categorie[$i]["actif"]==1){ 
